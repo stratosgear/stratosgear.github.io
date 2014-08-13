@@ -3,7 +3,7 @@
   <channel>
       <title>Cli on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>/tags/cli/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/cli/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Recording Streaming Audio</title>
-      <link>/2011/04/recording_streaming_audio/</link>
+      <link>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</link>
       <pubDate>Mon, 25 Apr 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2011/04/recording_streaming_audio/</guid>
+      <guid>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</guid>
       <description>
 
 &lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>Convert an A4 sized .pdf file to A5 size</title>
-      <link>/2011/01/convert_an_a4_page_to_a5/</link>
+      <link>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</link>
       <pubDate>Wed, 05 Jan 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2011/01/convert_an_a4_page_to_a5/</guid>
+      <guid>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</guid>
       <description>&lt;p&gt;I was working on a LyX document based on the Tufte layout and unfortunately the page layout was available at A4 page sizes only (ok, US letter, too, but that doesn&amp;rsquo;t count :)&lt;/p&gt;
 
 &lt;p&gt;I could try and learn Latex and create my own page size but the task looked monumental. I am sure the solution might be easy enough, but I just couldn&amp;rsquo;t do it myself. Googling for A5 sized tufte layouts didn&amp;rsquo;t help either.&lt;/p&gt;
@@ -117,10 +117,10 @@ ifelse
     
     <item>
       <title>Passwordless ssh connection with another server</title>
-      <link>/2008/03/passwordless_ssh_connection_with_another_server/</link>
+      <link>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</link>
       <pubDate>Fri, 21 Mar 2008 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2008/03/passwordless_ssh_connection_with_another_server/</guid>
+      <guid>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</guid>
       <description>&lt;p&gt;First, create the key on the local machine (without a passphrase) ::&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh-keygen -t rsa
@@ -159,10 +159,10 @@ otherUser@remote&#39;s password:
     
     <item>
       <title>Migrating greek table from mysql &lt; 4.1</title>
-      <link>/2006/06/migrate_mysql_4.1/</link>
+      <link>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</link>
       <pubDate>Sat, 17 Jun 2006 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2006/06/migrate_mysql_4.1/</guid>
+      <guid>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</guid>
       <description>&lt;p&gt;I do not remember how the tables were transferred from the old DB to the new (more likely through a mysqldump).&lt;/p&gt;
 
 &lt;p&gt;The end effect was that the tables in the 4.1 MySql Db had a collation of latin1_swedish_ci.&lt;/p&gt;

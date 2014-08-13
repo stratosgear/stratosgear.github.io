@@ -3,7 +3,7 @@
   <channel>
       <title>Mysql on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>/tags/mysql/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/mysql/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Mysql Bindings in Django</title>
-      <link>/2011/12/mysql_bindings_in_django/</link>
+      <link>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</link>
       <pubDate>Sun, 25 Dec 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2011/12/mysql_bindings_in_django/</guid>
+      <guid>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</guid>
       <description>&lt;p&gt;In order to correctly install mysql bindings in a Django virtualenv you need:&lt;/p&gt;
 
 &lt;p&gt;First install some Ubuntu dependencies::&lt;/p&gt;
@@ -35,10 +35,10 @@ $ pip install -E myVirtualEnv mysql-python
     
     <item>
       <title>Migrating greek table from mysql &lt; 4.1</title>
-      <link>/2006/06/migrate_mysql_4.1/</link>
+      <link>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</link>
       <pubDate>Sat, 17 Jun 2006 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2006/06/migrate_mysql_4.1/</guid>
+      <guid>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</guid>
       <description>&lt;p&gt;I do not remember how the tables were transferred from the old DB to the new (more likely through a mysqldump).&lt;/p&gt;
 
 &lt;p&gt;The end effect was that the tables in the 4.1 MySql Db had a collation of latin1_swedish_ci.&lt;/p&gt;

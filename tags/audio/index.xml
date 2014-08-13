@@ -3,7 +3,7 @@
   <channel>
       <title>Audio on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>/tags/audio/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/audio/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Recording Streaming Audio</title>
-      <link>/2011/04/recording_streaming_audio/</link>
+      <link>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</link>
       <pubDate>Mon, 25 Apr 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2011/04/recording_streaming_audio/</guid>
+      <guid>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</guid>
       <description>
 
 &lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;

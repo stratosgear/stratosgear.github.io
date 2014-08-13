@@ -3,7 +3,7 @@
   <channel>
       <title>Books on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>/book/index.xml</link>
+    <link>http://stratos.gerakakis.net/book/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Left Hand Of Darkness</title>
-      <link>/book/left_hand_of_darkness/</link>
+      <link>http://stratos.gerakakis.net/book/left_hand_of_darkness/</link>
       <pubDate>Sun, 10 Aug 2014 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/left_hand_of_darkness/</guid>
+      <guid>http://stratos.gerakakis.net/book/left_hand_of_darkness/</guid>
       <description>&lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34;  /&gt;
@@ -43,10 +43,10 @@
     
     <item>
       <title>Ringworld</title>
-      <link>/book/ringworld/</link>
+      <link>http://stratos.gerakakis.net/book/ringworld/</link>
       <pubDate>Tue, 01 Nov 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/ringworld/</guid>
+      <guid>http://stratos.gerakakis.net/book/ringworld/</guid>
       <description>&lt;!--- 0575077026 --&gt;
 
 &lt;figure &gt;
@@ -71,10 +71,10 @@
     
     <item>
       <title>Time Enough for Love</title>
-      <link>/book/time_enough_for_love/</link>
+      <link>http://stratos.gerakakis.net/book/time_enough_for_love/</link>
       <pubDate>Fri, 14 Oct 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/time_enough_for_love/</guid>
+      <guid>http://stratos.gerakakis.net/book/time_enough_for_love/</guid>
       <description>&lt;!--- 0441810764 --&gt;
 
 &lt;figure &gt;
@@ -107,10 +107,10 @@
     
     <item>
       <title>Dune</title>
-      <link>/book/dune/</link>
+      <link>http://stratos.gerakakis.net/book/dune/</link>
       <pubDate>Thu, 06 Jan 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/dune/</guid>
+      <guid>http://stratos.gerakakis.net/book/dune/</guid>
       <description>&lt;!--- 0441013597 --&gt;
 
 &lt;figure &gt;
@@ -137,10 +137,10 @@
     
     <item>
       <title>The Forever War</title>
-      <link>/book/the_forever_war/</link>
+      <link>http://stratos.gerakakis.net/book/the_forever_war/</link>
       <pubDate>Thu, 04 Nov 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/the_forever_war/</guid>
+      <guid>http://stratos.gerakakis.net/book/the_forever_war/</guid>
       <description>&lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/c/cd/TheForeverWar%281stEd%29.jpg&#34;  /&gt;
@@ -167,10 +167,10 @@
     
     <item>
       <title>The Demon Princes</title>
-      <link>/book/the_demon_princes/</link>
+      <link>http://stratos.gerakakis.net/book/the_demon_princes/</link>
       <pubDate>Tue, 05 Oct 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/the_demon_princes/</guid>
+      <guid>http://stratos.gerakakis.net/book/the_demon_princes/</guid>
       <description>
 
 &lt;!--- 0312853025 --&gt;

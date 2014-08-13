@@ -3,7 +3,7 @@
   <channel>
       <title>Django on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>/tags/django/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/django/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Mysql Bindings in Django</title>
-      <link>/2011/12/mysql_bindings_in_django/</link>
+      <link>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</link>
       <pubDate>Sun, 25 Dec 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2011/12/mysql_bindings_in_django/</guid>
+      <guid>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</guid>
       <description>&lt;p&gt;In order to correctly install mysql bindings in a Django virtualenv you need:&lt;/p&gt;
 
 &lt;p&gt;First install some Ubuntu dependencies::&lt;/p&gt;

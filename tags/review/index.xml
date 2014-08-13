@@ -3,7 +3,7 @@
   <channel>
       <title>Review on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>/tags/review/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/review/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Left Hand Of Darkness</title>
-      <link>/book/left_hand_of_darkness/</link>
+      <link>http://stratos.gerakakis.net/book/left_hand_of_darkness/</link>
       <pubDate>Sun, 10 Aug 2014 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/left_hand_of_darkness/</guid>
+      <guid>http://stratos.gerakakis.net/book/left_hand_of_darkness/</guid>
       <description>&lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34;  /&gt;
@@ -43,10 +43,10 @@
     
     <item>
       <title>Dune</title>
-      <link>/book/dune/</link>
+      <link>http://stratos.gerakakis.net/book/dune/</link>
       <pubDate>Thu, 06 Jan 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/dune/</guid>
+      <guid>http://stratos.gerakakis.net/book/dune/</guid>
       <description>&lt;!--- 0441013597 --&gt;
 
 &lt;figure &gt;
@@ -73,10 +73,10 @@
     
     <item>
       <title>The Forever War</title>
-      <link>/book/the_forever_war/</link>
+      <link>http://stratos.gerakakis.net/book/the_forever_war/</link>
       <pubDate>Thu, 04 Nov 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/the_forever_war/</guid>
+      <guid>http://stratos.gerakakis.net/book/the_forever_war/</guid>
       <description>&lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/c/cd/TheForeverWar%281stEd%29.jpg&#34;  /&gt;
@@ -103,10 +103,10 @@
     
     <item>
       <title>The Demon Princes</title>
-      <link>/book/the_demon_princes/</link>
+      <link>http://stratos.gerakakis.net/book/the_demon_princes/</link>
       <pubDate>Tue, 05 Oct 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/book/the_demon_princes/</guid>
+      <guid>http://stratos.gerakakis.net/book/the_demon_princes/</guid>
       <description>
 
 &lt;!--- 0312853025 --&gt;

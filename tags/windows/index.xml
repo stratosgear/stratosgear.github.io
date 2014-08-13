@@ -3,7 +3,7 @@
   <channel>
       <title>Windows on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>/tags/windows/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/windows/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Change codepage on Windows console</title>
-      <link>/2010/03/change_codepage_on_windows_console/</link>
+      <link>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</link>
       <pubDate>Tue, 02 Mar 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>/2010/03/change_codepage_on_windows_console/</guid>
+      <guid>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</guid>
       <description>&lt;p&gt;You will find this essential when administrating ORACLE databases from the command line and the locale of the database is set to Greek. I prefer to read the console output in Greek rather in gibberish::&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;chcp 1253
