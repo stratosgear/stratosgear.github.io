@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Audio on Stratos Gerakakis </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>/tags/audio/index.xml</link>
+    <language>en-us</language>
+    <author>Stratos Gerakakis</author>
+    
+    <updated>Mon, 25 Apr 2011 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Recording Streaming Audio</title>
+      <link>/2011/04/recording_streaming_audio/</link>
+      <pubDate>Mon, 25 Apr 2011 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2011/04/recording_streaming_audio/</guid>
+      <description>
+
+&lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Recording&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://streamripper.sourceforge.net&#34;&gt;streamripper&lt;/a&gt;: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::&lt;/p&gt;
+
+&lt;p&gt;$ streamripper URL -d /home/stratos/outRec -l 7800 -d /dir/to/save -t &amp;ndash;xs-none&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-l 7800: The duration of the recording (in seconds)&lt;/li&gt;
+&lt;li&gt;-d /dir/to/save: Directory where to save the stream.&lt;/li&gt;
+&lt;li&gt;-t: Do not overwrite files in recording folder.&lt;/li&gt;
+&lt;li&gt;&amp;ndash;xs-none: Do not try to find silent parts in the recording&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course adding to cron is quite easy::&lt;/p&gt;
+
+&lt;p&gt;$ crontab -e
+  0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Splitting&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://audacious-media-player.org&#34;&gt;audacious&lt;/a&gt;: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mp3splt.sourceforge.net/mp3splt_page/home.php&#34;&gt;mp3spl&lt;/a&gt;: Using the Start and End Times from above, use them to split the recording. Don&amp;rsquo;t bother with the &lt;code&gt;mp3splt-gtk&lt;/code&gt; gui app::&lt;/p&gt;
+
+&lt;p&gt;$ mp3splt recording.mp3 65.36 124.33 -a -o finalRecording&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;65.36: The start time from the original recording that the split will start&lt;/li&gt;
+&lt;li&gt;124.33: The end time from the original recording that the split will end.&lt;/li&gt;
+&lt;li&gt;-a: This option will slightly adjust the start and end time to fall on a silent period.&lt;/li&gt;
+&lt;li&gt;-o finalRecording: The final splitted file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Tagging&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://easytag.sourceforge.net&#34;&gt;easyTag&lt;/a&gt;: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!&lt;/p&gt;
+
+&lt;p&gt;Happy recordings!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

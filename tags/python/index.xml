@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Python on Stratos Gerakakis </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>/tags/python/index.xml</link>
+    <language>en-us</language>
+    <author>Stratos Gerakakis</author>
+    
+    <updated>Sun, 25 Dec 2011 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Mysql Bindings in Django</title>
+      <link>/2011/12/mysql_bindings_in_django/</link>
+      <pubDate>Sun, 25 Dec 2011 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2011/12/mysql_bindings_in_django/</guid>
+      <description>&lt;p&gt;In order to correctly install mysql bindings in a Django virtualenv you need:&lt;/p&gt;
+
+&lt;p&gt;First install some Ubuntu dependencies::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo aptitude install build-essential python-mysqldb libmysqlclient-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then create the virtual env and install the python packages::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ virtualenv --no-site-packages --distribute myVirtualEnv
+$ pip install -E myVirtualEnv Django
+$ pip install -E myVirtualEnv mysql-python
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I was missing the &lt;strong&gt;libmysqlclient-dev&lt;/strong&gt; package and I was getting a &lt;strong&gt;EnvironmentError: mysql_config not found&lt;/strong&gt; when running the &lt;strong&gt;pip install mysql-python&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

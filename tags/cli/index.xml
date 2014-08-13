@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Cli on Stratos Gerakakis </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>/tags/cli/index.xml</link>
+    <language>en-us</language>
+    <author>Stratos Gerakakis</author>
+    
+    <updated>Mon, 25 Apr 2011 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Recording Streaming Audio</title>
+      <link>/2011/04/recording_streaming_audio/</link>
+      <pubDate>Mon, 25 Apr 2011 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2011/04/recording_streaming_audio/</guid>
+      <description>
+
+&lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_0&#34;&gt;Recording&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://streamripper.sourceforge.net&#34;&gt;streamripper&lt;/a&gt;: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::&lt;/p&gt;
+
+&lt;p&gt;$ streamripper URL -d /home/stratos/outRec -l 7800 -d /dir/to/save -t &amp;ndash;xs-none&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-l 7800: The duration of the recording (in seconds)&lt;/li&gt;
+&lt;li&gt;-d /dir/to/save: Directory where to save the stream.&lt;/li&gt;
+&lt;li&gt;-t: Do not overwrite files in recording folder.&lt;/li&gt;
+&lt;li&gt;&amp;ndash;xs-none: Do not try to find silent parts in the recording&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Of course adding to cron is quite easy::&lt;/p&gt;
+
+&lt;p&gt;$ crontab -e
+  0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.&lt;/p&gt;
+
+&lt;h2 id=&#34;toc_1&#34;&gt;Splitting&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://audacious-media-player.org&#34;&gt;audacious&lt;/a&gt;: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mp3splt.sourceforge.net/mp3splt_page/home.php&#34;&gt;mp3spl&lt;/a&gt;: Using the Start and End Times from above, use them to split the recording. Don&amp;rsquo;t bother with the &lt;code&gt;mp3splt-gtk&lt;/code&gt; gui app::&lt;/p&gt;
+
+&lt;p&gt;$ mp3splt recording.mp3 65.36 124.33 -a -o finalRecording&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;65.36: The start time from the original recording that the split will start&lt;/li&gt;
+&lt;li&gt;124.33: The end time from the original recording that the split will end.&lt;/li&gt;
+&lt;li&gt;-a: This option will slightly adjust the start and end time to fall on a silent period.&lt;/li&gt;
+&lt;li&gt;-o finalRecording: The final splitted file.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;toc_2&#34;&gt;Tagging&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://easytag.sourceforge.net&#34;&gt;easyTag&lt;/a&gt;: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!&lt;/p&gt;
+
+&lt;p&gt;Happy recordings!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Convert an A4 sized .pdf file to A5 size</title>
+      <link>/2011/01/convert_an_a4_page_to_a5/</link>
+      <pubDate>Wed, 05 Jan 2011 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2011/01/convert_an_a4_page_to_a5/</guid>
+      <description>&lt;p&gt;I was working on a LyX document based on the Tufte layout and unfortunately the page layout was available at A4 page sizes only (ok, US letter, too, but that doesn&amp;rsquo;t count :)&lt;/p&gt;
+
+&lt;p&gt;I could try and learn Latex and create my own page size but the task looked monumental. I am sure the solution might be easy enough, but I just couldn&amp;rsquo;t do it myself. Googling for A5 sized tufte layouts didn&amp;rsquo;t help either.&lt;/p&gt;
+
+&lt;p&gt;So to the command line it is.&lt;/p&gt;
+
+&lt;p&gt;From LyX export you final document to postscript format, let&amp;rsquo;s say myBook.ps.&lt;/p&gt;
+
+&lt;p&gt;Then:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  psresize -Pa4 -pa5 myBook.ps myBook.A5.ps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will convert the original .ps to another sized at A5. Unfortunately it will need further tweaking.&lt;/p&gt;
+
+&lt;p&gt;Open the myBook.A5.ps postscript file and delete the &lt;code&gt;% %DocumentMedia&lt;/code&gt; line (if one exists).&lt;/p&gt;
+
+&lt;p&gt;Also change the existing &lt;code&gt;% %BoundingBox:&lt;/code&gt; line to:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% % BoundingBox: 0 0 421 595
+% % DocumentPaperSizes: a5
+% % BeginPaperSize: a5
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; On a couple of documents I could not locate the &lt;code&gt;% %BoundingBox:&lt;/code&gt; line and the structure of the .ps file was a little weird. As a workaround try to edit the:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% % BeginPaperSize: a5
+/setpagedevice where
+{ pop &amp;lt;&amp;lt; /PageSize [420 595] &amp;gt;&amp;gt; setpagedevice }
+{ /a5 where { pop a5 } if }
+ifelse
+% % EndPaperSize
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;section. In it&amp;rsquo;s original format it will contain A4 references and the dimensions would be [595 842].&lt;/p&gt;
+
+&lt;p&gt;Finally create your PDF file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gs -dSAFER -dNOPAUSE -dBATCH -sDEVICE=pdfwrite \
+-sPAPERSIZE=a5 -dPDFSETTINGS=/printer \
+-dCompatibilityLevel=1.4 -dMaxSubsetPct=100 \
+-dSubsetFonts=true -dEmbedAllFonts=true \
+-sOutputFile=myBook.pdf myBook.A5.ps
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Open myBook.pdf and marvel at your handiwork&amp;hellip; :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Passwordless ssh connection with another server</title>
+      <link>/2008/03/passwordless_ssh_connection_with_another_server/</link>
+      <pubDate>Fri, 21 Mar 2008 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2008/03/passwordless_ssh_connection_with_another_server/</guid>
+      <description>&lt;p&gt;First, create the key on the local machine (without a passphrase) ::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user/.ssh/id_rsa): 
+Created directory &#39;/home/user/.ssh&#39;.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/user/.ssh/id_rsa.
+Your public key has been saved in /home/user/.ssh/id_rsa.pub.
+The key fingerprint is:
+XX:XX:XX:XX:...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then create a directory on the remote machine::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh otherUser@remote mkdir -p .ssh
+otherUser@remote&#39;s password: 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally append new key to remote .ssh/authorized_keys file::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; cat .ssh/id_rsa.pub | ssh otherUser@remote &#39;tee -a .ssh/authorized_keys&#39;
+otherUser@remote&#39;s password:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: In place of the last command you could have also used::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; cat .ssh/id_rsa.pub | ssh otherUser@remote &#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&#39;
+otherUser@remote&#39;s password:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;but in the case your public key file does not contain a newline character at the end of the file (which probably it does not) the final concatenation on the &lt;code&gt;authorized_keys&lt;/code&gt; will end up with long text line without newlines between the keys, thus making the file invalid. Tee on the other hand prepends the concatenation with a newline, keeping &lt;code&gt;authorized keys&lt;/code&gt; happy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrating greek table from mysql &lt; 4.1</title>
+      <link>/2006/06/migrate_mysql_4.1/</link>
+      <pubDate>Sat, 17 Jun 2006 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2006/06/migrate_mysql_4.1/</guid>
+      <description>&lt;p&gt;I do not remember how the tables were transferred from the old DB to the new (more likely through a mysqldump).&lt;/p&gt;
+
+&lt;p&gt;The end effect was that the tables in the 4.1 MySql Db had a collation of latin1_swedish_ci.&lt;/p&gt;
+
+&lt;p&gt;After backing up the affected tables, do::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ALTER TABLE pfl_links_prot
+MODIFY category blob,
+MODIFY comments blob;
+
+ALTER TABLE pfl_links_prot
+MODIFY category varchar(20) character set greek,
+MODIFY comments text character set greek;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just make sure you return the column type at exactly what was before you made it a blob.&lt;/p&gt;
+
+&lt;p&gt;Now the columns should have a collation of greek_general_ci&lt;/p&gt;
+
+&lt;p&gt;Furthermore, in case the php scripts gives you trouble loading the new rows, try something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_client=greek&amp;quot;);
+$MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_connection=greek&amp;quot;);
+$MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_results=greek&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above example was run in some AdoDB Phakt scripts, but the gist of it is before any selects run the above sql commands.&lt;/p&gt;
+
+&lt;p&gt;Good luck&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

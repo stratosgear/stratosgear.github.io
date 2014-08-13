@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+
+  <title> RAID LVM2 setup  &middot; Stratos Gerakakis </title>
+
+  
+  <link rel="stylesheet" href="/stratos.gerakakis.net/css/poole.css">
+  <link rel="stylesheet" href="/stratos.gerakakis.net/css/syntax.css">
+  <link rel="stylesheet" href="/stratos.gerakakis.net/css/hyde.css">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Stratos Gerakakis" />
+
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+  <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ['Roboto']
+      }
+    });
+  </script>
+
+</head>
+<body class="theme-base-0d">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1 class="brand"><a href="/">Stratos Gerakakis</a></h1>
+      <p class="lead">
+       Quark, strangeness and charm... 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/post">Posts</a></li>
+      <li><a href="/book">Reading</a></li>
+      
+        <li><a href="/about">About </a></li>
+      
+    </ul>
+      <a href="http://gr.linkedin.com/in/stratosgear" title="LinkedIn"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
+      <a href="https://twitter.com/stratosgear" title="Twitter"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+      <a href="https://github.com/stratosgear" title="Github"><i class="fa fa-github"></i></a>&nbsp;&nbsp;
+      <a href="https://bitbucket.org/stratosgear" title="Bitbucket"><i class="fa fa-bitbucket"></i></a>&nbsp;&nbsp;
+      <a href="https://www.google.com/&#43;StratosGerakakis" title="Google+"><i class="fa fa-google-plus"></i></a>&nbsp;&nbsp;
+      <a href="/index.xml" title="Subscribe to RSS feed"><i class="fa fa-rss"></i></a>
+
+    <p class="footnote">powered by <a href="http://hugo.spf13.com">Hugo</a> <br/>
+    <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">stratos.gerakakis.net</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Stratos Gerakakis</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></p>
+    
+  </div>
+</div>
+
+
+<div class="content container">
+<div class="post">
+  <h1 class="post-title">RAID LVM2 setup
+  <span class="post-date">posted on Wednesday, Oct 20, 2010</span></h1>
+  <p>Tagged as: 
+    
+    	<a class="tag" href="/tags/ubuntu">ubuntu</a>&nbsp;
+    
+    	<a class="tag" href="/tags/raid">raid</a>&nbsp;
+    
+    	<a class="tag" href="/tags/lvm">lvm</a>&nbsp;
+    
+  </p>
+    
+
+      
+
+<p>I&rsquo;ve been using a software created RAID in Ubuntu for a couple of years now, and I am very happy with it. The system has gone through many iterations of system updates (and even some complete OS reinstalls) and it keeps working fine.</p>
+
+<p>Recently, I was not happy with the way I had partitioned the array and I wanted to re-arrange it, so I thought it would be a nice idea to document the process I went through. At the same I took the opportunity to also document the initial array creation (in case I&rsquo;ll have to redo it again)</p>
+
+<h2 id="toc_0">RAID Setup</h2>
+
+<h3 id="toc_1">Creating the RAID sandbox</h3>
+
+<p class="warning" markdown="1">
+<b>Caution:</b> Do not play recklessly with your disk partitions. You can very easily mistype something, or run a command with the wrong parameters and lose your data. Instead of blindingly follow what I propose here, create a safe sandbox environment to familiarize yourself with the RAID setup.  Then when you are comfortable setting everything up, do the same thing with your real disks.
+</p>
+
+<p>The sandbox will consist of some loopback files that will simulate disk partitions. We will use these &ldquo;fake&rdquo; partitions to create our array. That way there will be no harm on your actual disks.</p>
+
+<p>Let&rsquo;s imitate the creation of the RAID5 partition. First we will create three loopback files of 100MB each:</p>
+
+<pre><code>stratos@yoda:/tmp$ cd ~
+
+stratos@yoda:~$ cd sandbox/
+
+stratos@yoda:~/sandbox$ dd if=/dev/zero of=raid1 bs=10240 count=10240
+10240+0 records in
+10240+0 records out
+104857600 bytes (105 MB) copied, 0.315455 s, 332 MB/s
+
+stratos@yoda:~/sandbox$ cp raid1 raid2
+
+stratos@yoda:~/sandbox$ cp raid1 raid3
+
+stratos@yoda:~/sandbox$ ls -al
+total 307216
+drwxr-xr-x  2 stratos stratos      4096 2010-10-01 23:56 .
+drwxr-xr-x 11 stratos stratos      4096 2010-10-01 23:55 ..
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid1
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid2
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid3
+</code></pre>
+
+<p>With the loopback files created we can mount them as partitions:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo losetup /dev/loop1 raid1
+stratos@yoda:~/sandbox$ sudo losetup /dev/loop2 raid2
+stratos@yoda:~/sandbox$ sudo losetup /dev/loop3 raid3
+</code></pre>
+
+<h3 id="toc_2">Setup of RAID arrays</h3>
+
+<p>Now we have created three partitions /dev/loop1, /dev/loop2 and /dev/loop3 that will imitate some actual /dev/sdXX, /dev/sdXX and /dev/sdXX partitions.</p>
+
+<p>Now, let&rsquo;s combined them to create our RAID5 array:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --create --verbose /dev/md3 -l5 -n3 /dev/loop1 /dev/loop2 /dev/loop3
+mdadm: layout defaults to left-symmetric
+mdadm: chunk size defaults to 64K
+mdadm: size set to 102336K
+mdadm: array /dev/md3 started.
+</code></pre>
+
+<h2 id="toc_3">LVM2 Setup</h2>
+
+<p>At this point we could format the /dev/md3 partition with some filesystem and start using it. But that&rsquo;s the old way of doing it. What we want to do is run LVM2 on top of the RAID5 partition so we can better utilize the space provided by the /dev/md3 partition, allowing us to dynamically create, resize and remove volumes in the space provided.</p>
+
+<h3 id="toc_4">Create the LVM2 partitions</h3>
+
+<p>In order to use LVM2 we first have to create a LVM2 Physical Volume:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo pvcreate /dev/md3
+  Physical volume &quot;/dev/md3&quot; successfully created
+
+stratos@yoda:~/sandbox$ sudo pvdisplay
+  &quot;/dev/md3&quot; is a new physical volume of &quot;199.88 MB&quot;
+  --- NEW Physical volume ---
+  PV Name               /dev/md3
+  VG Name
+  PV Size               199.88 MB
+  Allocatable           NO
+  PE Size (KByte)       0
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               a00wd1-tPYt-zeuf-dybg-WbOX-3KDb-JYWlU6
+</code></pre>
+
+<p>So, we see here that the three 100MB loopback files have been combined to a 200MB RAID5 LVM2 Physical Volume (3 disks - 1 parity = 2 disks * 100 MB = 200MB usable space)</p>
+
+<p>Next we will create a LVM2 Volume Group:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo vgcreate lvm-group /dev/md3
+  Volume group &quot;lvm-group&quot; successfully created
+
+stratos@yoda:~/sandbox$ sudo vgdisplay
+  --- Volume group ---
+  VG Name               lvm-group
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               196.00 MB
+  PE Size               4.00 MB
+  Total PE              49
+  Alloc PE / Size       0 / 0
+  Free  PE / Size       49 / 196.00 MB
+  VG UUID               D6c2DE-YS5R-MM8M-rle5-J117-uF11-KORUYB
+</code></pre>
+
+<p>From the vgdisplay command we should note the Free PE size value. PE stands for Physical Extends and it the minimum amount of storage unit that we can use to create our final LVM2 volumes. Basically we have 49 PE to allocate as we wish for LVM2 volumes. Each PE is 196MB / 49 = 4MB of size.</p>
+
+<p>Let&rsquo;s create a LVM2 Logical Volume with 20 PE (20 * 4MBs = 80MB):</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo lvcreate -l 20 lvm-group -n myVolume
+  Logical volume &quot;myVolume&quot; created
+
+stratos@yoda:~/sandbox$ sudo lvdisplay
+  --- Logical volume ---
+  LV Name                /dev/lvm-group/myVolume
+  VG Name                lvm-group
+  LV UUID                qtWGgg-NIgm-l3qz-YYLP-tCG2-FApD-oVd8il
+  LV Write Access        read/write
+  LV Status              available
+  # open                 0
+  LV Size                80.00 MB
+  Current LE             20
+  Segments               1
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently set to     256
+  Block device           252:5
+</code></pre>
+
+<p>Finally, the LVM2 volume has been created. Let&rsquo;s see what&rsquo;s left from the lvm-group Volume Group:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo vgdisplay
+  --- Volume group ---
+  VG Name               lvm-group
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  2
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                1
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               196.00 MB
+  PE Size               4.00 MB
+  Total PE              49
+  Alloc PE / Size       20 / 80.00 MB
+  Free  PE / Size       29 / 116.00 MB
+  VG UUID               D6c2DE-YS5R-MM8M-rle5-J117-uF11-KORUYB
+</code></pre>
+
+<p>OK. The allocated PE are 20 and we have another 29 unallocated.</p>
+
+<h3 id="toc_5">Create the mountable volume</h3>
+
+<p>The newly created LVM2 volume is unformatted:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mkfs.ext4 /dev/lvm-group/myVolume
+mke2fs 1.41.9 (22-Aug-2009)
+Filesystem label=
+OS type: Linux
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+20480 inodes, 81920 blocks
+4096 blocks (5.00%) reserved for the super user
+First data block=1
+Maximum filesystem blocks=67371008
+10 block groups
+8192 blocks per group, 8192 fragments per group
+2048 inodes per group
+Superblock backups stored on blocks:
+        8193, 24577, 40961, 57345, 73729
+
+Writing inode tables: done
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 21 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+</code></pre>
+
+<p>Now let&rsquo;s mount it:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ mkdir myVolume
+
+stratos@yoda:~/sandbox$ sudo mount /dev/lvm-group/myVolume myVolume
+
+stratos@yoda:~/sandbox$ ls -al
+total 307217
+drwxr-xr-x  3 stratos stratos      4096 2010-10-02 00:31 .
+drwxr-xr-x 10 stratos stratos      4096 2010-10-02 00:06 ..
+drwxr-xr-x  3 root    root         1024 2010-10-02 00:30 myVolume
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid1
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid2
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid3
+
+stratos@yoda:~/sandbox$ cd myVolume/
+
+stratos@yoda:~/sandbox/myVolume$ ls -al
+total 17
+drwxr-xr-x 3 root    root     1024 2010-10-02 00:30 .
+drwxr-xr-x 3 stratos stratos  4096 2010-10-02 00:31 ..
+drwx------ 2 root    root    12288 2010-10-02 00:30 lost+found
+</code></pre>
+
+<p>So, now we finally have a 80MB volume that is sitting atop a RAID5 partition.</p>
+
+<p>Let&rsquo;s put some files in the this volume so we can test if the tests we will run later on will make us lose our data:</p>
+
+<pre><code>stratos@yoda:~/sandbox/myVolume$ sudo sh -c &quot;echo 'Hello LVM2 logical volume' &gt; test.txt&quot;
+
+stratos@yoda:~/sandbox/myVolume$ cat test.txt
+Hello LVM2 logical volume
+</code></pre>
+
+<p>As long as the <strong>test.txt</strong> file is there through all our following tests, then our data is safe.</p>
+
+<h2 id="toc_6">LVM2 Manipulation</h2>
+
+<p>Let&rsquo;s play with the 49 available PE given to us from the lvm-group Volume Group.</p>
+
+<h3 id="toc_7">Add more volumes</h3>
+
+<p>Create another LVM2 Logical volume:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ &lt;b&gt;sudo lvcreate -l 10 lvm-group -n myVolume2&lt;/b&gt;
+  Logical volume &quot;myVolume2&quot; created
+
+stratos@yoda:~/sandbox$ sudo mkfs.ext4 /dev/lvm-group/myVolume2
+mke2fs 1.41.9 (22-Aug-2009)
+Filesystem label=
+OS type: Linux
+Block size=1024 (log=0)
+Fragment size=1024 (log=0)
+10240 inodes, 40960 blocks
+2048 blocks (5.00%) reserved for the super user
+First data block=1
+Maximum filesystem blocks=41943040
+5 block groups
+8192 blocks per group, 8192 fragments per group
+2048 inodes per group
+Superblock backups stored on blocks:
+        8193, 24577
+
+Writing inode tables: done
+Creating journal (4096 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 21 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+
+stratos@yoda:~/sandbox$ mkdir myVolume2
+
+stratos@yoda:~/sandbox$ sudo mount /dev/lvm-group/myVolume2 myVolume2
+
+stratos@yoda:~/sandbox$ ls -al
+total 307218
+drwxr-xr-x  4 stratos stratos      4096 2010-10-02 11:39 .
+drwxr-xr-x 10 stratos stratos      4096 2010-10-02 00:06 ..
+drwxr-xr-x  3 root    root         1024 2010-10-02 00:42 myVolume
+drwxr-xr-x  3 root    root         1024 2010-10-02 11:39 myVolume2
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid1
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid2
+-rw-r--r--  1 stratos stratos 104857600 2010-10-01 23:56 raid3
+</code></pre>
+
+<p>Now we have another volume with 10 PE (40MB).</p>
+
+<h3 id="toc_8">Resize volumes</h3>
+
+<p>We have myVolume with 20 PE and myVolume2 with 10 PE. We should have 19 PE still unallocated:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo vgdisplay
+  --- Volume group ---
+  VG Name               lvm-group
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  3
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                2
+  Open LV               2
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               196.00 MB
+  PE Size               4.00 MB
+  Total PE              49
+  Alloc PE / Size       30 / 120.00 MB
+  Free  PE / Size       19 / 76.00 MB
+  VG UUID               D6c2DE-YS5R-MM8M-rle5-J117-uF11-KORUYB
+</code></pre>
+
+<p>Let&rsquo;s increase the size of myVolume by 10 PE:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo lvextend -l+10 /dev/lvm-group/myVolume
+  Extending logical volume myVolume to 120.00 MB
+  Logical volume myVolume successfully resized
+
+stratos@yoda:~/sandbox$ sudo umount myVolume
+
+stratos@yoda:~/sandbox$ sudo e2fsck -f /dev/lvm-group/myVolume
+e2fsck 1.41.9 (22-Aug-2009)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/lvm-group/myVolume: 12/20480 files (8.3% non-contiguous), 8240/81920 blocks
+
+stratos@yoda:~/sandbox$ sudo resize2fs /dev/lvm-group/myVolume
+resize2fs 1.41.9 (22-Aug-2009)
+Resizing the filesystem on /dev/lvm-group/myVolume to 122880 (1k) blocks.
+The filesystem on /dev/lvm-group/myVolume is now 122880 blocks long.
+</code></pre>
+
+<p>Let&rsquo;s check if we still have our files:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mount /dev/lvm-group/myVolume myVolume
+
+stratos@yoda:~/sandbox$ cd myVolume
+
+\stratos@yoda:~/sandbox/myVolume$ ls -al
+total 18
+drwxr-xr-x 3 root    root     1024 2010-10-02 00:42 .
+drwxr-xr-x 4 stratos stratos  4096 2010-10-02 11:39 ..
+drwx------ 2 root    root    12288 2010-10-02 00:30 lost+found
+-rw-r--r-- 1 root    root       26 2010-10-02 00:42 test.txt
+
+stratos@yoda:~/sandbox/myVolume$ cat test.txt
+Hello LVM2 logical volume
+</code></pre>
+
+<p>So far so good.</p>
+
+<h3 id="toc_9">Remove volumes</h3>
+
+<p>We have another volume, myVolume2 that we created for fun for 10 PE (40 MB). Let&rsquo;s remove it and reclaim the space:</p>
+
+<pre><code>stratos@yoda:~/sandbox/myVolume$ cd ..
+
+stratos@yoda:~/sandbox$ sudo umount myVolume2
+
+stratos@yoda:~/sandbox$ sudo lvremove /dev/lvm-group/myVolume2
+Do you really want to remove active logical volume &quot;myVolume2&quot;? [y/n]: y
+  Logical volume &quot;myVolume2&quot; successfully removed
+
+stratos@yoda:~/sandbox$ sudo vgdisplay
+  --- Volume group ---
+  VG Name               lvm-group
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  5
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                1
+  Open LV               1
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               196.00 MB
+  PE Size               4.00 MB
+  Total PE              49
+  Alloc PE / Size       30 / 120.00 MB
+  Free  PE / Size       19 / 76.00 MB
+  VG UUID               D6c2DE-YS5R-MM8M-rle5-J117-uF11-KORUYB
+</code></pre>
+
+<p>So, now we have 19 free PE. The allocated 30 are from myVolume (20 initial + 10 after the resize)</p>
+
+<h2 id="toc_10">RAID Manipulation</h2>
+
+<p>Playing with LVM2 is nice because you can manipulate and assign the available space you have any way you want. The actual unseen hero is the RAID5 volume that we have created because it provides a guarantee that even if one disk fails we will not lose our data. Let&rsquo;s play with the RAID disks now.</p>
+
+<h3 id="toc_11">Fail a RAID disk and recover</h3>
+
+<p>Hopefully you will never have to face a failed disk, but it is quite important to know what to do if a disk fails. For now, in our comfortable sandbox we will imitate a failed disk and we will check if we&rsquo;ll lose any data:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --fail /dev/md3 /dev/loop3
+mdadm: set /dev/loop3 faulty in /dev/md3
+
+stratos@yoda:~/sandbox$ sudo mdadm --detail /dev/md3
+/dev/md3:
+        Version : 00.90
+  Creation Time : Sat Oct  2 00:09:30 2010
+     Raid Level : raid5
+     Array Size : 204672 (199.91 MiB 209.58 MB)
+  Used Dev Size : 102336 (99.95 MiB 104.79 MB)
+   Raid Devices : 3
+  Total Devices : 3
+Preferred Minor : 3
+    Persistence : Superblock is persistent
+
+    Update Time : Sat Oct  2 23:48:23 2010
+          State : clean, degraded
+ Active Devices : 2
+Working Devices : 2
+ Failed Devices : 1
+  Spare Devices : 0
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+           UUID : 710c3b37:15563004:a1dba4fa:bb34958c (local to host yoda)
+         Events : 0.19
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       2       0        0        2      removed
+
+       3       7        3        -      faulty spare   /dev/loop3
+</code></pre>
+
+<p>Notice that the state is clean, degraded meaning that the files are OK but the state of the array is, well, degraded.</p>
+
+<p>Let&rsquo;s check the status of our files:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ cd myVolume
+
+stratos@yoda:~/sandbox/myVolume$ ls -al
+total 18
+drwxr-xr-x 3 root    root     1024 2010-10-02 00:42 .
+drwxr-xr-x 4 stratos stratos  4096 2010-10-02 11:39 ..
+drwx------ 2 root    root    12288 2010-10-02 00:30 lost+found
+-rw-r--r-- 1 root    root       26 2010-10-02 00:42 test.txt
+
+stratos@yoda:~/sandbox/myVolume$ cat test.txt
+Hello LVM2 logical volume
+</code></pre>
+
+<p>Yep, still here. Now, let&rsquo;s remove the failed disk (as if you are opening the computer case and removing the failed disk):</p>
+
+<pre><code>stratos@yoda:~/sandbox/myVolume$ sudo mdadm --remove /dev/md3 /dev/loop3
+mdadm: hot removed /dev/loop3
+
+stratos@yoda:~/sandbox/myVolume$ sudo losetup -d /dev/loop3
+
+stratos@yoda:~/sandbox/myVolume$ sudo rm raid3
+
+stratos@yoda:~/sandbox/myVolume$ sudo mdadm --detail /dev/md3
+/dev/md3:
+        Version : 00.90
+  Creation Time : Sat Oct  2 00:09:30 2010
+     Raid Level : raid5
+     Array Size : 204672 (199.91 MiB 209.58 MB)
+  Used Dev Size : 102336 (99.95 MiB 104.79 MB)
+   Raid Devices : 3
+  Total Devices : 2
+Preferred Minor : 3
+    Persistence : Superblock is persistent
+
+    Update Time : Sat Oct  2 23:53:58 2010
+          State : clean, degraded
+ Active Devices : 2
+Working Devices : 2
+ Failed Devices : 0
+  Spare Devices : 0
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+           UUID : 710c3b37:15563004:a1dba4fa:bb34958c (local to host yoda)
+         Events : 0.22
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       2       0        0        2      removed
+</code></pre>
+
+<p>Ok, the disk is removed. Now let&rsquo;s assume that you replace the failed hard drive, that you have recreated a similar partition as the one originally used and you are ready to fix the degraded RAID array:</p>
+
+<pre><code>stratos@yoda:~/sandbox/myVolume$ cd ..
+
+stratos@yoda:~/sandbox$ dd if=/dev/zero of=raid3 bs=10240 count=10240
+10240+0 records in
+10240+0 records out
+104857600 bytes (105 MB) copied, 0.430725 s, 243 MB/s
+
+stratos@yoda:~/sandbox$ sudo losetup /dev/loop3 raid3
+
+stratos@yoda:~/sandbox$ sudo mdadm --add /dev/md3 /dev/loop3
+mdadm: added /dev/loop3
+</code></pre>
+
+<p>Now, immediately after adding the disk the array will start reconstructing itself. It should look something like:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --detail /dev/md3
+/dev/md3:
+        Version : 00.90
+  Creation Time : Sat Oct  2 00:09:30 2010
+     Raid Level : raid5
+     Array Size : 204672 (199.91 MiB 209.58 MB)
+  Used Dev Size : 102336 (99.95 MiB 104.79 MB)
+   Raid Devices : 3
+  Total Devices : 3
+Preferred Minor : 3
+    Persistence : Superblock is persistent
+
+    Update Time : Sat Oct  2 23:58:58 2010
+          State : clean, degraded, recovering
+ Active Devices : 2
+Working Devices : 3
+ Failed Devices : 0
+  Spare Devices : 1
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+ Rebuild Status : 32% complete
+
+           UUID : 710c3b37:15563004:a1dba4fa:bb34958c (local to host yoda)
+         Events : 0.34
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       3       7        3        2      spare rebuilding   /dev/loop3
+</code></pre>
+
+<p>Notice how the state is clean, degraded, recovering and that the Rebuild Status process is at 32% percent. Depending on the size of your array the process might take from some minutes (I doubt it) up to some hours or days. You can always check the process with the above command. The array should be still usable and accesible even while it is getting reconstructed, but I really wouldn&rsquo;t like to push my luck, so I wouldn&rsquo;t suggest doing any work in the array until the reconstruction is done.</p>
+
+<p>In our case the reconstruction, for a tiny 120MB array, takes merely seconds and if we check the state again we see:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --detail /dev/md3
+/dev/md3:
+        Version : 00.90
+  Creation Time : Sat Oct  2 00:09:30 2010
+     Raid Level : raid5
+     Array Size : 204672 (199.91 MiB 209.58 MB)
+  Used Dev Size : 102336 (99.95 MiB 104.79 MB)
+   Raid Devices : 3
+  Total Devices : 3
+Preferred Minor : 3
+    Persistence : Superblock is persistent
+
+    Update Time : Sat Oct  2 23:59:02 2010
+          State : clean
+ Active Devices : 3
+Working Devices : 3
+ Failed Devices : 0
+  Spare Devices : 0
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+           UUID : 710c3b37:15563004:a1dba4fa:bb34958c (local to host yoda)
+         Events : 0.48
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       2       7        3        2      active sync   /dev/loop3
+</code></pre>
+
+<p>Nice and clean. Let&rsquo;s hope you never have to go through a procedure like this, EVER.</p>
+
+<h3 id="toc_12">Increase the RAID array size</h3>
+
+<p>&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&rdquo;</p>
+
+<p>Up until now we were playing with LVM2 volumes and the allocated space that was assigned to the LVM2 Physical Volume. But, what should we do if we want to create a Logical Volume larger than the 49 PE that the Volume Group contains? Well, not much unless we increase the number of PE.</p>
+
+<p>This can be done in two ways:</p>
+
+<ul>
+<li>Increase the number of disks in the RAID5 array or</li>
+<li>Increase the size of the disks already in the array.</li>
+</ul>
+
+<h3 id="toc_13">Add new disks to the RAID array</h3>
+
+<p>Adding a new disk in the array is easy (assuming you still have free SATA ports in your motherboard).</p>
+
+<p>Let&rsquo;s run an example:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ dd if=/dev/zero of=raid4 bs=10240 count=10240
+15360+0 records in
+15360+0 records out
+157286400 bytes (157 MB) copied, 0.675796 s, 233 MB/s
+
+stratos@yoda:~/sandbox$ sudo losetup /dev/loop4 loop4
+
+stratos@yoda:~/sandbox$ sudo mdadm --add /dev/md3 /dev/loop4
+mdadm: added /dev/loop4
+
+stratos@yoda:~/sandbox$ sudo mdadm --detail /dev/md3
+/dev/md3:
+        Version : 00.90
+  Creation Time : Sat Oct  2 00:09:30 2010
+     Raid Level : raid5
+     Array Size : 204672 (199.91 MiB 209.58 MB)
+  Used Dev Size : 102336 (99.95 MiB 104.79 MB)
+   Raid Devices : 3
+  Total Devices : 4
+Preferred Minor : 3
+    Persistence : Superblock is persistent
+
+    Update Time : Sun Oct  3 00:37:16 2010
+          State : clean
+ Active Devices : 3
+Working Devices : 4
+ Failed Devices : 0
+  Spare Devices : 1
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+           UUID : 710c3b37:15563004:a1dba4fa:bb34958c (local to host yoda)
+         Events : 0.49
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       2       7        3        2      active sync   /dev/loop3
+
+       3       7        4        -      spare   /dev/loop4
+</code></pre>
+
+<p>So we added the newly created disk to the array and mdadm considers the new disk a <strong>&ldquo;spare&rdquo;</strong> disk. A spare disk is considered a disk that is in standby mode ready to substitute a failed disk (automatically, I think; needs investigation). The spare disks capacity does not participate in the total capacity of the array, as it is in standby mode. Let&rsquo;s make it a part of the array:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --grow /dev/md3 --raid-devices=4
+mdadm: Need to backup 384K of critical section..
+mdadm: ... critical section passed.
+
+stratos@yoda:~/sandbox$ sudo mdadm --detail /dev/md3
+/dev/md3:
+        Version : 00.91
+  Creation Time : Sat Oct  2 00:09:30 2010
+     Raid Level : raid5
+     Array Size : 204672 (199.91 MiB 209.58 MB)
+  Used Dev Size : 102336 (99.95 MiB 104.79 MB)
+   Raid Devices : 4
+  Total Devices : 4
+Preferred Minor : 3
+    Persistence : Superblock is persistent
+
+    Update Time : Sun Oct  3 00:38:09 2010
+          State : clean, recovering
+ Active Devices : 4
+Working Devices : 4
+ Failed Devices : 0
+  Spare Devices : 0
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+ Reshape Status : 19% complete
+  Delta Devices : 1, (3-&gt;4)
+
+           UUID : 710c3b37:15563004:a1dba4fa:bb34958c (local to host yoda)
+         Events : 0.68
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       2       7        3        2      active sync   /dev/loop3
+       3       7        4        3      active sync   /dev/loop4
+</code></pre>
+
+<p>Immediately after the new disk is added to the array, mdadm starts reconstructing the array. Here we see a 19% complete status and the upgrade notification of 3-&gt;4 disks. Again, depending on your disks sizes this might take some time, and probably longer than adding a failed disk to the original disk array size because all the data will have to be re-written and spread across the new disk.</p>
+
+<p>The array should still be functional and up and running during the whole procedure. Once it&rsquo;s done we have to allocate the extra space to the LVM2 Physical Volume and resize the lvm-group LVM2 Volume Group.</p>
+
+<p>First let&rsquo;s see how much space the Physical Volume has:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo pvdisplay /dev/md3
+  --- Physical volume ---
+  PV Name               /dev/md3
+  VG Name               lvm-group
+  PV Size               199.88 MB / not usable 3.88 MB
+  Allocatable           yes
+  PE Size (KByte)       4096
+  Total PE              49
+  Free PE               19
+  Allocated PE          30
+  PV UUID               a00wd1-tPYt-zeuf-dybg-WbOX-3KDb-JYWlU6
+</code></pre>
+
+<p>So, although we have added a fourth disk in the RAID array the LVM2 Physical Volume is still at 200MB.</p>
+
+<p>Let&rsquo;s increase it:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo pvresize /dev/md3
+  Physical volume &quot;/dev/md3&quot; changed
+  1 physical volume(s) resized / 0 physical volume(s) not resized
+
+stratos@yoda:~/sandbox$ sudo pvdisplay /dev/md3
+  --- Physical volume ---
+  PV Name               /dev/md3
+  VG Name               lvm-group
+  PV Size               299.62 MB / not usable 3.62 MB
+  Allocatable           yes
+  PE Size (KByte)       4096
+  Total PE              74
+  Free PE               44
+  Allocated PE          30
+  PV UUID               a00wd1-tPYt-zeuf-dybg-WbOX-3KDb-JYWlU6
+
+stratos@yoda:~/sandbox$ sudo vgdisplay lvm-group
+  --- Volume group ---
+  VG Name               lvm-group
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  6
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                1
+  Open LV               1
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               296.00 MB
+  PE Size               4.00 MB
+  Total PE              74
+  Alloc PE / Size       30 / 120.00 MB
+  Free  PE / Size       44 / 176.00 MB
+  VG UUID               D6c2DE-YS5R-MM8M-rle5-J117-uF11-KORUYB
+</code></pre>
+
+<p>As you see the Physical Volume now is 300MB. A nice side-effect is that the lvm-group Volume Group was also automatically resized, because when we initially created we used all the available space of the Physical Volume, so it kept using all the available PE. So now we have a total of 74 PE to play with. If you want to increase the size of your Logical Volumes you can now easily do it (see the &lsquo;Resize Volumes&rsquo; above).</p>
+
+<p>But do we still have our data?:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ cd myVolume
+
+stratos@yoda:~/sandbox/myVolume$ cat test.txt
+Hello LVM2 logical volume
+</code></pre>
+
+<p>Yep, still here.</p>
+
+<h3 id="toc_14">Increase the size of the RAID disks</h3>
+
+<p>In reality (as in my personal case) you will end up increasing the initial RAID size because you want to substitute the original disks with larger ones. The prices keep dropping and the amount of SATA ports in a motherboard are finite. So, sooner or later you will need to replace the disks, with larger ones.</p>
+
+<p>Unfortunately, you cannot do the upgrade at your leisure. That is, you just can&rsquo;t drop a 1TB disk together with a couple of 640GB disks and expect to create a RAID5 array larger than the original (3-1) x 640GB = 1280GB RAID5 array. You will have to upgrade all the disks at the same time, if you want to expand your RAID5 array. You can always, upgrade just one disk, though, and use the extra space of the larger disk as another partition.</p>
+
+<p>So, for now, we have a 4 disk array with 100MB capacity each. Let&rsquo;s substitute each disk with a 150MB one (one at a time):</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --fail /dev/md3 /dev/loop1
+mdadm: set /dev/loop1 faulty in /dev/md3
+
+stratos@yoda:~/sandbox$ sudo mdadm --remove /dev/md3 /dev/loop1
+mdadm: hot removed /dev/loop1
+
+stratos@yoda:~/sandbox$ sudo losetup -d /dev/loop1
+
+stratos@yoda:~/sandbox$ rm raid1
+
+stratos@yoda:~/sandbox$ dd if=/dev/zero of=raid1 bs=10240 count=15360
+15360+0 records in
+15360+0 records out
+157286400 bytes (157 MB) copied, 0.498492 s, 316 MB/s
+
+stratos@yoda:~/sandbox$ sudo losetup /dev/loop1 raid1
+
+stratos@yoda:~/sandbox$ sudo mdadm /dev/md3 --add /dev/loop1
+mdadm: added /dev/loop1
+</code></pre>
+
+<p>What we did was to fail, remove and substitute one disk with another, bigger one. As always the procedure is not instantaneous and the &ldquo;adding&rdquo; of the larger disk into the array should take some time.</p>
+
+<p>When the array has finished restructuring, from the last add we did, lather-rinse-repeat for the remaining disks (loop2, loop3 and loop4 in our case). When you are done with all disks:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --detail /dev/md3
+/dev/md3:
+        Version : 00.90
+  Creation Time : Sun Oct  3 15:16:01 2010
+     Raid Level : raid5
+     Array Size : 307008 (299.86 MiB 314.38 MB)
+  Used Dev Size : 102336 (99.95 MiB 104.79 MB)
+   Raid Devices : 4
+  Total Devices : 4
+Preferred Minor : 3
+    Persistence : Superblock is persistent
+
+    Update Time : Sun Oct  3 15:18:28 2010
+          State : clean
+ Active Devices : 4
+Working Devices : 4
+ Failed Devices : 0
+  Spare Devices : 0
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+           UUID : ec2bf06b:20f11352:a1dba4fa:bb34958c (local to host yoda)
+         Events : 0.28
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       2       7        3        2      active sync   /dev/loop3
+       3       7        4        3      active sync   /dev/loop4
+</code></pre>
+
+<p>The array is still 300MB (4 - 1) * 100MB = 300 MB! What happens is that during the introduction of the larger disks into the already existing array, mdadm is using a partition as large as the existing partitions that already are part of the array. So basically although we are adding a 150MB disk, the array is using only 100MB, just as the already existing older 100MB disks.</p>
+
+<p>When we substitute all four disks, we can resize the array and use the remaining 50MB from each disk. Let&rsquo;s do it:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm /dev/md3 --grow --size=max
+
+stratos@yoda:~/sandbox$ sudo mdadm --detail /dev/md3
+/dev/md3:
+        Version : 00.90
+  Creation Time : Sun Oct  3 15:16:01 2010
+     Raid Level : raid5
+     Array Size : 460608 (449.89 MiB 471.66 MB)
+  Used Dev Size : 153536 (149.96 MiB 157.22 MB)
+   Raid Devices : 4
+  Total Devices : 4
+Preferred Minor : 3
+    Persistence : Superblock is persistent
+
+    Update Time : Sun Oct  3 15:59:13 2010
+          State : clean
+ Active Devices : 4
+Working Devices : 4
+ Failed Devices : 0
+  Spare Devices : 0
+
+         Layout : left-symmetric
+     Chunk Size : 64K
+
+           UUID : ec2bf06b:20f11352:a1dba4fa:bb34958c (local to host yoda)
+         Events : 0.137
+
+    Number   Major   Minor   RaidDevice State
+       0       7        1        0      active sync   /dev/loop1
+       1       7        2        1      active sync   /dev/loop2
+       2       7        3        2      active sync   /dev/loop3
+       3       7        4        3      active sync   /dev/loop4
+</code></pre>
+
+<p>Finally done. The array is now 450MB (4-1) * 150MB = 450 MB. But how about the Volume Groups we had? Let&rsquo;s check them:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo vgdisplay lvm-group
+  --- Volume group ---
+  VG Name               lvm-group
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  2
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                1
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               296.00 MB
+  PE Size               4.00 MB
+  Total PE              74
+  Alloc PE / Size       30 / 120.00 MB
+  Free  PE / Size       44 / 176.00 MB
+  VG UUID               0F0ahV-9wdw-piAN-RQGt-sA4E-ttR3-c0ClSd
+
+stratos@yoda:~/sandbox$ sudo pvresize /dev/md3
+  Physical volume &quot;/dev/md3&quot; changed
+  1 physical volume(s) resized / 0 physical volume(s) not resized
+
+stratos@yoda:~/sandbox$ sudo vgdisplay lvm-group
+  --- Volume group ---
+  VG Name               lvm-group
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  3
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                1
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               448.00 MB
+  PE Size               4.00 MB
+  Total PE              112
+  Alloc PE / Size       30 / 120.00 MB
+  Free  PE / Size       82 / 328.00 MB
+  VG UUID               0F0ahV-9wdw-piAN-RQGt-sA4E-ttR3-c0ClSd
+</code></pre>
+
+<p>As you see we went from 74 PE to 112 PE. Now we can go back to normal LVM2 volume manipulation to take advantage of the gained space.</p>
+
+<h3 id="toc_15">Recover RAID array</h3>
+
+<p>OK, but what happens when something happens and you lose your RAID array?</p>
+
+<p>Let&rsquo;s just say that you whole motherboard just fails and you have to take your disks and set the machine again. Or, when you re-install the OS and you want to remount your RAID array.</p>
+
+<p>The actual neccessary file, to identify and mount the RAID array lives in /etc/mdadm/mdadm.conf and it looks like this:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ cat /etc/mdadm/mdadm.conf 
+# mdadm.conf
+#
+# Please refer to mdadm.conf(5) for information about this file.
+#
+
+# by default, scan all partitions (/proc/partitions) for MD superblocks.
+# alternatively, specify devices to scan, using wildcards if desired.
+DEVICE partitions
+
+# auto-create devices with Debian standard permissions
+CREATE owner=root group=disk mode=0660 auto=yes
+
+# automatically tag new arrays as belonging to the local system
+HOMEHOST &lt;system&gt;
+
+# instruct the monitoring daemon where to send mail alerts
+MAILADDR root
+
+# definitions of existing MD arrays
+ARRAY /dev/md0 level=raid0 num-devices=3 UUID=1ecc61f7:ab95b8b0:b6150be0:b4ec82ed
+ARRAY /dev/md1 level=raid5 num-devices=3 UUID=0e065f5e:b0bc71b3:b6150be0:b4ec82ed
+
+# This file was auto-generated on Wed, 22 Sep 2010 13:21:48 +0300
+# by mkconf $Id$
+</code></pre>
+
+<p>Note the ARRAY definitions that tell mdadm what arrays you are currently using.</p>
+
+<p>On a newly created system this file will be probably missing and you will have to recreate it.</p>
+
+<p>If you already have an /etc/mdadm/mdadm.conf file in your system, but you are missing the ARRAY definitions you can force mdadm to create these definitions for you:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --examine --scan 
+
+ARRAY /dev/md0 level=raid0 num-devices=3 UUID=1ecc61f7:ab95b8b0:b6150be0:b4ec82ed
+ARRAY /dev/md1 level=raid5 num-devices=3 UUID=0e065f5e:b0bc71b3:b6150be0:b4ec82ed
+</code></pre>
+
+<p>All you have to do is append these lines at the end of the /etc/mdadm/mdadm.conf file.</p>
+
+<p>If you don&rsquo;t have an mdadm.conf file at all you can quickly produce one:</p>
+
+<pre><code>stratos@yoda:~/sandbox$ echo 'DEVICE partitions' &gt; mdadm.conf
+stratos@yoda:~/sandbox$ sudo mdadm --examine --scan &gt;&gt; mdadm.conf
+stratos@yoda:~/sandbox$ sudo cp mdadm.conf /etc/mdadm/mdadm.conf
+</code></pre>
+
+<p>Now, if you reboot you should have you array back. Well, done!</p>
+
+<h2 id="toc_16">RAID/LVM2 Summary</h2>
+
+<p>So to sum up all the Raid and LVM2 operations that we did:</p>
+
+<h3 id="toc_17">Create sandbox</h3>
+
+<pre><code>cd ~
+cd sandbox/
+dd if=/dev/zero of=raid1 bs=10240 count=10240
+cp raid1 raid2
+cp raid1 raid3
+sudo losetup /dev/loop1 raid1
+sudo losetup /dev/loop2 raid2
+sudo losetup /dev/loop3 raid3
+</code></pre>
+
+<h3 id="toc_18">Create RAID5 array</h3>
+
+<pre><code>sudo mdadm --create --verbose /dev/md3 -l5 -n3 /dev/loop1 /dev/loop2 /dev/loop3
+</code></pre>
+
+<h3 id="toc_19">Create LVM2 volumes</h3>
+
+<pre><code>sudo pvcreate /dev/md3
+sudo vgcreate lvm-group /dev/md3
+sudo lvcreate -l 20 lvm-group -n myVolume     # you can use any PE you want
+</code></pre>
+
+<h3 id="toc_20">Format / Mount the volume</h3>
+
+<pre><code>sudo mkfs.ext4 /dev/lvm-group/myVolume
+mkdir myVolume
+sudo mount /dev/lvm-group/myVolume myVolume
+</code></pre>
+
+<h3 id="toc_21">Extend an LVM2 Logical Volume</h3>
+
+<pre><code>sudo lvextend -l+10 /dev/lvm-group/myVolume   # add any PE you want
+sudo umount myVolume
+sudo e2fsck -f /dev/lvm-group/myVolume
+sudo resize2fs /dev/lvm-group/myVolume
+</code></pre>
+
+<h3 id="toc_22">Remove an LVM2 Logical Volume</h3>
+
+<pre><code>sudo lvremove /dev/lvm-group/myVolume2
+</code></pre>
+
+<h3 id="toc_23">Replace a failed RAID disk</h3>
+
+<pre><code>sudo mdadm --fail /dev/md3 /dev/loop3          # This is part of our simulation
+sudo mdadm --remove /dev/md3 /dev/loop3
+sudo losetup -d /dev/loop3
+rm raid3
+dd if=/dev/zero of=raid3 bs=10240 count=10240  # This creates a new fake disk
+sudo losetup /dev/loop3 raid3
+sudo mdadm /dev/md3 --add /dev/loop3           # Do this under normal circumstances
+</code></pre>
+
+<h3 id="toc_24">Add new disks to RAID5 array</h3>
+
+<pre><code>dd if=/dev/zero of=raid4 bs=10240 count=10240  # This is part of our simulation
+sudo losetup /dev/loop4 raid4
+sudo mdadm --grow /dev/md3 --raid-devices=4    # Do this under normal circumstances
+sudo pvresize /dev/md3
+</code></pre>
+
+<h3 id="toc_25">Increase size of RAID disks</h3>
+
+<pre><code>sudo mdadm --fail /dev/md3 /dev/loop1          # First remove old disk
+sudo mdadm --remove /dev/md3 /dev/loop1
+sudo losetup -d /dev/loop1                     # This is part of our simulation
+rm raid1
+dd if=/dev/zero of=raid1 bs=10240 count=15360  # This creates a new fake disk
+sudo losetup /dev/loop1 raid1
+sudo mdadm /dev/md3 --add /dev/loop1           # Do this under normal circumstances
+... Repeat for all disks...                    # Replace all disks
+sudo mdadm /dev/md3 --grow --size=max
+sudo pvresize /dev/md3
+</code></pre>
+
+<h3 id="toc_26">Recover lost RAID array</h3>
+
+<pre><code>sudo mdadm --examine --scan                   # append output to /etc/mdadm/mdadm.conf
+</code></pre>
+
+<p>And that&rsquo;s how it&rsquo;s done.</p>
+
+
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost") 
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'stratosgear';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the comments powered by <a href="http://disqus.com/?ref_noscript">Disqus.</a></noscript>
+</div>
+</div>
+
+  </body>
+</html>

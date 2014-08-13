@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Mysql on Stratos Gerakakis </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>/tags/mysql/index.xml</link>
+    <language>en-us</language>
+    <author>Stratos Gerakakis</author>
+    
+    <updated>Sun, 25 Dec 2011 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Mysql Bindings in Django</title>
+      <link>/2011/12/mysql_bindings_in_django/</link>
+      <pubDate>Sun, 25 Dec 2011 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2011/12/mysql_bindings_in_django/</guid>
+      <description>&lt;p&gt;In order to correctly install mysql bindings in a Django virtualenv you need:&lt;/p&gt;
+
+&lt;p&gt;First install some Ubuntu dependencies::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo aptitude install build-essential python-mysqldb libmysqlclient-dev
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then create the virtual env and install the python packages::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ virtualenv --no-site-packages --distribute myVirtualEnv
+$ pip install -E myVirtualEnv Django
+$ pip install -E myVirtualEnv mysql-python
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I was missing the &lt;strong&gt;libmysqlclient-dev&lt;/strong&gt; package and I was getting a &lt;strong&gt;EnvironmentError: mysql_config not found&lt;/strong&gt; when running the &lt;strong&gt;pip install mysql-python&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Migrating greek table from mysql &lt; 4.1</title>
+      <link>/2006/06/migrate_mysql_4.1/</link>
+      <pubDate>Sat, 17 Jun 2006 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2006/06/migrate_mysql_4.1/</guid>
+      <description>&lt;p&gt;I do not remember how the tables were transferred from the old DB to the new (more likely through a mysqldump).&lt;/p&gt;
+
+&lt;p&gt;The end effect was that the tables in the 4.1 MySql Db had a collation of latin1_swedish_ci.&lt;/p&gt;
+
+&lt;p&gt;After backing up the affected tables, do::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ALTER TABLE pfl_links_prot
+MODIFY category blob,
+MODIFY comments blob;
+
+ALTER TABLE pfl_links_prot
+MODIFY category varchar(20) character set greek,
+MODIFY comments text character set greek;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Just make sure you return the column type at exactly what was before you made it a blob.&lt;/p&gt;
+
+&lt;p&gt;Now the columns should have a collation of greek_general_ci&lt;/p&gt;
+
+&lt;p&gt;Furthermore, in case the php scripts gives you trouble loading the new rows, try something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_client=greek&amp;quot;);
+$MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_connection=greek&amp;quot;);
+$MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_results=greek&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above example was run in some AdoDB Phakt scripts, but the gist of it is before any selects run the above sql commands.&lt;/p&gt;
+
+&lt;p&gt;Good luck&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

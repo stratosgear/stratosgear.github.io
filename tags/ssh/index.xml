@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Ssh on Stratos Gerakakis </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>/tags/ssh/index.xml</link>
+    <language>en-us</language>
+    <author>Stratos Gerakakis</author>
+    
+    <updated>Fri, 21 Mar 2008 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Passwordless ssh connection with another server</title>
+      <link>/2008/03/passwordless_ssh_connection_with_another_server/</link>
+      <pubDate>Fri, 21 Mar 2008 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>/2008/03/passwordless_ssh_connection_with_another_server/</guid>
+      <description>&lt;p&gt;First, create the key on the local machine (without a passphrase) ::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/user/.ssh/id_rsa): 
+Created directory &#39;/home/user/.ssh&#39;.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/user/.ssh/id_rsa.
+Your public key has been saved in /home/user/.ssh/id_rsa.pub.
+The key fingerprint is:
+XX:XX:XX:XX:...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then create a directory on the remote machine::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh otherUser@remote mkdir -p .ssh
+otherUser@remote&#39;s password: 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Finally append new key to remote .ssh/authorized_keys file::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; cat .ssh/id_rsa.pub | ssh otherUser@remote &#39;tee -a .ssh/authorized_keys&#39;
+otherUser@remote&#39;s password:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: In place of the last command you could have also used::&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; cat .ssh/id_rsa.pub | ssh otherUser@remote &#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&#39;
+otherUser@remote&#39;s password:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;but in the case your public key file does not contain a newline character at the end of the file (which probably it does not) the final concatenation on the &lt;code&gt;authorized_keys&lt;/code&gt; will end up with long text line without newlines between the keys, thus making the file invalid. Tee on the other hand prepends the concatenation with a newline, keeping &lt;code&gt;authorized keys&lt;/code&gt; happy.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
