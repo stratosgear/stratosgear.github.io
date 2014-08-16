@@ -612,6 +612,35 @@ ifelse
     </item>
     
     <item>
+      <title>Installing Virtualbox on Ubuntu Server 10.04</title>
+      <link>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</link>
+      <pubDate>Fri, 22 Oct 2010 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</guid>
+      <description>
+
+&lt;p&gt;Wanna install Virtualbox on a headless Ubuntu server?&lt;/p&gt;
+
+&lt;p&gt;First do a:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo aptitude install libcurl3 libgl1-mesa-glx libqt4-network libqt4-opengl libxcursor1 libxinerama1 libxmu6 libsdl1.2debian
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then download the appropriate .deb for your architecture from &lt;a href=&#34;http://www.virtualbox.org/wiki/Linux_Downloads&#34;&gt;http://www.virtualbox.org/wiki/Linux_Downloads&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, install with:&lt;/p&gt;
+
+&lt;p&gt;sudo dpkg -i virtualbox-3.2_3.2.10-66523~Ubuntu~lucid_amd64.deb&lt;/p&gt;
+
+&lt;p&gt;(Ok, I installed virtualbox 3.2 on a 64 bit server, yours might vary)&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Extra credit&lt;/h3&gt;
+
+&lt;p&gt;If you want to make your life &lt;strong&gt;REAAALY&lt;/strong&gt; easy you should also install &lt;a href=&#34;http://code.google.com/p/phpvirtualbox&#34;&gt;phpvirtualbox&lt;/a&gt; on the host Ubuntu server and get a shiny web based GUI administration screen that looks almost exactly like the native GUI Virtualbox application.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>RAID LVM2 setup</title>
       <link>http://stratos.gerakakis.net/2010/10/raid_lvm2_setup/</link>
       <pubDate>Wed, 20 Oct 2010 00:00:00 UTC</pubDate>
@@ -1670,92 +1699,6 @@ sudo pvresize /dev/md3
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And that&amp;rsquo;s how it&amp;rsquo;s done.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The Demon Princes</title>
-      <link>http://stratos.gerakakis.net/book/the_demon_princes/</link>
-      <pubDate>Tue, 05 Oct 2010 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/book/the_demon_princes/</guid>
-      <description>
-
-&lt;!--- 0312853025 --&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Kirth Gersen carries in his pocket a slip of paper with a list of five names written on it. Theses are the names of the five Demon Princes who led the historic Mount Pleasant Massacre, which destroyed not only Kirth&amp;rsquo;s family but his entrire world as well. He roams the universe, searching the endless galaxies of space, hunting down the Demon Princes and exacting his revenge. Three princes will fall before Kirth&amp;rsquo;s work is done, and two more await their doom&amp;hellip;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;(from the book&amp;rsquo;s back cover)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;This is Volume One that includes the first three books of the series: The Star King, The Killing Machine and The Palace of Love.&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_0&#34;&gt;The Star King&lt;/h2&gt;
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Star_king.jpg/200px-Star_king.jpg&#34;  /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;The Star King&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-   
-
-&lt;p&gt;Gesrhen is against Attel Malagate. Attel is not human, but rather a type of species, later called Star Kings, that can quickly mutate (through not so many generations) and approximate the best qualities of similar species that surrounds them. When humans colonized their planet, Star Kings quickly became a species that rivaled even human themselves.&lt;/p&gt;
-
-&lt;p&gt;An interesting concept in the book (apart from the detective work that Gershen has to go through to locate Attel) is Smade&amp;rsquo;s Planet and Smade&amp;rsquo;s Tavern. Smade, apparently fed up with society, took his family and set up a tavern, appropriately named Smade&amp;rsquo;s Tavern, on a remote uninhabited planet. The only inhabitants of the planet is Smade and his family running the tavern. The planet is locate Beyond (beyond the limits of what is considered explored civilized galaxy) and the tavern is patroned with fugitives and outlaws looking to relax a little.&lt;/p&gt;
-
-&lt;p&gt;Smade runs a quite civil establishment and although his clientele is of doubtful morality, they must obey his rules or face his wrath.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Read more at the&lt;/em&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Star_King&#34;&gt;Wikipedia article.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_1&#34;&gt;The Killing Machine&lt;/h2&gt;
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/2/29/Killing_Machine_%28Jack_Vance%29_1st_edition.jpg/200px-Killing_Machine_%28Jack_Vance%29_1st_edition.jpg&#34;  /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;The Killing Machine&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-   
-
-&lt;p&gt;The Killing Machine contains &lt;strong&gt;THE BEST&lt;/strong&gt; villain name I have ever read: &lt;strong&gt;Kokkor Hekkus&lt;/strong&gt;. It sounds so mean, that I do not even have to read a description of the vile things Mr.Hekkus has performed in his life. The fact that he is a &amp;ldquo;hormagaunt&amp;rdquo;, extending his life by stealing children and kind of &amp;ldquo;distilling&amp;rdquo; them (it doesn&amp;rsquo;t even sound nice), in order to extend his lifespan, doesn&amp;rsquo;t make him any more likable, either.&lt;/p&gt;
-
-&lt;p&gt;The concept of the &amp;ldquo;Interchange&amp;rdquo; is the interesting fact of this book. Basically the Interchange, located in a secure planet, acts as an intermediary between kidnappers and ransomers. They safely keep the kidnapped victims and accept payments from their family that they forward to the kidnappers. Their motto is that everything is civilized and they offer the assurance and the much needed good faith that the whole procedure will be as smooth as possible with no surprises from either party. They take a cut of the ransom and try to be as civilized and humane to the kidnap victims. Since they guarantee such efficiency, it is to the best interest of everyone involved that they continue providing their services as is.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Read more at the&lt;/em&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Killing_Machine&#34;&gt;Wikipedia article.&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;toc_2&#34;&gt;The Palace of Love&lt;/h2&gt;
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Palace_of_love.jpg/200px-Palace_of_love.jpg&#34;  /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;The Palace of Love&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-
-&lt;p&gt;Gershen is after Viole Falush on this one.&lt;/p&gt;
-
-&lt;p&gt;With all due respect to Mr.Vance, this book hurt my head. Having to read through so much rumble from the mad poet Navarth (oh, he was quite mad, alright) was making me skip a page every so often just to get to the conclusion of it all. I had no interest at all on either Viole Falush, the plot as it was unfolding, or their dialogs, that were disjointed and led to no plausible or understandable conclusions.&lt;/p&gt;
-
-&lt;p&gt;My guess is, that even if you skip this book, in the Demon Princes pentalogy, you wont miss much.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Read more at the&lt;/em&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Palace_of_Love&#34;&gt;Wikipedia article.&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

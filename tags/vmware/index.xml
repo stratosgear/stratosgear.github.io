@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Vmware on Stratos Gerakakis </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://stratos.gerakakis.net/tags/vmware/index.xml</link>
+    <language>en-us</language>
+    <author>Stratos Gerakakis</author>
+    
+    <updated>Fri, 22 Oct 2010 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Installing Virtualbox on Ubuntu Server 10.04</title>
+      <link>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</link>
+      <pubDate>Fri, 22 Oct 2010 00:00:00 UTC</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</guid>
+      <description>
+
+&lt;p&gt;Wanna install Virtualbox on a headless Ubuntu server?&lt;/p&gt;
+
+&lt;p&gt;First do a:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo aptitude install libcurl3 libgl1-mesa-glx libqt4-network libqt4-opengl libxcursor1 libxinerama1 libxmu6 libsdl1.2debian
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then download the appropriate .deb for your architecture from &lt;a href=&#34;http://www.virtualbox.org/wiki/Linux_Downloads&#34;&gt;http://www.virtualbox.org/wiki/Linux_Downloads&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, install with:&lt;/p&gt;
+
+&lt;p&gt;sudo dpkg -i virtualbox-3.2_3.2.10-66523~Ubuntu~lucid_amd64.deb&lt;/p&gt;
+
+&lt;p&gt;(Ok, I installed virtualbox 3.2 on a 64 bit server, yours might vary)&lt;/p&gt;
+
+&lt;h3 id=&#34;toc_0&#34;&gt;Extra credit&lt;/h3&gt;
+
+&lt;p&gt;If you want to make your life &lt;strong&gt;REAAALY&lt;/strong&gt; easy you should also install &lt;a href=&#34;http://code.google.com/p/phpvirtualbox&#34;&gt;phpvirtualbox&lt;/a&gt; on the host Ubuntu server and get a shiny web based GUI administration screen that looks almost exactly like the native GUI Virtualbox application.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
