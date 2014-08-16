@@ -3,7 +3,7 @@
   <channel>
       <title>Posts on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/post/index.xml</link>
+    <link>http://stratos.gerakakis.net/post/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Mysql Bindings in Django</title>
-      <link>http://localhost:1313/2011/12/mysql_bindings_in_django/</link>
+      <link>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</link>
       <pubDate>Sun, 25 Dec 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2011/12/mysql_bindings_in_django/</guid>
+      <guid>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</guid>
       <description>&lt;p&gt;In order to correctly install mysql bindings in a Django virtualenv you need:&lt;/p&gt;
 
 &lt;p&gt;First install some Ubuntu dependencies::&lt;/p&gt;
@@ -35,10 +35,10 @@ $ pip install -E myVirtualEnv mysql-python
     
     <item>
       <title>Translating a PDF</title>
-      <link>http://localhost:1313/2011/12/translating_a_pdf/</link>
+      <link>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</link>
       <pubDate>Thu, 15 Dec 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2011/12/translating_a_pdf/</guid>
+      <guid>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</guid>
       <description>&lt;p&gt;Hey, if you pass the link of the online PDF document to the Google Translate service then Google will extract the text from the PDF and translate it in the language that you selected.  It doesn&amp;rsquo;t keep the &lt;strong&gt;exact same&lt;/strong&gt; page formatting but the PDF is now &lt;strong&gt;very&lt;/strong&gt; readable.  Much more readable than it was before&amp;hellip; :-)&lt;/p&gt;
 
 &lt;p&gt;I didn&amp;rsquo;t know that!&lt;/p&gt;
@@ -47,10 +47,10 @@ $ pip install -E myVirtualEnv mysql-python
     
     <item>
       <title>First overhead ISS pass</title>
-      <link>http://localhost:1313/2011/09/first_overhead_iss_pass/</link>
+      <link>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</link>
       <pubDate>Sat, 03 Sep 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2011/09/first_overhead_iss_pass/</guid>
+      <guid>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</guid>
       <description>&lt;figure &gt;
     
         &lt;img src=&#34;/images/iss.jpg&#34;  /&gt;
@@ -77,10 +77,10 @@ $ pip install -E myVirtualEnv mysql-python
     
     <item>
       <title>stratos?ear.com word play</title>
-      <link>http://localhost:1313/2011/06/stratos_ear_com/</link>
+      <link>http://stratos.gerakakis.net/2011/06/stratos_ear_com/</link>
       <pubDate>Sat, 04 Jun 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2011/06/stratos_ear_com/</guid>
+      <guid>http://stratos.gerakakis.net/2011/06/stratos_ear_com/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s funny how many of the following domain names are actually working (and how many of the letter combinations actually make sense):&lt;/p&gt;
 
 &lt;table&gt;
@@ -257,10 +257,10 @@ $ pip install -E myVirtualEnv mysql-python
     
     <item>
       <title>Cosmote more 4 us</title>
-      <link>http://localhost:1313/2011/05/cosmote_more_4_us/</link>
+      <link>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</link>
       <pubDate>Sat, 28 May 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2011/05/cosmote_more_4_us/</guid>
+      <guid>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</guid>
       <description>&lt;figure &gt;
     
         &lt;img src=&#34;/images/cosmote_more4us.jpg&#34;  /&gt;
@@ -335,10 +335,10 @@ $ pip install -E myVirtualEnv mysql-python
     
     <item>
       <title>Recording Streaming Audio</title>
-      <link>http://localhost:1313/2011/04/recording_streaming_audio/</link>
+      <link>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</link>
       <pubDate>Mon, 25 Apr 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2011/04/recording_streaming_audio/</guid>
+      <guid>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</guid>
       <description>
 
 &lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
@@ -386,10 +386,10 @@ $ pip install -E myVirtualEnv mysql-python
     
     <item>
       <title>Convert an A4 sized .pdf file to A5 size</title>
-      <link>http://localhost:1313/2011/01/convert_an_a4_page_to_a5/</link>
+      <link>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</link>
       <pubDate>Wed, 05 Jan 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2011/01/convert_an_a4_page_to_a5/</guid>
+      <guid>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</guid>
       <description>&lt;p&gt;I was working on a LyX document based on the Tufte layout and unfortunately the page layout was available at A4 page sizes only (ok, US letter, too, but that doesn&amp;rsquo;t count :)&lt;/p&gt;
 
 &lt;p&gt;I could try and learn Latex and create my own page size but the task looked monumental. I am sure the solution might be easy enough, but I just couldn&amp;rsquo;t do it myself. Googling for A5 sized tufte layouts didn&amp;rsquo;t help either.&lt;/p&gt;
@@ -441,10 +441,10 @@ ifelse
     
     <item>
       <title>Installing Virtualbox on Ubuntu Server 10.04</title>
-      <link>http://localhost:1313/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</link>
+      <link>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</link>
       <pubDate>Fri, 22 Oct 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</guid>
+      <guid>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</guid>
       <description>
 
 &lt;p&gt;Wanna install Virtualbox on a headless Ubuntu server?&lt;/p&gt;
@@ -470,10 +470,10 @@ ifelse
     
     <item>
       <title>RAID LVM2 setup</title>
-      <link>http://localhost:1313/2010/10/raid_lvm2_setup/</link>
+      <link>http://stratos.gerakakis.net/2010/10/raid_lvm2_setup/</link>
       <pubDate>Wed, 20 Oct 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2010/10/raid_lvm2_setup/</guid>
+      <guid>http://stratos.gerakakis.net/2010/10/raid_lvm2_setup/</guid>
       <description>
 
 &lt;p&gt;I&amp;rsquo;ve been using a software created RAID in Ubuntu for a couple of years now, and I am very happy with it. The system has gone through many iterations of system updates (and even some complete OS reinstalls) and it keeps working fine.&lt;/p&gt;
@@ -1532,10 +1532,10 @@ sudo pvresize /dev/md3
     
     <item>
       <title>Ubuntu Snippets</title>
-      <link>http://localhost:1313/2010/09/ubuntu_snippets/</link>
+      <link>http://stratos.gerakakis.net/2010/09/ubuntu_snippets/</link>
       <pubDate>Thu, 09 Sep 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2010/09/ubuntu_snippets/</guid>
+      <guid>http://stratos.gerakakis.net/2010/09/ubuntu_snippets/</guid>
       <description>
 
 &lt;p&gt;These are little Ubuntu snippets, that I always forget!&lt;/p&gt;
@@ -1569,10 +1569,10 @@ $ sudo mkfs.xfs /dev/sdf
     
     <item>
       <title>Change codepage on Windows console</title>
-      <link>http://localhost:1313/2010/03/change_codepage_on_windows_console/</link>
+      <link>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</link>
       <pubDate>Tue, 02 Mar 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2010/03/change_codepage_on_windows_console/</guid>
+      <guid>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</guid>
       <description>&lt;p&gt;You will find this essential when administrating ORACLE databases from the command line and the locale of the database is set to Greek. I prefer to read the console output in Greek rather in gibberish::&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;chcp 1253
@@ -1582,10 +1582,10 @@ $ sudo mkfs.xfs /dev/sdf
     
     <item>
       <title>Passwordless ssh connection with another server</title>
-      <link>http://localhost:1313/2008/03/passwordless_ssh_connection_with_another_server/</link>
+      <link>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</link>
       <pubDate>Fri, 21 Mar 2008 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2008/03/passwordless_ssh_connection_with_another_server/</guid>
+      <guid>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</guid>
       <description>&lt;p&gt;First, create the key on the local machine (without a passphrase) ::&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh-keygen -t rsa
@@ -1624,10 +1624,10 @@ otherUser@remote&#39;s password:
     
     <item>
       <title>Migrating greek table from mysql &lt; 4.1</title>
-      <link>http://localhost:1313/2006/06/migrate_mysql_4.1/</link>
+      <link>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</link>
       <pubDate>Sat, 17 Jun 2006 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2006/06/migrate_mysql_4.1/</guid>
+      <guid>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</guid>
       <description>&lt;p&gt;I do not remember how the tables were transferred from the old DB to the new (more likely through a mysqldump).&lt;/p&gt;
 
 &lt;p&gt;The end effect was that the tables in the 4.1 MySql Db had a collation of latin1_swedish_ci.&lt;/p&gt;
@@ -1662,10 +1662,10 @@ $MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_results=greek&amp;quo
     
     <item>
       <title>Αρίθμηση των δρόμων</title>
-      <link>http://localhost:1313/2004/12/street_numbering/</link>
+      <link>http://stratos.gerakakis.net/2004/12/street_numbering/</link>
       <pubDate>Sun, 05 Dec 2004 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2004/12/street_numbering/</guid>
+      <guid>http://stratos.gerakakis.net/2004/12/street_numbering/</guid>
       <description>&lt;p&gt;Οι παρακάτω οδηγίες ίσως να είναι σημαντικές για κάποιον που ψάχνει να βρει μία συγκεκριμένη διεύθυνση.&lt;/p&gt;
 
 &lt;p&gt;Οι δρόμοι στην Αθήνα δεν έχουν τον ίδιο αριθμό μόνο μία φορά . Για παράδειγμα, δεν υπάρχει μόνο μία Πειραιώς 40 αλλά τουλάχιστον τρεις ή τέσσερις.&lt;/p&gt;
@@ -1680,10 +1680,10 @@ $MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_results=greek&amp;quo
     
     <item>
       <title>Στατιστική ανάλυση του Κίνο</title>
-      <link>http://localhost:1313/2004/11/keno_statistical_analysis/</link>
+      <link>http://stratos.gerakakis.net/2004/11/keno_statistical_analysis/</link>
       <pubDate>Wed, 24 Nov 2004 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/2004/11/keno_statistical_analysis/</guid>
+      <guid>http://stratos.gerakakis.net/2004/11/keno_statistical_analysis/</guid>
       <description>
 
 &lt;p&gt;Για το καινούριο παιχνίδι του ΟΠΑΠ, Κίνο, ο μοναδικός πίνακας που είναι δημοσιευμένος για το παιχνίδι στο έντυπο υλικό του ΟΠΑΠ είναι ο &lt;strong&gt;Πίνακας Συντελεστών Κέρδους&lt;/strong&gt;. Ποιές είναι όμως οι πιθανότητες για να κερδίσεις σε αυτό το παιχνίδι? Πόσο δίκαιο είναι το παιχνίδι?&lt;/p&gt;

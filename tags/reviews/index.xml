@@ -3,7 +3,7 @@
   <channel>
       <title>Reviews on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://localhost:1313/tags/reviews/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/reviews/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Ringworld</title>
-      <link>http://localhost:1313/book/ringworld/</link>
+      <link>http://stratos.gerakakis.net/book/ringworld/</link>
       <pubDate>Tue, 01 Nov 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/book/ringworld/</guid>
+      <guid>http://stratos.gerakakis.net/book/ringworld/</guid>
       <description>&lt;!--- 0575077026 --&gt;
 
 &lt;figure &gt;
@@ -39,10 +39,10 @@
     
     <item>
       <title>Time Enough for Love</title>
-      <link>http://localhost:1313/book/time_enough_for_love/</link>
+      <link>http://stratos.gerakakis.net/book/time_enough_for_love/</link>
       <pubDate>Fri, 14 Oct 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://localhost:1313/book/time_enough_for_love/</guid>
+      <guid>http://stratos.gerakakis.net/book/time_enough_for_love/</guid>
       <description>&lt;!--- 0441810764 --&gt;
 
 &lt;figure &gt;
