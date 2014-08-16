@@ -3,7 +3,7 @@
   <channel>
       <title>Pdf on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/pdf/index.xml</link>
+    <link>http://localhost:1313/tags/pdf/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Translating a PDF</title>
-      <link>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</link>
+      <link>http://localhost:1313/2011/12/translating_a_pdf/</link>
       <pubDate>Thu, 15 Dec 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</guid>
+      <guid>http://localhost:1313/2011/12/translating_a_pdf/</guid>
       <description>&lt;p&gt;Hey, if you pass the link of the online PDF document to the Google Translate service then Google will extract the text from the PDF and translate it in the language that you selected.  It doesn&amp;rsquo;t keep the &lt;strong&gt;exact same&lt;/strong&gt; page formatting but the PDF is now &lt;strong&gt;very&lt;/strong&gt; readable.  Much more readable than it was before&amp;hellip; :-)&lt;/p&gt;
 
 &lt;p&gt;I didn&amp;rsquo;t know that!&lt;/p&gt;
@@ -23,10 +23,10 @@
     
     <item>
       <title>Convert an A4 sized .pdf file to A5 size</title>
-      <link>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</link>
+      <link>http://localhost:1313/2011/01/convert_an_a4_page_to_a5/</link>
       <pubDate>Wed, 05 Jan 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</guid>
+      <guid>http://localhost:1313/2011/01/convert_an_a4_page_to_a5/</guid>
       <description>&lt;p&gt;I was working on a LyX document based on the Tufte layout and unfortunately the page layout was available at A4 page sizes only (ok, US letter, too, but that doesn&amp;rsquo;t count :)&lt;/p&gt;
 
 &lt;p&gt;I could try and learn Latex and create my own page size but the task looked monumental. I am sure the solution might be easy enough, but I just couldn&amp;rsquo;t do it myself. Googling for A5 sized tufte layouts didn&amp;rsquo;t help either.&lt;/p&gt;

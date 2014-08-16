@@ -3,7 +3,7 @@
   <channel>
       <title>Nebula on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/nebula/index.xml</link>
+    <link>http://localhost:1313/tags/nebula/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Left Hand Of Darkness</title>
-      <link>http://stratos.gerakakis.net/book/left_hand_of_darkness/</link>
+      <link>http://localhost:1313/book/left_hand_of_darkness/</link>
       <pubDate>Sun, 10 Aug 2014 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/book/left_hand_of_darkness/</guid>
+      <guid>http://localhost:1313/book/left_hand_of_darkness/</guid>
       <description>&lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34;  /&gt;

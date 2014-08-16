@@ -3,7 +3,7 @@
   <channel>
       <title>Domains on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/domains/index.xml</link>
+    <link>http://localhost:1313/tags/domains/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>stratos?ear.com word play</title>
-      <link>http://stratos.gerakakis.net/2011/06/stratos_ear_com/</link>
+      <link>http://localhost:1313/2011/06/stratos_ear_com/</link>
       <pubDate>Sat, 04 Jun 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/2011/06/stratos_ear_com/</guid>
+      <guid>http://localhost:1313/2011/06/stratos_ear_com/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s funny how many of the following domain names are actually working (and how many of the letter combinations actually make sense):&lt;/p&gt;
 
 &lt;table&gt;

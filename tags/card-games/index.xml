@@ -3,7 +3,7 @@
   <channel>
       <title>Card-Games on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/card-games/index.xml</link>
+    <link>http://localhost:1313/tags/card-games/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Πρέφα</title>
-      <link>http://stratos.gerakakis.net/2003/08/prefa/</link>
+      <link>http://localhost:1313/2003/08/prefa/</link>
       <pubDate>Tue, 26 Aug 2003 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/2003/08/prefa/</guid>
+      <guid>http://localhost:1313/2003/08/prefa/</guid>
       <description>
 
 &lt;p&gt;Επιτέλους, online κανονισμοί για την Πρέφα.&lt;/p&gt;

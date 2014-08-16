@@ -3,7 +3,7 @@
   <channel>
       <title>Greek on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/greek/index.xml</link>
+    <link>http://localhost:1313/tags/greek/index.xml</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Cosmote more 4 us</title>
-      <link>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</link>
+      <link>http://localhost:1313/2011/05/cosmote_more_4_us/</link>
       <pubDate>Sat, 28 May 2011 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</guid>
+      <guid>http://localhost:1313/2011/05/cosmote_more_4_us/</guid>
       <description>&lt;figure &gt;
     
         &lt;img src=&#34;/images/cosmote_more4us.jpg&#34;  /&gt;
@@ -89,10 +89,10 @@
     
     <item>
       <title>Change codepage on Windows console</title>
-      <link>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</link>
+      <link>http://localhost:1313/2010/03/change_codepage_on_windows_console/</link>
       <pubDate>Tue, 02 Mar 2010 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</guid>
+      <guid>http://localhost:1313/2010/03/change_codepage_on_windows_console/</guid>
       <description>&lt;p&gt;You will find this essential when administrating ORACLE databases from the command line and the locale of the database is set to Greek. I prefer to read the console output in Greek rather in gibberish::&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;chcp 1253
@@ -102,10 +102,10 @@
     
     <item>
       <title>Αρίθμηση των δρόμων</title>
-      <link>http://stratos.gerakakis.net/2004/12/street_numbering/</link>
+      <link>http://localhost:1313/2004/12/street_numbering/</link>
       <pubDate>Sun, 05 Dec 2004 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/2004/12/street_numbering/</guid>
+      <guid>http://localhost:1313/2004/12/street_numbering/</guid>
       <description>&lt;p&gt;Οι παρακάτω οδηγίες ίσως να είναι σημαντικές για κάποιον που ψάχνει να βρει μία συγκεκριμένη διεύθυνση.&lt;/p&gt;
 
 &lt;p&gt;Οι δρόμοι στην Αθήνα δεν έχουν τον ίδιο αριθμό μόνο μία φορά . Για παράδειγμα, δεν υπάρχει μόνο μία Πειραιώς 40 αλλά τουλάχιστον τρεις ή τέσσερις.&lt;/p&gt;
