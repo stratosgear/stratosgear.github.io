@@ -9,7 +9,10 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
   <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700|Roboto:400,700" rel="stylesheet" />
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/default.min.css">
+  <link rel="stylesheet" href="https://yandex.st/highlightjs/8.0/styles/solarized_light.min.css">
+  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <link href="http://stratos.gerakakis.net/css/striped.css" rel="stylesheet">
 
 
@@ -69,12 +72,12 @@
 
 <p>These are little Ubuntu snippets, that I always forget!</p>
 
-<h2 id="toc_0">Changing the timezone</h2>
+<h3 id="toc_0">Changing the timezone</h3>
 
 <pre><code>sudo dpkg-reconfigure tzdata
 </code></pre>
 
-<h2 id="toc_1">Create and mount xfs filesystem</h2>
+<h3 id="toc_1">Create and mount xfs filesystem</h3>
 
 <pre><code>$ sudo apt-get install xfsprogs
 $ sudo mkfs.xfs /dev/sdf
@@ -82,14 +85,14 @@ $ sudo mkfs.xfs /dev/sdf
 
 <p>Add to fstab:</p>
 
-<pre><code>/dev/sdf   /my/location   xfs  defaults,nobootwait,noatime    0    0
+<pre><code class="bash">/dev/sdf   /my/location   xfs  defaults,nobootwait,noatime    0    0
 </code></pre>
 
 <p>(Tested on Amazon EC2 EBS volume.)</p>
 
-<h2 id="toc_2">Timestamp too far in the future</h2>
+<h3 id="toc_2">Timestamp too far in the future</h3>
 
-<pre><code>su rm -rf /var/run/sudo/Username
+<pre><code class="bash">    su rm -rf /var/run/sudo/Username
 </code></pre>
 
 <p>(Username: the name of the Ubuntu user, that should behave like root)</p>

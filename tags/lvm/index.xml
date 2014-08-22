@@ -25,7 +25,7 @@
 
 &lt;h3 id=&#34;toc_1&#34;&gt;Creating the RAID sandbox&lt;/h3&gt;
 
-&lt;p class=&#34;warning&#34; markdown=&#34;1&#34;&gt;
+&lt;p class=&#34;admonition warning&#34; markdown=&#34;1&#34;&gt;
 &lt;b&gt;Caution:&lt;/b&gt; Do not play recklessly with your disk partitions. You can very easily mistype something, or run a command with the wrong parameters and lose your data. Instead of blindingly follow what I propose here, create a safe sandbox environment to familiarize yourself with the RAID setup.  Then when you are comfortable setting everything up, do the same thing with your real disks.
 &lt;/p&gt;
 

@@ -33,11 +33,10 @@ body, input, textarea {
 
 body {
   background-color: #e8e8e8;
-  background-image: url('/images/bg2.png');
 }
 
 a {
-  color: invert(lighten($theme-color, 10%));
+  color: #6ea1c6;
   font-weight: bold;
 }
 
@@ -49,6 +48,7 @@ strong, b {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
+  margin-bottom: 0.5em;
 }
 
 h1 a, h2 a, h4 a, h5 a, h6 a {
@@ -123,13 +123,13 @@ br.clear {
   clear: both;
 }
 
-p, ul, ol, dl, table {
-  margin-bottom: 1em;
-  font-size: 1.2em;
+p {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;  
 }
 
 section, article {
-  margin-bottom: 3em;
+  margin-bottom: 1em;
   clear: left;
 }
 
@@ -445,8 +445,7 @@ a.button-alt:active, input.button-alt:active {
 
 #content {
   position: relative;
-  background-color: #fff;
-  background-image: url('/images/bg2.png');
+  background-color: #fafafa;
 }
 
 #content-inner {
@@ -557,7 +556,7 @@ figcaption {
   -moz-border-radius: 6px; 
   -webkit-border-radius: 6px; 
   font-size: .9rem;
-  color: white;
+  color: #fafafa;
   vertical-align: middle;
   background-color: lighten($theme-color, 20%);
   font-weight: bold;
@@ -575,11 +574,13 @@ figcaption {
    clear: both;
 }
 
-ul.posts {
-  font-size: 1.2em;
+ul.contents li {
+  font-size: 1.4em;
+  line-height: 1.4em;
 }
+
 ul.leaders {
-    max-width: 40em;
+    max-width: 50em;
     padding: 0;
     overflow-x: hidden;
     list-style: none}
@@ -594,9 +595,31 @@ ul.leaders li:before {
  ". . . . . . . . . . . . . . . . . . . . "}
 ul.leaders span:first-child {
     padding-right: 0.33em;
-    background: white}
+    max-width: 30em;
+    word-wrap: break-word;
+    background: #fafafa;
+    display: inline-block;}
 ul.leaders span + span {
     float: right;
     padding-left: 0.33em;
-    background: white
+    background: #fafafa;
+    display: inline-block;
     }
+pre {
+  margin: 1em;
+}
+.admonition {
+  margin: 1em;
+  padding: 15px;
+  &.info {
+    background-color: #d9edf7;
+  }
+
+  &.note {
+    background-color: #fcf8e3;
+  }
+
+  &.warning {
+    background-color: #f2dede;
+  }
+}

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Recording Streaming Audio  &middot; Stratos Gerakakis </title>
+  <title>Moving to Arch  &middot; Stratos Gerakakis </title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="description" content="Quark, strangeness and charm..." />
   <meta name="keywords" content="" />
@@ -42,27 +42,27 @@
 
   <header>
     <h2>
-      <a href="#">Recording Streaming Audio</a>
+      <a href="#">Moving to Arch</a>
     </h2>
     
     <p>Tagged as: 
       <a class="tag" href="/tags/ubuntu">ubuntu</a>&nbsp; 
-      <a class="tag" href="/tags/cli">cli</a>&nbsp; 
-      <a class="tag" href="/tags/audio">audio</a>&nbsp; 
+      <a class="tag" href="/tags/arch">arch</a>&nbsp; 
+      <a class="tag" href="/tags/migration">migration</a>&nbsp; 
     </p>
   </header>
 
   <div class="info">
     <span class="date">
-      <span class="month">Apr</span>
-      <span class="day">25</span>
-      <span class="year">2011</span>
+      <span class="month">Aug</span>
+      <span class="day">22</span>
+      <span class="year">2014</span>
     </span>
 
     <ul class="stats">
       
       <li>
-        <a href="http://stratos.gerakakis.net/2011/04/recording_streaming_audio/#disqus_thread" class="fa fa-comment">?</a>
+        <a href="http://stratos.gerakakis.net/2014/08/moving_to_arch/#disqus_thread" class="fa fa-comment">?</a>
       </li>
       
 
@@ -70,48 +70,23 @@
   </div>
 
   <div class="post">
-    
+    <p>Well the time to move-on has finally come.</p>
 
-<p>My choice of Ubuntu tools for recording, splitting and tagging streaming audio.</p>
+<p>After being a faithfull Ubuntu user since Warty Warthog, Ubuntu 4.10 back in 2004, (wow, already a decade ago) it is time to move on.</p>
 
-<h2 id="toc_0">Recording</h2>
-
-<p><a href="http://streamripper.sourceforge.net">streamripper</a>: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::</p>
-
-<p>$ streamripper URL -d /home/stratos/outRec -l 7800 -d /dir/to/save -t &ndash;xs-none</p>
+<p>There are multiple online posts complaining about the direction Ubuntu has taken over the last years, but I&rsquo;ll just quickly state my own reasons.</p>
 
 <ul>
-<li>-l 7800: The duration of the recording (in seconds)</li>
-<li>-d /dir/to/save: Directory where to save the stream.</li>
-<li>-t: Do not overwrite files in recording folder.</li>
-<li>&ndash;xs-none: Do not try to find silent parts in the recording</li>
+<li><p>Tired of constantly upgrading the system every six months. Although considerable effort is being taken to provide smooth upgrades, usually the procedure to upgrade a system takes the better part of a day.  That is, if everything goes well.  After almost 20 upgrades I had some gone awry on me, which really adds to the burden of updating the system.  And that&rsquo;s only for one system.  Multiply that be 5-6 times, for all my servers, desktops, laptops and the amount of work really adds up.</p></li>
+
+<li><p>Ever since the move to Unity (which I don&rsquo;t like at all) I have been using Gnome3.  With Ubuntu I am forced to stay a couple of version behind, since the repositories do not include the latest version.  Some thing with other packages that do not have the latest versions updated in the repos.</p></li>
+
+<li><p>In the last two or three Ubuntu releases I get a lot of <em>&ldquo;Sorry, Ubuntu has experienced an internal error&rdquo;</em> popups that are really annoying.  Same hardware, same settings but a lot of these errors.  And very vague descriptions of what went wrong.</p></li>
 </ul>
 
-<p>Of course adding to cron is quite easy::</p>
+<p>So I decide it is time to move to another distro.  Reading many nice things online about <a href="https://www.archlinux.org/">Arch</a> and after trying it in a Virtualbox machine I decided to take the plunge.  I took a shortcut though, and installed <a href="http://antergos.com/">Antergos</a> which is a very nicely packaged version of Arch with a gui installer that automatically installs a Desktop Environemnt for you.  All done in <a href="https://wiki.archlinux.org/index.php/The_Arch_Way">the Arch way</a> so the end result is well documented.</p>
 
-<p>$ crontab -e
-  0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.</p>
-
-<h2 id="toc_1">Splitting</h2>
-
-<p><a href="http://audacious-media-player.org">audacious</a>: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.</p>
-
-<p><a href="http://mp3splt.sourceforge.net/mp3splt_page/home.php">mp3spl</a>: Using the Start and End Times from above, use them to split the recording. Don&rsquo;t bother with the <code>mp3splt-gtk</code> gui app::</p>
-
-<p>$ mp3splt recording.mp3 65.36 124.33 -a -o finalRecording</p>
-
-<ul>
-<li>65.36: The start time from the original recording that the split will start</li>
-<li>124.33: The end time from the original recording that the split will end.</li>
-<li>-a: This option will slightly adjust the start and end time to fall on a silent period.</li>
-<li>-o finalRecording: The final splitted file.</li>
-</ul>
-
-<h2 id="toc_2">Tagging</h2>
-
-<p><a href="http://easytag.sourceforge.net">easyTag</a>: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!</p>
-
-<p>Happy recordings!</p>
+<p>More posts as the time passes by&hellip;</p>
 
   </div>
 

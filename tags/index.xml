@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title> on Stratos Gerakakis </title>
+      <generator uri="https://hugo.spf13.com">Hugo</generator>
+    <link>http://localhost:1313/tags/index.xml</link>
+    <language>en-us</language>
+    <author>Stratos Gerakakis</author>
+    
+    <updated>Fri, 22 Aug 2014 14:26:03 CEST</updated>
+    
+    <item>
+      <title>moving_to_arch</title>
+      <link>http://localhost:1313/2014/08/moving_to_arch/</link>
+      <pubDate>Fri, 22 Aug 2014 14:26:03 CEST</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>http://localhost:1313/2014/08/moving_to_arch/</guid>
+      <description>&lt;p&gt;Well the time to move on has finally come.&lt;/p&gt;
+
+&lt;p&gt;After being a faithfull Ubuntu user since Warty Warthog, Ubuntu 4.10 back in 2004, (wow, already a decade ago) it is time to move on.&lt;/p&gt;
+
+&lt;p&gt;There are multiple online posts complaining about the direction Ubuntu has taken over the last years, but I&amp;rsquo;ll just quickly state my own reasons.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Tired of constantly upgrading the system every six months. Although considerable effort is being taken to provide smooth upgrades, usually the procedure to upgrade a system takes a better part of a day.  That is, if everything goes well.  After almost 20 upgrades I had some gone awry on me, which really adds to the burden of updating the system.  And that&amp;rsquo;s only for one system.  Multiply that be 5-6 for all my servers, desktops, laptops, and the amount of work really adds up.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ever since the move to Unity (which I don;t like at all) I have been using Gnome3.  The&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>moving_to_arch</title>
+      <link>http://localhost:1313/2014/08/moving_to_arch/</link>
+      <pubDate>Fri, 22 Aug 2014 14:26:03 CEST</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>http://localhost:1313/2014/08/moving_to_arch/</guid>
+      <description>&lt;p&gt;Well the time to move on has finally come.&lt;/p&gt;
+
+&lt;p&gt;After being a faithfull Ubuntu user since Warty Warthog, Ubuntu 4.10 back in 2004, (wow, already a decade ago) it is time to move on.&lt;/p&gt;
+
+&lt;p&gt;There are multiple online posts complaining about the direction Ubuntu has taken over the last years, but I&amp;rsquo;ll just quickly state my own reasons.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Tired of constantly upgrading the system every six months. Although considerable effort is being taken to provide smooth upgrades, usually the procedure to upgrade a system takes a better part of a day.  That is, if everything goes well.  After almost 20 upgrades I had some gone awry on me, which really adds to the burden of updating the system.  And that&amp;rsquo;s only for one system.  Multiply that be 5-6 for all my servers, desktops, laptops, and the amount of work really adds up.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ever since the move to Unity (which I don;t like at all) I have been using Gnome3.  The&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

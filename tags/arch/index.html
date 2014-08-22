@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Recording Streaming Audio  &middot; Stratos Gerakakis </title>
+  <title>Arch  &middot; Stratos Gerakakis </title>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="description" content="Quark, strangeness and charm..." />
   <meta name="keywords" content="" />
@@ -39,103 +39,20 @@
 
 
 <article class="is-post">
-
   <header>
-    <h2>
-      <a href="#">Recording Streaming Audio</a>
-    </h2>
-    
-    <p>Tagged as: 
-      <a class="tag" href="/tags/ubuntu">ubuntu</a>&nbsp; 
-      <a class="tag" href="/tags/cli">cli</a>&nbsp; 
-      <a class="tag" href="/tags/audio">audio</a>&nbsp; 
-    </p>
+    <h2 class="title">Other items tagged as Arch</h2>
   </header>
-
-  <div class="info">
-    <span class="date">
-      <span class="month">Apr</span>
-      <span class="day">25</span>
-      <span class="year">2011</span>
-    </span>
-
-    <ul class="stats">
-      
-      <li>
-        <a href="http://stratos.gerakakis.net/2011/04/recording_streaming_audio/#disqus_thread" class="fa fa-comment">?</a>
-      </li>
-      
-
-    </ul>
-  </div>
-
-  <div class="post">
+  <ul class="contents leaders">
     
-
-<p>My choice of Ubuntu tools for recording, splitting and tagging streaming audio.</p>
-
-<h2 id="toc_0">Recording</h2>
-
-<p><a href="http://streamripper.sourceforge.net">streamripper</a>: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::</p>
-
-<p>$ streamripper URL -d /home/stratos/outRec -l 7800 -d /dir/to/save -t &ndash;xs-none</p>
-
-<ul>
-<li>-l 7800: The duration of the recording (in seconds)</li>
-<li>-d /dir/to/save: Directory where to save the stream.</li>
-<li>-t: Do not overwrite files in recording folder.</li>
-<li>&ndash;xs-none: Do not try to find silent parts in the recording</li>
-</ul>
-
-<p>Of course adding to cron is quite easy::</p>
-
-<p>$ crontab -e
-  0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.</p>
-
-<h2 id="toc_1">Splitting</h2>
-
-<p><a href="http://audacious-media-player.org">audacious</a>: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.</p>
-
-<p><a href="http://mp3splt.sourceforge.net/mp3splt_page/home.php">mp3spl</a>: Using the Start and End Times from above, use them to split the recording. Don&rsquo;t bother with the <code>mp3splt-gtk</code> gui app::</p>
-
-<p>$ mp3splt recording.mp3 65.36 124.33 -a -o finalRecording</p>
-
-<ul>
-<li>65.36: The start time from the original recording that the split will start</li>
-<li>124.33: The end time from the original recording that the split will end.</li>
-<li>-a: This option will slightly adjust the start and end time to fall on a silent period.</li>
-<li>-o finalRecording: The final splitted file.</li>
-</ul>
-
-<h2 id="toc_2">Tagging</h2>
-
-<p><a href="http://easytag.sourceforge.net">easyTag</a>: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!</p>
-
-<p>Happy recordings!</p>
-
-  </div>
-
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-(function() {
-  
-  
-  if (window.location.hostname == "localhost")
-    return;
-
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  var disqus_shortname = 'stratosgear';
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-</script>
-<noscript>Please enable JavaScript to view the comments powered by
-  <a href="http://disqus.com/?ref_noscript">Disqus.</a>
-</noscript>
-
-
+    <li>
+      <span>
+        <a href="http://stratos.gerakakis.net/2014/08/moving_to_arch/">Moving to Arch</a>
+      </span>
+        <span><time class="pull-right post-list">Fri, Aug 22, 2014
+        </time></span>
+    </li>
+    
+  </ul>
 </article>
 
 </div>

@@ -7,7 +7,33 @@
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
-    <updated>Thu, 15 Dec 2011 00:00:00 UTC</updated>
+    <updated>Fri, 22 Aug 2014 14:26:03 CEST</updated>
+    
+    <item>
+      <title>Moving to Arch</title>
+      <link>http://stratos.gerakakis.net/2014/08/moving_to_arch/</link>
+      <pubDate>Fri, 22 Aug 2014 14:26:03 CEST</pubDate>
+      <author>Stratos Gerakakis</author>
+      <guid>http://stratos.gerakakis.net/2014/08/moving_to_arch/</guid>
+      <description>&lt;p&gt;Well the time to move-on has finally come.&lt;/p&gt;
+
+&lt;p&gt;After being a faithfull Ubuntu user since Warty Warthog, Ubuntu 4.10 back in 2004, (wow, already a decade ago) it is time to move on.&lt;/p&gt;
+
+&lt;p&gt;There are multiple online posts complaining about the direction Ubuntu has taken over the last years, but I&amp;rsquo;ll just quickly state my own reasons.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Tired of constantly upgrading the system every six months. Although considerable effort is being taken to provide smooth upgrades, usually the procedure to upgrade a system takes the better part of a day.  That is, if everything goes well.  After almost 20 upgrades I had some gone awry on me, which really adds to the burden of updating the system.  And that&amp;rsquo;s only for one system.  Multiply that be 5-6 times, for all my servers, desktops, laptops and the amount of work really adds up.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ever since the move to Unity (which I don&amp;rsquo;t like at all) I have been using Gnome3.  With Ubuntu I am forced to stay a couple of version behind, since the repositories do not include the latest version.  Some thing with other packages that do not have the latest versions updated in the repos.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the last two or three Ubuntu releases I get a lot of &lt;em&gt;&amp;ldquo;Sorry, Ubuntu has experienced an internal error&amp;rdquo;&lt;/em&gt; popups that are really annoying.  Same hardware, same settings but a lot of these errors.  And very vague descriptions of what went wrong.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So I decide it is time to move to another distro.  Reading many nice things online about &lt;a href=&#34;https://www.archlinux.org/&#34;&gt;Arch&lt;/a&gt; and after trying it in a Virtualbox machine I decided to take the plunge.  I took a shortcut though, and installed &lt;a href=&#34;http://antergos.com/&#34;&gt;Antergos&lt;/a&gt; which is a very nicely packaged version of Arch with a gui installer that automatically installs a Desktop Environemnt for you.  All done in &lt;a href=&#34;https://wiki.archlinux.org/index.php/The_Arch_Way&#34;&gt;the Arch way&lt;/a&gt; so the end result is well documented.&lt;/p&gt;
+
+&lt;p&gt;More posts as the time passes by&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Translating a PDF</title>
@@ -143,7 +169,7 @@ ifelse
 
 &lt;h3 id=&#34;toc_1&#34;&gt;Creating the RAID sandbox&lt;/h3&gt;
 
-&lt;p class=&#34;warning&#34; markdown=&#34;1&#34;&gt;
+&lt;p class=&#34;admonition warning&#34; markdown=&#34;1&#34;&gt;
 &lt;b&gt;Caution:&lt;/b&gt; Do not play recklessly with your disk partitions. You can very easily mistype something, or run a command with the wrong parameters and lose your data. Instead of blindingly follow what I propose here, create a safe sandbox environment to familiarize yourself with the RAID setup.  Then when you are comfortable setting everything up, do the same thing with your real disks.
 &lt;/p&gt;
 
@@ -1199,12 +1225,12 @@ sudo pvresize /dev/md3
 
 &lt;p&gt;These are little Ubuntu snippets, that I always forget!&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Changing the timezone&lt;/h2&gt;
+&lt;h3 id=&#34;toc_0&#34;&gt;Changing the timezone&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo dpkg-reconfigure tzdata
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;Create and mount xfs filesystem&lt;/h2&gt;
+&lt;h3 id=&#34;toc_1&#34;&gt;Create and mount xfs filesystem&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt-get install xfsprogs
 $ sudo mkfs.xfs /dev/sdf
@@ -1212,14 +1238,14 @@ $ sudo mkfs.xfs /dev/sdf
 
 &lt;p&gt;Add to fstab:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;/dev/sdf   /my/location   xfs  defaults,nobootwait,noatime    0    0
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;/dev/sdf   /my/location   xfs  defaults,nobootwait,noatime    0    0
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(Tested on Amazon EC2 EBS volume.)&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Timestamp too far in the future&lt;/h2&gt;
+&lt;h3 id=&#34;toc_2&#34;&gt;Timestamp too far in the future&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;su rm -rf /var/run/sudo/Username
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;    su rm -rf /var/run/sudo/Username
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(Username: the name of the Ubuntu user, that should behave like root)&lt;/p&gt;
