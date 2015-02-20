@@ -3,7 +3,7 @@
   <channel>
       <title>Books on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/book/index.xml</link>
+    <link>http://stratos.gerakakis.net/book/index.xml/</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -56,7 +56,7 @@
     
 &lt;/figure&gt;
 
-&lt;p&gt;No wonder this has won both Hugo and Nebula awards in 1970/71.&lt;/p&gt;
+&lt;p&gt;No wonder this has won both Hugo and Nebula awards in &lt;sup&gt;1970&lt;/sup&gt;&amp;frasl;&lt;sub&gt;71&lt;/sub&gt;.&lt;/p&gt;
 
 &lt;p&gt;I was not very fond of Niven&amp;rsquo;s writing style (this is the first &lt;a href=&#34;http://en.wikipedia.org/wiki/Larry_Niven&#34;&gt;Larry Niven&lt;/a&gt; book I read) and maybe he used it for this book only.  The plot though was ingenious.  The idea of the Ringworld was very interesting. It kept me entertained from the beginning until the end.&lt;/p&gt;
 

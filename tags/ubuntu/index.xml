@@ -3,7 +3,7 @@
   <channel>
       <title>Ubuntu on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/ubuntu/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/ubuntu/index.xml/</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -1238,14 +1238,14 @@ $ sudo mkfs.xfs /dev/sdf
 
 &lt;p&gt;Add to fstab:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;/dev/sdf   /my/location   xfs  defaults,nobootwait,noatime    0    0
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/dev/sdf   /my/location   xfs  defaults,nobootwait,noatime    0    0
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(Tested on Amazon EC2 EBS volume.)&lt;/p&gt;
 
 &lt;h3 id=&#34;toc_2&#34;&gt;Timestamp too far in the future&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;    su rm -rf /var/run/sudo/Username
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    su rm -rf /var/run/sudo/Username
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(Username: the name of the Ubuntu user, that should behave like root)&lt;/p&gt;

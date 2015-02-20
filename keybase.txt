@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/stratosgear
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://stratos.gerakakis.net
+  * I am stratosgear (https://keybase.io/stratosgear) on keybase.
+  * I have a public key with fingerprint 89B6 36C0 8A3E 8473 43D2  D478 0F99 7F95 48D8 8152
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "89b636c08a3e847343d2d4780f997f9548d88152",
+            "host": "keybase.io",
+            "key_id": "0f997f9548d88152",
+            "kid": 
+"0101da644a8ddf7bb57d625f25e5be8faf474cc7b61ea6ec6f3e5c5da3bb34e1550f0a",
+            "uid": "c2312a8ddde6f00fd64071bbf7112e19",
+            "username": "stratosgear"
+        },
+        "revoke": {
+            "sig_ids": [
+                "39e5d05807d310b1ff497df599814c437b04bad7c072347ea25da3753266c55d0f"
+            ]
+        },
+        "service": {
+            "hostname": "stratos.gerakakis.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1424445028,
+    "expire_in": 157680000,
+    "prev": "f94c44f9f81947a6a9fafc4506e408bff05462cc69bf89996ae2cbb21bc96f74",
+    "seqno": 6,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.4
+Comment: https://keybase.io/crypto
+
+yMN/AnicbZJ9TJVVHMcvQiAXEV2DORkSj7vEAOF5Oc/blZHCGBZLoCEN8QLPyzn3
+Pl24z+3eywUkK0klJxkKuMBCIs22VpT5Mkp5K5hSsOFMYUPMgm60qMjiIjPseaj+
+aOv8c3bO+X4/5/v7nfNFeKDBGBDR+lLLjvH9zwR82f9epaHAt1OuxURVrsHMtZgd
+rkxIcVihy+lSHB7MjHG8yFCMhHMCBTnAUoCSSRmwHI54nkU8DTiZ4wiaxJIxm+rW
+HRpGFNwwRVG1PW1Rqsja7v/o7X8fEDghCwwAAifLiBVFmpUZkkYkDWkRckhAgAWS
+xIoMAQUGSgyiIC3RskCJIgUgQdM4wgUNV7mCk0iKIHWUDBmE40hmAM4SoohYgiAh
+wetCN3Q5hAqoqd0el+BR3VYouLB9yZgLelU71JvgVqxabjdmLsYoHtIyTnM4K1ME
+LhIIAZ6VEc3zHAEkQLEiDkRBZiWcJSnAQoHUw7E0RTKMRGtWhFk0tnapV5FW4Hqj
+/hsgReu4YBfsijvFAT1aRqdL9aiSWq5JbB6P06yn89Q4dUsVFEv/gZWKikPWnksz
+eKHLragOzExoSsmj6HQCkAAAGie5ZAxWOxUXLFV0Bc0yHK4N/Rro1ZCI1woBiEcc
+wQNWYARea7ukORkIcE5ECKcBQ0oSw4uI43meESApiSJJiBLPIBZgennPO1TMzGgx
+BatemGJ1CJ5KF8T2DfTvCTIEGA3Bj6zSP5zBGLru32+Y/CBiOe5s9RNbzqPM2hfX
+tT8e076lMKfK3n88ZDgvype9fUdgzkBS6lHC9p3/MLdjf2rbj2rHyGJV4Kah+sTO
+3zZ/2jhcvD4HQkv9Q3vDuTX+kC4pYtepD6NOe92RJt9cZZn6sLVNFqbn1i5lp3OR
+Y8L9QxmNZ5uP5hiXcy2vPQhirsyULU6Kzw43xs5fjCs50sscP7y7u+lUV5nkz7+B
+NSfgB56aPPNkb/1EuKd7a/VQwXp/473APCzP9kNY+K7Ta+j8YLZ2d0DYzpLCbfyx
+z673fFM2bT4/7rymDEU39OWF3s8dTC+PPuFt8SeuDc1sbb0l+Hx1V/dmO68UVBls
+B/vS0YDx5Rbru1OFq7+q988vldf8nLo97HaZj8vozLnwcWaS+ZVWU5N9ofCu4dwm
+J/bc1tmom1leGzzy6NtJPXkZs2lv3XUkdAz2xo6euNO14cLTU13xM1kXr80c+PrY
+GVPAsnMwOHEqvvbGH/6iz9uC3kzoKLqUtq3iZK9lUF0cHM3dGBET80L3T6Ozw5+U
+R7dOS8aUONN1L4zEXj9Y1zOyum3Z9E5811Jl96rLIZV9Yfn4G5c7G8Y2pnz7y53f
+R6rmxGHTXrSnoccyX7fw56HMdktzQXLmR+8zxRVN1onxx2ZFkDVxcrPh16wPSnxF
+/ZMbgl+9d3tM+j7oUtpNR1vPrYWEUVtsxtXiqr8AEdrFow==
+=0FDn
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/stratosgear
+
+==================================================================
+

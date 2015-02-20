@@ -3,7 +3,7 @@
   <channel>
       <title>Keno on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/keno/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/keno/index.xml/</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -128,7 +128,7 @@ c(α, β) = ----------------
  0     &lt;strong&gt;23&lt;/strong&gt;    &lt;strong&gt;33&lt;/strong&gt;    &lt;strong&gt;46&lt;/strong&gt;    64        88        122       167      227    308     417     560     750&lt;br /&gt;
 ===== ========= ========= ========= ========= ========= ========= ========= ====== ======= ======= ======= =======&lt;/p&gt;
 
-&lt;p&gt;(&lt;em&gt;): Το &lt;/em&gt;&lt;em&gt;0&lt;/em&gt;* σε αυτές τις περιπτώσεις, σημαίνει ότι η πιθανότητα να κερδίσεις σε αυτήν την κατηγορία, παίζοντας 1000 μόνο παιχνίδια, είναι τόσο στατιστικά μικρή, που μπορούμε να υποθέσουμε ότι είναι μηδέν.&lt;/p&gt;
+&lt;p&gt;(*): Το &lt;strong&gt;0&lt;/strong&gt; σε αυτές τις περιπτώσεις, σημαίνει ότι η πιθανότητα να κερδίσεις σε αυτήν την κατηγορία, παίζοντας 1000 μόνο παιχνίδια, είναι τόσο στατιστικά μικρή, που μπορούμε να υποθέσουμε ότι είναι μηδέν.&lt;/p&gt;
 
 &lt;p&gt;Πώς διαβάζεται αυτός ο πίνακας?
 &amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rsquo;&lt;/p&gt;

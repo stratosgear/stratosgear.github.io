@@ -3,7 +3,7 @@
   <channel>
       <title>Posts on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/post/index.xml</link>
+    <link>http://stratos.gerakakis.net/post/index.xml/</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -112,9 +112,9 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;td&gt;Domain&lt;/td&gt;
-&lt;td&gt;Valid Word&lt;/td&gt;
-&lt;td&gt;Domain Name&lt;/td&gt;
+&lt;th&gt;Domain&lt;/th&gt;
+&lt;th&gt;Valid Word&lt;/th&gt;
+&lt;th&gt;Domain Name&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
@@ -302,7 +302,7 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;p&gt;Ξαφνικά άρχισαν να μου έρχονται κάποια SMS στο καρτοκινητό μου ότι:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ 22/05/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
+&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ &lt;sup&gt;22&lt;/sup&gt;&amp;frasl;&lt;sub&gt;05&lt;/sub&gt;/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Στην αρχή νόμιζα ότι έκανα εγώ κάποιο λάθος, αλλά σήμερα διασταύρωσα με την αδερφή μου ότι γίνεται και σε εκείνην το ίδιο.  Σε αυτήν είχαν ήδη χρεώσει περίπου 20 ευρώ και όταν πήρε τηλέφωνο την εξυπηρέτηση πελατών της είπαν ότι είναι μια καινούρια υπηρεσία της Cosmote και αν δεν την θέλει μπορεί να την απενεργοποιήσει.&lt;/p&gt;
@@ -1579,14 +1579,14 @@ $ sudo mkfs.xfs /dev/sdf
 
 &lt;p&gt;Add to fstab:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;/dev/sdf   /my/location   xfs  defaults,nobootwait,noatime    0    0
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;/dev/sdf   /my/location   xfs  defaults,nobootwait,noatime    0    0
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(Tested on Amazon EC2 EBS volume.)&lt;/p&gt;
 
 &lt;h3 id=&#34;toc_2&#34;&gt;Timestamp too far in the future&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;    su rm -rf /var/run/sudo/Username
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    su rm -rf /var/run/sudo/Username
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(Username: the name of the Ubuntu user, that should behave like root)&lt;/p&gt;

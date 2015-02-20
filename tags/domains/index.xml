@@ -3,7 +3,7 @@
   <channel>
       <title>Domains on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/domains/index.xml</link>
+    <link>http://stratos.gerakakis.net/tags/domains/index.xml/</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -20,9 +20,9 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;td&gt;Domain&lt;/td&gt;
-&lt;td&gt;Valid Word&lt;/td&gt;
-&lt;td&gt;Domain Name&lt;/td&gt;
+&lt;th&gt;Domain&lt;/th&gt;
+&lt;th&gt;Valid Word&lt;/th&gt;
+&lt;th&gt;Domain Name&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 

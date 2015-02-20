@@ -3,7 +3,7 @@
   <channel>
       <title>Recent Content on Stratos Gerakakis </title>
       <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/index.xml</link>
+    <link>http://stratos.gerakakis.net/index.xml/</link>
     <language>en-us</language>
     <author>Stratos Gerakakis</author>
     
@@ -64,10 +64,10 @@
     
     <item>
       <title>About this site</title>
-      <link>http://stratos.gerakakis.net/about</link>
+      <link>http://stratos.gerakakis.net/about/</link>
       <pubDate>Wed, 06 Aug 2014 00:00:00 UTC</pubDate>
       <author>Stratos Gerakakis</author>
-      <guid>http://stratos.gerakakis.net/about</guid>
+      <guid>http://stratos.gerakakis.net/about/</guid>
       <description>&lt;p&gt;These are the mesonoxian inaniloquent ramblings of Stratos Gerakakis.&lt;/p&gt;
 
 &lt;p&gt;This must be the sixth or sevent attempt trying to find the right tool for my online ramblings (after trying, html pages, Geeklog, Drupal, Blogger, Dokuwiki, Nikola, Tinkerer, Pelican)&lt;/p&gt;
@@ -134,7 +134,7 @@ $ pip install -E myVirtualEnv mysql-python
     
 &lt;/figure&gt;
 
-&lt;p&gt;No wonder this has won both Hugo and Nebula awards in 1970/71.&lt;/p&gt;
+&lt;p&gt;No wonder this has won both Hugo and Nebula awards in &lt;sup&gt;1970&lt;/sup&gt;&amp;frasl;&lt;sub&gt;71&lt;/sub&gt;.&lt;/p&gt;
 
 &lt;p&gt;I was not very fond of Niven&amp;rsquo;s writing style (this is the first &lt;a href=&#34;http://en.wikipedia.org/wiki/Larry_Niven&#34;&gt;Larry Niven&lt;/a&gt; book I read) and maybe he used it for this book only.  The plot though was ingenious.  The idea of the Ringworld was very interesting. It kept me entertained from the beginning until the end.&lt;/p&gt;
 
@@ -219,9 +219,9 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;td&gt;Domain&lt;/td&gt;
-&lt;td&gt;Valid Word&lt;/td&gt;
-&lt;td&gt;Domain Name&lt;/td&gt;
+&lt;th&gt;Domain&lt;/th&gt;
+&lt;th&gt;Valid Word&lt;/th&gt;
+&lt;th&gt;Domain Name&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 
@@ -409,7 +409,7 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;p&gt;Ξαφνικά άρχισαν να μου έρχονται κάποια SMS στο καρτοκινητό μου ότι:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ 22/05/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
+&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ &lt;sup&gt;22&lt;/sup&gt;&amp;frasl;&lt;sub&gt;05&lt;/sub&gt;/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Στην αρχή νόμιζα ότι έκανα εγώ κάποιο λάθος, αλλά σήμερα διασταύρωσα με την αδερφή μου ότι γίνεται και σε εκείνην το ίδιο.  Σε αυτήν είχαν ήδη χρεώσει περίπου 20 ευρώ και όταν πήρε τηλέφωνο την εξυπηρέτηση πελατών της είπαν ότι είναι μια καινούρια υπηρεσία της Cosmote και αν δεν την θέλει μπορεί να την απενεργοποιήσει.&lt;/p&gt;
