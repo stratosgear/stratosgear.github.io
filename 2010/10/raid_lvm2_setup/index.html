@@ -46,7 +46,7 @@
     </h2>
     
     <p>Tagged as: 
-      <a class="tag" href="/tags/ubuntu">ubuntu</a>&nbsp; 
+      <a class="tag" href="/tags/linux">linux</a>&nbsp; 
       <a class="tag" href="/tags/raid">raid</a>&nbsp; 
       <a class="tag" href="/tags/lvm">lvm</a>&nbsp; 
     </p>
@@ -76,9 +76,9 @@
 
 <p>Recently, I was not happy with the way I had partitioned the array and I wanted to re-arrange it, so I thought it would be a nice idea to document the process I went through. At the same I took the opportunity to also document the initial array creation (in case I&rsquo;ll have to redo it again)</p>
 
-<h2 id="toc_0">RAID Setup</h2>
+<h2 id="raid-setup:eac168a4d4aa4a6f9e28c20ed3911aad">RAID Setup</h2>
 
-<h3 id="toc_1">Creating the RAID sandbox</h3>
+<h3 id="creating-the-raid-sandbox:eac168a4d4aa4a6f9e28c20ed3911aad">Creating the RAID sandbox</h3>
 
 <p class="admonition warning" markdown="1">
 <b>Caution:</b> Do not play recklessly with your disk partitions. You can very easily mistype something, or run a command with the wrong parameters and lose your data. Instead of blindingly follow what I propose here, create a safe sandbox environment to familiarize yourself with the RAID setup.  Then when you are comfortable setting everything up, do the same thing with your real disks.
@@ -117,7 +117,7 @@ stratos@yoda:~/sandbox$ sudo losetup /dev/loop2 raid2
 stratos@yoda:~/sandbox$ sudo losetup /dev/loop3 raid3
 </code></pre>
 
-<h3 id="toc_2">Setup of RAID arrays</h3>
+<h3 id="setup-of-raid-arrays:eac168a4d4aa4a6f9e28c20ed3911aad">Setup of RAID arrays</h3>
 
 <p>Now we have created three partitions /dev/loop1, /dev/loop2 and /dev/loop3 that will imitate some actual /dev/sdXX, /dev/sdXX and /dev/sdXX partitions.</p>
 
@@ -130,11 +130,11 @@ mdadm: size set to 102336K
 mdadm: array /dev/md3 started.
 </code></pre>
 
-<h2 id="toc_3">LVM2 Setup</h2>
+<h2 id="lvm2-setup:eac168a4d4aa4a6f9e28c20ed3911aad">LVM2 Setup</h2>
 
 <p>At this point we could format the /dev/md3 partition with some filesystem and start using it. But that&rsquo;s the old way of doing it. What we want to do is run LVM2 on top of the RAID5 partition so we can better utilize the space provided by the /dev/md3 partition, allowing us to dynamically create, resize and remove volumes in the space provided.</p>
 
-<h3 id="toc_4">Create the LVM2 partitions</h3>
+<h3 id="create-the-lvm2-partitions:eac168a4d4aa4a6f9e28c20ed3911aad">Create the LVM2 partitions</h3>
 
 <p>In order to use LVM2 we first have to create a LVM2 Physical Volume:</p>
 
@@ -236,7 +236,7 @@ stratos@yoda:~/sandbox$ sudo lvdisplay
 
 <p>OK. The allocated PE are 20 and we have another 29 unallocated.</p>
 
-<h3 id="toc_5">Create the mountable volume</h3>
+<h3 id="create-the-mountable-volume:eac168a4d4aa4a6f9e28c20ed3911aad">Create the mountable volume</h3>
 
 <p>The newly created LVM2 volume is unformatted:</p>
 
@@ -300,11 +300,11 @@ Hello LVM2 logical volume
 
 <p>As long as the <strong>test.txt</strong> file is there through all our following tests, then our data is safe.</p>
 
-<h2 id="toc_6">LVM2 Manipulation</h2>
+<h2 id="lvm2-manipulation:eac168a4d4aa4a6f9e28c20ed3911aad">LVM2 Manipulation</h2>
 
 <p>Let&rsquo;s play with the 49 available PE given to us from the lvm-group Volume Group.</p>
 
-<h3 id="toc_7">Add more volumes</h3>
+<h3 id="add-more-volumes:eac168a4d4aa4a6f9e28c20ed3911aad">Add more volumes</h3>
 
 <p>Create another LVM2 Logical volume:</p>
 
@@ -351,7 +351,7 @@ drwxr-xr-x  3 root    root         1024 2010-10-02 11:39 myVolume2
 
 <p>Now we have another volume with 10 PE (40MB).</p>
 
-<h3 id="toc_8">Resize volumes</h3>
+<h3 id="resize-volumes:eac168a4d4aa4a6f9e28c20ed3911aad">Resize volumes</h3>
 
 <p>We have myVolume with 20 PE and myVolume2 with 10 PE. We should have 19 PE still unallocated:</p>
 
@@ -420,7 +420,7 @@ Hello LVM2 logical volume
 
 <p>So far so good.</p>
 
-<h3 id="toc_9">Remove volumes</h3>
+<h3 id="remove-volumes:eac168a4d4aa4a6f9e28c20ed3911aad">Remove volumes</h3>
 
 <p>We have another volume, myVolume2 that we created for fun for 10 PE (40 MB). Let&rsquo;s remove it and reclaim the space:</p>
 
@@ -457,11 +457,11 @@ stratos@yoda:~/sandbox$ sudo vgdisplay
 
 <p>So, now we have 19 free PE. The allocated 30 are from myVolume (20 initial + 10 after the resize)</p>
 
-<h2 id="toc_10">RAID Manipulation</h2>
+<h2 id="raid-manipulation:eac168a4d4aa4a6f9e28c20ed3911aad">RAID Manipulation</h2>
 
 <p>Playing with LVM2 is nice because you can manipulate and assign the available space you have any way you want. The actual unseen hero is the RAID5 volume that we have created because it provides a guarantee that even if one disk fails we will not lose our data. Let&rsquo;s play with the RAID disks now.</p>
 
-<h3 id="toc_11">Fail a RAID disk and recover</h3>
+<h3 id="fail-a-raid-disk-and-recover:eac168a4d4aa4a6f9e28c20ed3911aad">Fail a RAID disk and recover</h3>
 
 <p>Hopefully you will never have to face a failed disk, but it is quite important to know what to do if a disk fails. For now, in our comfortable sandbox we will imitate a failed disk and we will check if we&rsquo;ll lose any data:</p>
 
@@ -645,7 +645,7 @@ Working Devices : 3
 
 <p>Nice and clean. Let&rsquo;s hope you never have to go through a procedure like this, EVER.</p>
 
-<h3 id="toc_12">Increase the RAID array size</h3>
+<h3 id="increase-the-raid-array-size:eac168a4d4aa4a6f9e28c20ed3911aad">Increase the RAID array size</h3>
 
 <p>&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&ldquo;&rdquo;&rdquo;</p>
 
@@ -658,7 +658,7 @@ Working Devices : 3
 <li>Increase the size of the disks already in the array.</li>
 </ul>
 
-<h3 id="toc_13">Add new disks to the RAID array</h3>
+<h3 id="add-new-disks-to-the-raid-array:eac168a4d4aa4a6f9e28c20ed3911aad">Add new disks to the RAID array</h3>
 
 <p>Adding a new disk in the array is easy (assuming you still have free SATA ports in your motherboard).</p>
 
@@ -822,7 +822,7 @@ Hello LVM2 logical volume
 
 <p>Yep, still here.</p>
 
-<h3 id="toc_14">Increase the size of the RAID disks</h3>
+<h3 id="increase-the-size-of-the-raid-disks:eac168a4d4aa4a6f9e28c20ed3911aad">Increase the size of the RAID disks</h3>
 
 <p>In reality (as in my personal case) you will end up increasing the initial RAID size because you want to substitute the original disks with larger ones. The prices keep dropping and the amount of SATA ports in a motherboard are finite. So, sooner or later you will need to replace the disks, with larger ones.</p>
 
@@ -978,7 +978,7 @@ stratos@yoda:~/sandbox$ sudo vgdisplay lvm-group
 
 <p>As you see we went from 74 PE to 112 PE. Now we can go back to normal LVM2 volume manipulation to take advantage of the gained space.</p>
 
-<h3 id="toc_15">Recover RAID array</h3>
+<h3 id="recover-raid-array:eac168a4d4aa4a6f9e28c20ed3911aad">Recover RAID array</h3>
 
 <p>OK, but what happens when something happens and you lose your RAID array?</p>
 
@@ -986,7 +986,7 @@ stratos@yoda:~/sandbox$ sudo vgdisplay lvm-group
 
 <p>The actual neccessary file, to identify and mount the RAID array lives in /etc/mdadm/mdadm.conf and it looks like this:</p>
 
-<pre><code>stratos@yoda:~/sandbox$ cat /etc/mdadm/mdadm.conf 
+<pre><code>stratos@yoda:~/sandbox$ cat /etc/mdadm/mdadm.conf
 # mdadm.conf
 #
 # Please refer to mdadm.conf(5) for information about this file.
@@ -1019,7 +1019,7 @@ ARRAY /dev/md1 level=raid5 num-devices=3 UUID=0e065f5e:b0bc71b3:b6150be0:b4ec82e
 
 <p>If you already have an /etc/mdadm/mdadm.conf file in your system, but you are missing the ARRAY definitions you can force mdadm to create these definitions for you:</p>
 
-<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --examine --scan 
+<pre><code>stratos@yoda:~/sandbox$ sudo mdadm --examine --scan
 
 ARRAY /dev/md0 level=raid0 num-devices=3 UUID=1ecc61f7:ab95b8b0:b6150be0:b4ec82ed
 ARRAY /dev/md1 level=raid5 num-devices=3 UUID=0e065f5e:b0bc71b3:b6150be0:b4ec82ed
@@ -1036,11 +1036,11 @@ stratos@yoda:~/sandbox$ sudo cp mdadm.conf /etc/mdadm/mdadm.conf
 
 <p>Now, if you reboot you should have you array back. Well, done!</p>
 
-<h2 id="toc_16">RAID/LVM2 Summary</h2>
+<h2 id="raid-lvm2-summary:eac168a4d4aa4a6f9e28c20ed3911aad">RAID/LVM2 Summary</h2>
 
 <p>So to sum up all the Raid and LVM2 operations that we did:</p>
 
-<h3 id="toc_17">Create sandbox</h3>
+<h3 id="create-sandbox:eac168a4d4aa4a6f9e28c20ed3911aad">Create sandbox</h3>
 
 <pre><code>cd ~
 cd sandbox/
@@ -1052,26 +1052,26 @@ sudo losetup /dev/loop2 raid2
 sudo losetup /dev/loop3 raid3
 </code></pre>
 
-<h3 id="toc_18">Create RAID5 array</h3>
+<h3 id="create-raid5-array:eac168a4d4aa4a6f9e28c20ed3911aad">Create RAID5 array</h3>
 
 <pre><code>sudo mdadm --create --verbose /dev/md3 -l5 -n3 /dev/loop1 /dev/loop2 /dev/loop3
 </code></pre>
 
-<h3 id="toc_19">Create LVM2 volumes</h3>
+<h3 id="create-lvm2-volumes:eac168a4d4aa4a6f9e28c20ed3911aad">Create LVM2 volumes</h3>
 
 <pre><code>sudo pvcreate /dev/md3
 sudo vgcreate lvm-group /dev/md3
 sudo lvcreate -l 20 lvm-group -n myVolume     # you can use any PE you want
 </code></pre>
 
-<h3 id="toc_20">Format / Mount the volume</h3>
+<h3 id="format-mount-the-volume:eac168a4d4aa4a6f9e28c20ed3911aad">Format / Mount the volume</h3>
 
 <pre><code>sudo mkfs.ext4 /dev/lvm-group/myVolume
 mkdir myVolume
 sudo mount /dev/lvm-group/myVolume myVolume
 </code></pre>
 
-<h3 id="toc_21">Extend an LVM2 Logical Volume</h3>
+<h3 id="extend-an-lvm2-logical-volume:eac168a4d4aa4a6f9e28c20ed3911aad">Extend an LVM2 Logical Volume</h3>
 
 <pre><code>sudo lvextend -l+10 /dev/lvm-group/myVolume   # add any PE you want
 sudo umount myVolume
@@ -1079,12 +1079,12 @@ sudo e2fsck -f /dev/lvm-group/myVolume
 sudo resize2fs /dev/lvm-group/myVolume
 </code></pre>
 
-<h3 id="toc_22">Remove an LVM2 Logical Volume</h3>
+<h3 id="remove-an-lvm2-logical-volume:eac168a4d4aa4a6f9e28c20ed3911aad">Remove an LVM2 Logical Volume</h3>
 
 <pre><code>sudo lvremove /dev/lvm-group/myVolume2
 </code></pre>
 
-<h3 id="toc_23">Replace a failed RAID disk</h3>
+<h3 id="replace-a-failed-raid-disk:eac168a4d4aa4a6f9e28c20ed3911aad">Replace a failed RAID disk</h3>
 
 <pre><code>sudo mdadm --fail /dev/md3 /dev/loop3          # This is part of our simulation
 sudo mdadm --remove /dev/md3 /dev/loop3
@@ -1095,7 +1095,7 @@ sudo losetup /dev/loop3 raid3
 sudo mdadm /dev/md3 --add /dev/loop3           # Do this under normal circumstances
 </code></pre>
 
-<h3 id="toc_24">Add new disks to RAID5 array</h3>
+<h3 id="add-new-disks-to-raid5-array:eac168a4d4aa4a6f9e28c20ed3911aad">Add new disks to RAID5 array</h3>
 
 <pre><code>dd if=/dev/zero of=raid4 bs=10240 count=10240  # This is part of our simulation
 sudo losetup /dev/loop4 raid4
@@ -1103,7 +1103,7 @@ sudo mdadm --grow /dev/md3 --raid-devices=4    # Do this under normal circumstan
 sudo pvresize /dev/md3
 </code></pre>
 
-<h3 id="toc_25">Increase size of RAID disks</h3>
+<h3 id="increase-size-of-raid-disks:eac168a4d4aa4a6f9e28c20ed3911aad">Increase size of RAID disks</h3>
 
 <pre><code>sudo mdadm --fail /dev/md3 /dev/loop1          # First remove old disk
 sudo mdadm --remove /dev/md3 /dev/loop1
@@ -1117,7 +1117,7 @@ sudo mdadm /dev/md3 --grow --size=max
 sudo pvresize /dev/md3
 </code></pre>
 
-<h3 id="toc_26">Recover lost RAID array</h3>
+<h3 id="recover-lost-raid-array:eac168a4d4aa4a6f9e28c20ed3911aad">Recover lost RAID array</h3>
 
 <pre><code>sudo mdadm --examine --scan                   # append output to /etc/mdadm/mdadm.conf
 </code></pre>
@@ -1177,7 +1177,7 @@ sudo pvresize /dev/md3
 
       
       <li>
-        <a href="http://stratos.gerakakis.net/about/">
+        <a href="/about/">
           About</a>
       </li>
       
@@ -1219,8 +1219,8 @@ sudo pvresize /dev/md3
     <p class="footnote">powered by
       <a href="http://hugo.spf13.com">Hugo</a>
       <br/>
-      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">stratos.gerakakis.net</span>by
-      <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Stratos Gerakakis</span>is licensed under a
+      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">stratos.gerakakis.net</span> by
+      <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Stratos Gerakakis</span> is licensed under a
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
         <br />

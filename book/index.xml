@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Books on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/book/index.xml/</link>
+    <title>Books on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/book/</link>
+    <description>Recent content in Books on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Sun, 10 Aug 2014 00:00:00 UTC</updated>
+    <lastBuildDate>Sun, 10 Aug 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/book/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Left Hand Of Darkness</title>
       <link>http://stratos.gerakakis.net/book/left_hand_of_darkness/</link>
-      <pubDate>Sun, 10 Aug 2014 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sun, 10 Aug 2014 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/left_hand_of_darkness/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34; /&gt;
     
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Winter is an Earth-like planet with two major differences: conditions are semi artic even at the warmest time of the year, and the inhabitants are all of the same sex. Tucked away in a remote corner of the universe, they have no knowledge of space travel or of life beyond their own world. And when a strange envoy from space brings news of a vast coalition of planets which they are invited to join, he is met with fear, mistrust and disbelief.&lt;/p&gt;
@@ -39,14 +41,15 @@
     <item>
       <title>Ringworld</title>
       <link>http://stratos.gerakakis.net/book/ringworld/</link>
-      <pubDate>Tue, 01 Nov 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/ringworld/</guid>
       <description>&lt;!--- 0575077026 --&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/7/71/Ringworld%281stEd%29.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/7/71/Ringworld%281stEd%29.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -55,6 +58,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;No wonder this has won both Hugo and Nebula awards in &lt;sup&gt;1970&lt;/sup&gt;&amp;frasl;&lt;sub&gt;71&lt;/sub&gt;.&lt;/p&gt;
 
@@ -67,14 +71,15 @@
     <item>
       <title>Time Enough for Love</title>
       <link>http://stratos.gerakakis.net/book/time_enough_for_love/</link>
-      <pubDate>Fri, 14 Oct 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/time_enough_for_love/</guid>
       <description>&lt;!--- 0441810764 --&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/6/68/Time_Enough_For_Love_73.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/6/68/Time_Enough_For_Love_73.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -83,6 +88,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Lazarus Long&lt;/strong&gt;&lt;/p&gt;
@@ -103,14 +109,15 @@
     <item>
       <title>Dune</title>
       <link>http://stratos.gerakakis.net/book/dune/</link>
-      <pubDate>Thu, 06 Jan 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Thu, 06 Jan 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/dune/</guid>
       <description>&lt;!--- 0441013597 --&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/5/5a/FrankHerbert_Dune_1st.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/5/5a/FrankHerbert_Dune_1st.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -119,6 +126,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;I was looking to print a nice PnP (Print and Play) game and I came across &lt;a href=&#34;http://boardgamegeek.com/boardgame/121/dune&#34;&gt;Dune&lt;/a&gt;.&lt;/p&gt;
 
@@ -133,12 +141,13 @@
     <item>
       <title>The Forever War</title>
       <link>http://stratos.gerakakis.net/book/the_forever_war/</link>
-      <pubDate>Thu, 04 Nov 2010 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Thu, 04 Nov 2010 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/the_forever_war/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/c/cd/TheForeverWar%281stEd%29.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/c/cd/TheForeverWar%281stEd%29.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -147,6 +156,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Private William Mandella is a reluctant hero in an interstellar war against an unknowable and unconquerable alien enemy. But his greatest test will be when he returns home. Relativity means that for every few months&amp;rsquo; tour of duty centuries have passed on Earth, isolating the combatants ever more from the world for whose future they are fighting.&lt;/p&gt;
@@ -163,8 +173,8 @@
     <item>
       <title>The Demon Princes</title>
       <link>http://stratos.gerakakis.net/book/the_demon_princes/</link>
-      <pubDate>Tue, 05 Oct 2010 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Tue, 05 Oct 2010 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/the_demon_princes/</guid>
       <description>
 
@@ -178,11 +188,12 @@
 
 &lt;p&gt;This is Volume One that includes the first three books of the series: The Star King, The Killing Machine and The Palace of Love.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;The Star King&lt;/h2&gt;
+&lt;h2 id=&#34;the-star-king:58862752ffb66aaec0a3876c9abb56f6&#34;&gt;The Star King&lt;/h2&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Star_king.jpg/200px-Star_king.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/4/48/Star_king.jpg/200px-Star_king.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -191,7 +202,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-   
+&lt;/p&gt;
 
 &lt;p&gt;Gesrhen is against Attel Malagate. Attel is not human, but rather a type of species, later called Star Kings, that can quickly mutate (through not so many generations) and approximate the best qualities of similar species that surrounds them. When humans colonized their planet, Star Kings quickly became a species that rivaled even human themselves.&lt;/p&gt;
 
@@ -201,11 +212,12 @@
 
 &lt;p&gt;&lt;em&gt;Read more at the&lt;/em&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Star_King&#34;&gt;Wikipedia article.&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;The Killing Machine&lt;/h2&gt;
+&lt;h2 id=&#34;the-killing-machine:58862752ffb66aaec0a3876c9abb56f6&#34;&gt;The Killing Machine&lt;/h2&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/2/29/Killing_Machine_%28Jack_Vance%29_1st_edition.jpg/200px-Killing_Machine_%28Jack_Vance%29_1st_edition.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/2/29/Killing_Machine_%28Jack_Vance%29_1st_edition.jpg/200px-Killing_Machine_%28Jack_Vance%29_1st_edition.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -214,7 +226,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-   
+&lt;/p&gt;
 
 &lt;p&gt;The Killing Machine contains &lt;strong&gt;THE BEST&lt;/strong&gt; villain name I have ever read: &lt;strong&gt;Kokkor Hekkus&lt;/strong&gt;. It sounds so mean, that I do not even have to read a description of the vile things Mr.Hekkus has performed in his life. The fact that he is a &amp;ldquo;hormagaunt&amp;rdquo;, extending his life by stealing children and kind of &amp;ldquo;distilling&amp;rdquo; them (it doesn&amp;rsquo;t even sound nice), in order to extend his lifespan, doesn&amp;rsquo;t make him any more likable, either.&lt;/p&gt;
 
@@ -222,11 +234,12 @@
 
 &lt;p&gt;&lt;em&gt;Read more at the&lt;/em&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Killing_Machine&#34;&gt;Wikipedia article.&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;The Palace of Love&lt;/h2&gt;
+&lt;h2 id=&#34;the-palace-of-love:58862752ffb66aaec0a3876c9abb56f6&#34;&gt;The Palace of Love&lt;/h2&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Palace_of_love.jpg/200px-Palace_of_love.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Palace_of_love.jpg/200px-Palace_of_love.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -235,6 +248,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Gershen is after Viole Falush on this one.&lt;/p&gt;
 

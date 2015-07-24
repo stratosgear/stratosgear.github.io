@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Cli on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/cli/index.xml/</link>
+    <title>Cli on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/cli/</link>
+    <description>Recent content in Cli on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Mon, 25 Apr 2011 00:00:00 UTC</updated>
+    <lastBuildDate>Mon, 25 Apr 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Recording Streaming Audio</title>
       <link>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</link>
-      <pubDate>Mon, 25 Apr 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Mon, 25 Apr 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</guid>
       <description>
 
 &lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Recording&lt;/h2&gt;
+&lt;h2 id=&#34;recording:614caedb33634d43f044cbd61067e96e&#34;&gt;Recording&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://streamripper.sourceforge.net&#34;&gt;streamripper&lt;/a&gt;: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 &lt;p&gt;$ crontab -e
   0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;Splitting&lt;/h2&gt;
+&lt;h2 id=&#34;splitting:614caedb33634d43f044cbd61067e96e&#34;&gt;Splitting&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://audacious-media-player.org&#34;&gt;audacious&lt;/a&gt;: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.&lt;/p&gt;
 
@@ -52,7 +52,7 @@
 &lt;li&gt;-o finalRecording: The final splitted file.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Tagging&lt;/h2&gt;
+&lt;h2 id=&#34;tagging:614caedb33634d43f044cbd61067e96e&#34;&gt;Tagging&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://easytag.sourceforge.net&#34;&gt;easyTag&lt;/a&gt;: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!&lt;/p&gt;
 
@@ -63,8 +63,8 @@
     <item>
       <title>Convert an A4 sized .pdf file to A5 size</title>
       <link>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</link>
-      <pubDate>Wed, 05 Jan 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Wed, 05 Jan 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</guid>
       <description>&lt;p&gt;I was working on a LyX document based on the Tufte layout and unfortunately the page layout was available at A4 page sizes only (ok, US letter, too, but that doesn&amp;rsquo;t count :)&lt;/p&gt;
 
@@ -118,17 +118,17 @@ ifelse
     <item>
       <title>Passwordless ssh connection with another server</title>
       <link>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</link>
-      <pubDate>Fri, 21 Mar 2008 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Fri, 21 Mar 2008 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</guid>
       <description>&lt;p&gt;First, create the key on the local machine (without a passphrase) ::&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh-keygen -t rsa
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/user/.ssh/id_rsa): 
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
 Created directory &#39;/home/user/.ssh&#39;.
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 Your identification has been saved in /home/user/.ssh/id_rsa.
 Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 The key fingerprint is:
@@ -137,8 +137,8 @@ XX:XX:XX:XX:...
 
 &lt;p&gt;Then create a directory on the remote machine::&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh otherUser@remote mkdir -p .ssh
-otherUser@remote&#39;s password: 
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh otherUser@remote &amp;quot;mkdir -p .ssh &amp;amp;&amp;amp; chmod 700 .ssh&amp;quot;
+otherUser@remote&#39;s password:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Finally append new key to remote .ssh/authorized_keys file::&lt;/p&gt;
@@ -160,8 +160,8 @@ otherUser@remote&#39;s password:
     <item>
       <title>Migrating greek table from mysql &lt; 4.1</title>
       <link>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</link>
-      <pubDate>Sat, 17 Jun 2006 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sat, 17 Jun 2006 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</guid>
       <description>&lt;p&gt;I do not remember how the tables were transferred from the old DB to the new (more likely through a mysqldump).&lt;/p&gt;
 

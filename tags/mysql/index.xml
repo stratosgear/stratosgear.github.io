@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Mysql on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/mysql/index.xml/</link>
+    <title>Mysql on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/mysql/</link>
+    <description>Recent content in Mysql on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Sun, 25 Dec 2011 00:00:00 UTC</updated>
+    <lastBuildDate>Sun, 25 Dec 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Mysql Bindings in Django</title>
       <link>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</link>
-      <pubDate>Sun, 25 Dec 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sun, 25 Dec 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</guid>
       <description>&lt;p&gt;In order to correctly install mysql bindings in a Django virtualenv you need:&lt;/p&gt;
 
@@ -36,8 +36,8 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>Migrating greek table from mysql &lt; 4.1</title>
       <link>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</link>
-      <pubDate>Sat, 17 Jun 2006 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sat, 17 Jun 2006 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2006/06/migrate_mysql_4.1/</guid>
       <description>&lt;p&gt;I do not remember how the tables were transferred from the old DB to the new (more likely through a mysqldump).&lt;/p&gt;
 

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Recent Content on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/index.xml/</link>
+    <title>Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/</link>
+    <description>Recent content on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Fri, 22 Aug 2014 14:26:03 CEST</updated>
+    <lastBuildDate>Fri, 22 Aug 2014 14:26:03 +0200</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Moving to Arch</title>
       <link>http://stratos.gerakakis.net/2014/08/moving_to_arch/</link>
-      <pubDate>Fri, 22 Aug 2014 14:26:03 CEST</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Fri, 22 Aug 2014 14:26:03 +0200</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2014/08/moving_to_arch/</guid>
       <description>&lt;p&gt;Well the time to move-on has finally come.&lt;/p&gt;
 
@@ -38,15 +38,17 @@
     <item>
       <title>Left Hand Of Darkness</title>
       <link>http://stratos.gerakakis.net/book/left_hand_of_darkness/</link>
-      <pubDate>Sun, 10 Aug 2014 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sun, 10 Aug 2014 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/left_hand_of_darkness/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34; /&gt;
     
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Winter is an Earth-like planet with two major differences: conditions are semi artic even at the warmest time of the year, and the inhabitants are all of the same sex. Tucked away in a remote corner of the universe, they have no knowledge of space travel or of life beyond their own world. And when a strange envoy from space brings news of a vast coalition of planets which they are invited to join, he is met with fear, mistrust and disbelief.&lt;/p&gt;
@@ -65,8 +67,8 @@
     <item>
       <title>About this site</title>
       <link>http://stratos.gerakakis.net/about/</link>
-      <pubDate>Wed, 06 Aug 2014 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Wed, 06 Aug 2014 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/about/</guid>
       <description>&lt;p&gt;These are the mesonoxian inaniloquent ramblings of Stratos Gerakakis.&lt;/p&gt;
 
@@ -81,8 +83,8 @@
     <item>
       <title>Mysql Bindings in Django</title>
       <link>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</link>
-      <pubDate>Sun, 25 Dec 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sun, 25 Dec 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</guid>
       <description>&lt;p&gt;In order to correctly install mysql bindings in a Django virtualenv you need:&lt;/p&gt;
 
@@ -105,8 +107,8 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>Translating a PDF</title>
       <link>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</link>
-      <pubDate>Thu, 15 Dec 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Thu, 15 Dec 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</guid>
       <description>&lt;p&gt;Hey, if you pass the link of the online PDF document to the Google Translate service then Google will extract the text from the PDF and translate it in the language that you selected.  It doesn&amp;rsquo;t keep the &lt;strong&gt;exact same&lt;/strong&gt; page formatting but the PDF is now &lt;strong&gt;very&lt;/strong&gt; readable.  Much more readable than it was before&amp;hellip; :-)&lt;/p&gt;
 
@@ -117,14 +119,15 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>Ringworld</title>
       <link>http://stratos.gerakakis.net/book/ringworld/</link>
-      <pubDate>Tue, 01 Nov 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/ringworld/</guid>
       <description>&lt;!--- 0575077026 --&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/7/71/Ringworld%281stEd%29.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/7/71/Ringworld%281stEd%29.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -133,6 +136,7 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;No wonder this has won both Hugo and Nebula awards in &lt;sup&gt;1970&lt;/sup&gt;&amp;frasl;&lt;sub&gt;71&lt;/sub&gt;.&lt;/p&gt;
 
@@ -145,14 +149,15 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>Time Enough for Love</title>
       <link>http://stratos.gerakakis.net/book/time_enough_for_love/</link>
-      <pubDate>Fri, 14 Oct 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/time_enough_for_love/</guid>
       <description>&lt;!--- 0441810764 --&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/6/68/Time_Enough_For_Love_73.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/6/68/Time_Enough_For_Love_73.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -161,6 +166,7 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Lazarus Long&lt;/strong&gt;&lt;/p&gt;
@@ -181,12 +187,13 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>First overhead ISS pass</title>
       <link>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</link>
-      <pubDate>Sat, 03 Sep 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sat, 03 Sep 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;/images/iss.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://stratos.gerakakis.net/images/iss.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -195,6 +202,7 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Today I saw my first overhead pass of the ISS.&lt;/p&gt;
 
@@ -211,8 +219,8 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>stratos?ear.com word play</title>
       <link>http://stratos.gerakakis.net/2011/06/stratos_ear_com/</link>
-      <pubDate>Sat, 04 Jun 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sat, 04 Jun 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/06/stratos_ear_com/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s funny how many of the following domain names are actually working (and how many of the letter combinations actually make sense):&lt;/p&gt;
 
@@ -391,12 +399,13 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>Cosmote more 4 us</title>
       <link>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</link>
-      <pubDate>Sat, 28 May 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sat, 28 May 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;/images/cosmote_more4us.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://stratos.gerakakis.net/images/cosmote_more4us.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -405,11 +414,12 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Ξαφνικά άρχισαν να μου έρχονται κάποια SMS στο καρτοκινητό μου ότι:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ &lt;sup&gt;22&lt;/sup&gt;&amp;frasl;&lt;sub&gt;05&lt;/sub&gt;/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
+&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ 22/05/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Στην αρχή νόμιζα ότι έκανα εγώ κάποιο λάθος, αλλά σήμερα διασταύρωσα με την αδερφή μου ότι γίνεται και σε εκείνην το ίδιο.  Σε αυτήν είχαν ήδη χρεώσει περίπου 20 ευρώ και όταν πήρε τηλέφωνο την εξυπηρέτηση πελατών της είπαν ότι είναι μια καινούρια υπηρεσία της Cosmote και αν δεν την θέλει μπορεί να την απενεργοποιήσει.&lt;/p&gt;
@@ -469,14 +479,14 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>Recording Streaming Audio</title>
       <link>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</link>
-      <pubDate>Mon, 25 Apr 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Mon, 25 Apr 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/04/recording_streaming_audio/</guid>
       <description>
 
 &lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_0&#34;&gt;Recording&lt;/h2&gt;
+&lt;h2 id=&#34;recording:614caedb33634d43f044cbd61067e96e&#34;&gt;Recording&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://streamripper.sourceforge.net&#34;&gt;streamripper&lt;/a&gt;: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::&lt;/p&gt;
 
@@ -494,7 +504,7 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;p&gt;$ crontab -e
   0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.&lt;/p&gt;
 
-&lt;h2 id=&#34;toc_1&#34;&gt;Splitting&lt;/h2&gt;
+&lt;h2 id=&#34;splitting:614caedb33634d43f044cbd61067e96e&#34;&gt;Splitting&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://audacious-media-player.org&#34;&gt;audacious&lt;/a&gt;: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.&lt;/p&gt;
 
@@ -509,7 +519,7 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;li&gt;-o finalRecording: The final splitted file.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;toc_2&#34;&gt;Tagging&lt;/h2&gt;
+&lt;h2 id=&#34;tagging:614caedb33634d43f044cbd61067e96e&#34;&gt;Tagging&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://easytag.sourceforge.net&#34;&gt;easyTag&lt;/a&gt;: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!&lt;/p&gt;
 
@@ -520,14 +530,15 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>Dune</title>
       <link>http://stratos.gerakakis.net/book/dune/</link>
-      <pubDate>Thu, 06 Jan 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Thu, 06 Jan 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/dune/</guid>
       <description>&lt;!--- 0441013597 --&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/5/5a/FrankHerbert_Dune_1st.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/5/5a/FrankHerbert_Dune_1st.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -536,6 +547,7 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;I was looking to print a nice PnP (Print and Play) game and I came across &lt;a href=&#34;http://boardgamegeek.com/boardgame/121/dune&#34;&gt;Dune&lt;/a&gt;.&lt;/p&gt;
 
@@ -550,8 +562,8 @@ $ pip install -E myVirtualEnv mysql-python
     <item>
       <title>Convert an A4 sized .pdf file to A5 size</title>
       <link>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</link>
-      <pubDate>Wed, 05 Jan 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Wed, 05 Jan 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</guid>
       <description>&lt;p&gt;I was working on a LyX document based on the Tufte layout and unfortunately the page layout was available at A4 page sizes only (ok, US letter, too, but that doesn&amp;rsquo;t count :)&lt;/p&gt;
 
@@ -605,12 +617,13 @@ ifelse
     <item>
       <title>The Forever War</title>
       <link>http://stratos.gerakakis.net/book/the_forever_war/</link>
-      <pubDate>Thu, 04 Nov 2010 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Thu, 04 Nov 2010 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/the_forever_war/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/c/cd/TheForeverWar%281stEd%29.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/c/cd/TheForeverWar%281stEd%29.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -619,6 +632,7 @@ ifelse
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Private William Mandella is a reluctant hero in an interstellar war against an unknowable and unconquerable alien enemy. But his greatest test will be when he returns home. Relativity means that for every few months&amp;rsquo; tour of duty centuries have passed on Earth, isolating the combatants ever more from the world for whose future they are fighting.&lt;/p&gt;
@@ -635,8 +649,8 @@ ifelse
     <item>
       <title>Installing Virtualbox on Ubuntu Server 10.04</title>
       <link>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</link>
-      <pubDate>Fri, 22 Oct 2010 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Fri, 22 Oct 2010 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</guid>
       <description>
 
@@ -655,7 +669,7 @@ ifelse
 
 &lt;p&gt;(Ok, I installed virtualbox 3.2 on a 64 bit server, yours might vary)&lt;/p&gt;
 
-&lt;h3 id=&#34;toc_0&#34;&gt;Extra credit&lt;/h3&gt;
+&lt;h3 id=&#34;extra-credit:ee28dc631e021a2ef70672aede7f2e6b&#34;&gt;Extra credit&lt;/h3&gt;
 
 &lt;p&gt;If you want to make your life &lt;strong&gt;REAAALY&lt;/strong&gt; easy you should also install &lt;a href=&#34;http://code.google.com/p/phpvirtualbox&#34;&gt;phpvirtualbox&lt;/a&gt; on the host Ubuntu server and get a shiny web based GUI administration screen that looks almost exactly like the native GUI Virtualbox application.&lt;/p&gt;
 </description>

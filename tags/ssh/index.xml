@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Ssh on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/ssh/index.xml/</link>
+    <title>Ssh on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/ssh/</link>
+    <description>Recent content in Ssh on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Fri, 21 Mar 2008 00:00:00 UTC</updated>
+    <lastBuildDate>Fri, 21 Mar 2008 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Passwordless ssh connection with another server</title>
       <link>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</link>
-      <pubDate>Fri, 21 Mar 2008 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Fri, 21 Mar 2008 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</guid>
       <description>&lt;p&gt;First, create the key on the local machine (without a passphrase) ::&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh-keygen -t rsa
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/user/.ssh/id_rsa): 
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
 Created directory &#39;/home/user/.ssh&#39;.
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 Your identification has been saved in /home/user/.ssh/id_rsa.
 Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 The key fingerprint is:
@@ -31,8 +31,8 @@ XX:XX:XX:XX:...
 
 &lt;p&gt;Then create a directory on the remote machine::&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh otherUser@remote mkdir -p .ssh
-otherUser@remote&#39;s password: 
+&lt;pre&gt;&lt;code&gt;user@machine:~&amp;gt; ssh otherUser@remote &amp;quot;mkdir -p .ssh &amp;amp;&amp;amp; chmod 700 .ssh&amp;quot;
+otherUser@remote&#39;s password:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Finally append new key to remote .ssh/authorized_keys file::&lt;/p&gt;

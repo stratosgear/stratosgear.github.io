@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Iss on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/iss/index.xml/</link>
+    <title>Iss on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/iss/</link>
+    <description>Recent content in Iss on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Sat, 03 Sep 2011 00:00:00 UTC</updated>
+    <lastBuildDate>Sat, 03 Sep 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/iss/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>First overhead ISS pass</title>
       <link>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</link>
-      <pubDate>Sat, 03 Sep 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sat, 03 Sep 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;/images/iss.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://stratos.gerakakis.net/images/iss.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -26,6 +27,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Today I saw my first overhead pass of the ISS.&lt;/p&gt;
 

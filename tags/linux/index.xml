@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Stratos Gerakakis</title>
-    <link>http://stratos.gerakakis.net/post/</link>
-    <description>Recent content in Posts on Stratos Gerakakis</description>
+    <title>Linux on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/linux/</link>
+    <description>Recent content in Linux on Stratos Gerakakis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 Aug 2014 14:26:03 +0200</lastBuildDate>
-    <atom:link href="http://stratos.gerakakis.net/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://stratos.gerakakis.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Moving to Arch</title>
@@ -36,30 +36,6 @@
     </item>
     
     <item>
-      <title>Mysql Bindings in Django</title>
-      <link>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</link>
-      <pubDate>Sun, 25 Dec 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</guid>
-      <description>&lt;p&gt;In order to correctly install mysql bindings in a Django virtualenv you need:&lt;/p&gt;
-
-&lt;p&gt;First install some Ubuntu dependencies::&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo aptitude install build-essential python-mysqldb libmysqlclient-dev
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then create the virtual env and install the python packages::&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ virtualenv --no-site-packages --distribute myVirtualEnv
-$ pip install -E myVirtualEnv Django
-$ pip install -E myVirtualEnv mysql-python
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I was missing the &lt;strong&gt;libmysqlclient-dev&lt;/strong&gt; package and I was getting a &lt;strong&gt;EnvironmentError: mysql_config not found&lt;/strong&gt; when running the &lt;strong&gt;pip install mysql-python&lt;/strong&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Translating a PDF</title>
       <link>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</link>
       <pubDate>Thu, 15 Dec 2011 00:00:00 +0000</pubDate>
@@ -68,298 +44,6 @@ $ pip install -E myVirtualEnv mysql-python
       <description>&lt;p&gt;Hey, if you pass the link of the online PDF document to the Google Translate service then Google will extract the text from the PDF and translate it in the language that you selected.  It doesn&amp;rsquo;t keep the &lt;strong&gt;exact same&lt;/strong&gt; page formatting but the PDF is now &lt;strong&gt;very&lt;/strong&gt; readable.  Much more readable than it was before&amp;hellip; :-)&lt;/p&gt;
 
 &lt;p&gt;I didn&amp;rsquo;t know that!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>First overhead ISS pass</title>
-      <link>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</link>
-      <pubDate>Sat, 03 Sep 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</guid>
-      <description>&lt;p&gt;
-&lt;figure &gt;
-    
-        &lt;img src=&#34;http://stratos.gerakakis.net/images/iss.jpg&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;International Space Station&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Today I saw my first overhead pass of the ISS.&lt;/p&gt;
-
-&lt;p&gt;For some time I was registered to &lt;a href=&#34;http://www.twisst.nl&#34;&gt;Twisst&lt;/a&gt; and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
-
-&lt;p&gt;So, today at 20:52 (right as Twisst predicted) I saw the ISS. The brightness was supposed to be at a magnitude of -1.6 (I have no idea how bright that is) and I was wondering what was I was supposed to be looking at.  Suddenly, approximately where I was looking at, a very bright star appeared out of nowhere.  And I could see it with a naked eye.&lt;/p&gt;
-
-&lt;p&gt;It was brighter than the other current stars I could see at the moment and it moved at a pretty high speed accross the sky.  It looked like an airplane was flying overhead, but at a quite fast pace.  The whole pass took approximately 5 minutes and the station traversed an arc almost two thirds of the sky. Then, slowly, in 5-6 seconds, while it was still moving, faded out to nothing.&lt;/p&gt;
-
-&lt;p&gt;I must have look like an idiot, standing there in the middle of the park (it was Azul&amp;rsquo;s nightly walk) gazing at the sky for five minutes.  But, I think it was worth it&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>stratos?ear.com word play</title>
-      <link>http://stratos.gerakakis.net/2011/06/stratos_ear_com/</link>
-      <pubDate>Sat, 04 Jun 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2011/06/stratos_ear_com/</guid>
-      <description>&lt;p&gt;It&amp;rsquo;s funny how many of the following domain names are actually working (and how many of the letter combinations actually make sense):&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Domain&lt;/th&gt;
-&lt;th&gt;Valid Word&lt;/th&gt;
-&lt;th&gt;Domain Name&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosaear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratosbear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratoscear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratosdear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratoseear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Exists&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratosfear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Obviously&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratosgear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Exists&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratoshear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosiear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosjear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratoskear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Exists&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratoslear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosmear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratosnear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosoear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratospear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosqear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratosrear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratossear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratostear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosuear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosvear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Exists&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratoswear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;www.stratosxear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratosyear.com&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yes&lt;/td&gt;
-&lt;td&gt;www.stratoszear.com&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;(Edited):&lt;/strong&gt; This post was written when the blog was hosted on www.stratosgear.com.  I have long since moved it to the current location. &lt;em&gt;&amp;ndash;Aug 14 2014&lt;/em&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cosmote more 4 us</title>
-      <link>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</link>
-      <pubDate>Sat, 28 May 2011 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</guid>
-      <description>&lt;p&gt;
-&lt;figure &gt;
-    
-        &lt;img src=&#34;http://stratos.gerakakis.net/images/cosmote_more4us.jpg&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Cosmote more 4 us&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Ξαφνικά άρχισαν να μου έρχονται κάποια SMS στο καρτοκινητό μου ότι:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ 22/05/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Στην αρχή νόμιζα ότι έκανα εγώ κάποιο λάθος, αλλά σήμερα διασταύρωσα με την αδερφή μου ότι γίνεται και σε εκείνην το ίδιο.  Σε αυτήν είχαν ήδη χρεώσει περίπου 20 ευρώ και όταν πήρε τηλέφωνο την εξυπηρέτηση πελατών της είπαν ότι είναι μια καινούρια υπηρεσία της Cosmote και αν δεν την θέλει μπορεί να την απενεργοποιήσει.&lt;/p&gt;
-
-&lt;p&gt;Συγνώμη!!! Με ρώτησε κανείς εμένα αν θέλω αυτήν την &amp;ldquo;καινούρια υπηρεσία&amp;rdquo; πριν αρχίσουν να μου την χρεώνουν; Έστειλα εγώ κανένα SMS ενεργοποίησης πουθενά;&lt;/p&gt;
-
-&lt;p&gt;Ποιός ξέρει πόσα παράνομα τέτοια ευρώ έχει μαζέψει η Cosmote με αυτήν την απάτη.&lt;/p&gt;
-
-&lt;p&gt;Έλεος&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;[Update 1η Ιουνίου 2011]:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Μετά από λίγο googling βρήκα τα εξής:&lt;/p&gt;
-
-&lt;p&gt;Αυτή η υπηρεσία λέγεται &lt;strong&gt;Cosmote Internet Day Pass&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Σύμφωνα με τα λεγόμενα τους:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;ldquo;Η υπηρεσία COSMOTE Internet Day Pass είναι προενεργοποιημένη σε όλους τους συνδρομητές Συμβολαίου, ΚαρτοΣυμβολαίου και Καρτοκινητής που δεν έχουν ενεργοποιημένο κάποιο πρόγραμμα ή πρόσθετη υπηρεσία που να παρέχει πρόσβαση στο Internet.&amp;rdquo;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Και πάλι, επιμένω, κανείς δεν με ρώτησε αν θέλω την αυτόματη ενεργοποίηση.&lt;/p&gt;
-
-&lt;p&gt;Τέλος, για να απαλαγείς από τις χρεώσεις (κάτι που θα έπρεπε να αναφέρεται και στα SMS που στέλνουν) απλά στείλε δωρεάν SMS με τις λέξεις END DAY στο 1333.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;[Update 30 Σεπτεμβρίου 2011]:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Το μύνημα ξαναεπέστρεψε (μαζί με την χρέωση).  Τώρα, και καλά, το έχουν &amp;ldquo;φτιάξει λίγο&amp;rdquo; γιατί μερικά δευτερόλεπτα μετά το πρώτο μύνημα (με το ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET κτλ κτλ) σου στέλνουν κι&amp;rsquo; άλλο μύνημα που λέει:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;ΑΝ ΕΧΕΙΣ SMARTPHONE ΣΥΣΚΕΥΗ Η ΠΡΟΣΒΑΣΗ ΣΤΟ INTERNET ΙΣΩΣ ΟΦΕΙΛΕΤΑΙ ΣΕ ΕΦΑΡΜΟΓΕΣ (ΚΑΙΡΟΣ-ΝΕΑ-Ε-MAIL) ΠΟΥ ΣΥΝΔΕΟΝΤΑΙ ΑΥΤΟΜΑΤΑ. ΓΙΑ ΠΛΗΡΟΦΟΡΙΕΣ ΚΑΛΕΣΕ ΤΟ 13838&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Βασικά, δηλαδή, φταίει η συσκευή σου που είναι smartphone και έχει την απαίτηση να συνδεθεί στο internet.  Δεν φταίμε εμείς, η Cosmote, που ξεδιάντροπα αποφασίσαμε για σένα ότι θέλεις να χρεώνεσαι κάθε μέρα ένα ευρώ χωρίς να έχεις ερωτηθεί πρώτα! Όχι, μάλλον φταίνε οι εφαρμογές του τηλεφώνου σου.&lt;/p&gt;
-
-&lt;p&gt;Επίσης στο μύνημα που σου στέλνουμε ΔΕΝ σου λέμε πως να το απενεργοποιήσεις, αλλά πάρε μας τηλέφωνο να σε χρεώσουμε και γι&amp;rsquo;αυτό.  Άσε που μερικοί μπορεί και να μην το κάνουνε, οπότε θα συνεχίσουμε να τους χρεώνουμε τα ευρώ.&lt;/p&gt;
-
-&lt;p&gt;Πήρα πάλι τηλέφωνο για να δώ πως τελικά απενεργοποιήται αυτό το πράγμα.  Για να σας γλυτώσω και τα άλλα 0.135€ που σε χρεώνουν στο 13838 (οι ρεζίληδες) οι οδηγίες είναι οι εξής:&lt;/p&gt;
-
-&lt;p&gt;(όπως είχα αναφέρει και πριν) Στέλνεις END DAY στο 1333.&lt;/p&gt;
-
-&lt;p&gt;Απαντάνε με:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;ΤΟ ΑΙΤΗΜΑ ΣΑΣ ΕΙΝΑΙ ΥΠΟ ΕΠΕΞΕΡΓΑΣΙΑ&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;και μετά από λίγο:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;ΤΟ ΑΙΤΗΜΑ ΣΑΣ ΓΙΑ ΑΠΕΝΕΡΓΟΠΟΙΗΣΗ ΤΗΣ ΥΠΗΡΕΣΙΑΣ COSMOTE INTERNET DAY PASS ΟΛΟΚΛΗΡΩΘΗΚΕ.&lt;/p&gt;
-&lt;/blockquote&gt;
 </description>
     </item>
     
@@ -466,35 +150,6 @@ ifelse
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Open myBook.pdf and marvel at your handiwork&amp;hellip; :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Installing Virtualbox on Ubuntu Server 10.04</title>
-      <link>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</link>
-      <pubDate>Fri, 22 Oct 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</guid>
-      <description>
-
-&lt;p&gt;Wanna install Virtualbox on a headless Ubuntu server?&lt;/p&gt;
-
-&lt;p&gt;First do a:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo aptitude install libcurl3 libgl1-mesa-glx libqt4-network libqt4-opengl libxcursor1 libxinerama1 libxmu6 libsdl1.2debian
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then download the appropriate .deb for your architecture from &lt;a href=&#34;http://www.virtualbox.org/wiki/Linux_Downloads&#34;&gt;http://www.virtualbox.org/wiki/Linux_Downloads&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally, install with:&lt;/p&gt;
-
-&lt;p&gt;sudo dpkg -i virtualbox-3.2_3.2.10-66523~Ubuntu~lucid_amd64.deb&lt;/p&gt;
-
-&lt;p&gt;(Ok, I installed virtualbox 3.2 on a 64 bit server, yours might vary)&lt;/p&gt;
-
-&lt;h3 id=&#34;extra-credit:ee28dc631e021a2ef70672aede7f2e6b&#34;&gt;Extra credit&lt;/h3&gt;
-
-&lt;p&gt;If you want to make your life &lt;strong&gt;REAAALY&lt;/strong&gt; easy you should also install &lt;a href=&#34;http://code.google.com/p/phpvirtualbox&#34;&gt;phpvirtualbox&lt;/a&gt; on the host Ubuntu server and get a shiny web based GUI administration screen that looks almost exactly like the native GUI Virtualbox application.&lt;/p&gt;
 </description>
     </item>
     
@@ -1598,19 +1253,6 @@ $ sudo mkfs.xfs /dev/sdf
     </item>
     
     <item>
-      <title>Change codepage on Windows console</title>
-      <link>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</link>
-      <pubDate>Tue, 02 Mar 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</guid>
-      <description>&lt;p&gt;You will find this essential when administrating ORACLE databases from the command line and the locale of the database is set to Greek. I prefer to read the console output in Greek rather in gibberish::&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;chcp 1253
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Passwordless ssh connection with another server</title>
       <link>http://stratos.gerakakis.net/2008/03/passwordless_ssh_connection_with_another_server/</link>
       <pubDate>Fri, 21 Mar 2008 00:00:00 +0000</pubDate>
@@ -1687,24 +1329,6 @@ $MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_results=greek&amp;quo
 &lt;p&gt;The above example was run in some AdoDB Phakt scripts, but the gist of it is before any selects run the above sql commands.&lt;/p&gt;
 
 &lt;p&gt;Good luck&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Αρίθμηση των δρόμων</title>
-      <link>http://stratos.gerakakis.net/2004/12/street_numbering/</link>
-      <pubDate>Sun, 05 Dec 2004 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2004/12/street_numbering/</guid>
-      <description>&lt;p&gt;Οι παρακάτω οδηγίες ίσως να είναι σημαντικές για κάποιον που ψάχνει να βρει μία συγκεκριμένη διεύθυνση.&lt;/p&gt;
-
-&lt;p&gt;Οι δρόμοι στην Αθήνα δεν έχουν τον ίδιο αριθμό μόνο μία φορά . Για παράδειγμα, δεν υπάρχει μόνο μία Πειραιώς 40 αλλά τουλάχιστον τρεις ή τέσσερις.&lt;/p&gt;
-
-&lt;p&gt;Όταν έψαχνα να βρω την Πειραιώς 40 (Υπουργείο Εργασίας και Κοινωνικής Ασφάλισης), κοιτάζοντας στον χάρτη και υποθέτωντας ότι το 40 θα βρίσκεται κάπου στην αρχή ή στο τέλος της Πειραιώς και, ίσως, επειδή ονομάζεται Πειραιώς θα ξεκινάει και από τον Πειραιά, έκανα το λάθος να βρώ έναν τυχαίο αριθμό 38 στον χάρτη κοντά στην αρχή της Πειραιώς και να υποθέσω οτι από &amp;lsquo;κει ξεκινάει η αρίθμηση.&lt;/p&gt;
-
-&lt;p&gt;Αμ, δε&amp;hellip;. Γιατί να είναι τόσο εύκολο? Όπως φαίνεται οι δήμοι έχουν κάποιοι σοβαρό λόγο να θέλουν να αριθμούν τα κομμάτια των δρόμων που ανήκουν στην δικαιοδοσία  τους με τους δικούς τους αριθμούς.  Πιό πρακτικό λόγο εξυπηρετούν, δυστυχώς δεν μπορώ να σκεφτώ?&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Εάν όντως υπάρχει θα ήθελα να τον ξέρω. (Όπως επίσης θα ήθελα να ξέρω και από πιά μεριά του δρόμου αρχίζει η αρίθμηση.)&lt;/p&gt;
 </description>
     </item>
     

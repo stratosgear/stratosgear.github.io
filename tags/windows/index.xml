@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Windows on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/windows/index.xml/</link>
+    <title>Windows on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/windows/</link>
+    <description>Recent content in Windows on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Tue, 02 Mar 2010 00:00:00 UTC</updated>
+    <lastBuildDate>Tue, 02 Mar 2010 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Change codepage on Windows console</title>
       <link>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</link>
-      <pubDate>Tue, 02 Mar 2010 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Tue, 02 Mar 2010 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</guid>
       <description>&lt;p&gt;You will find this essential when administrating ORACLE databases from the command line and the locale of the database is set to Greek. I prefer to read the console output in Greek rather in gibberish::&lt;/p&gt;
 

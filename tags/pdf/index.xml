@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Pdf on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/pdf/index.xml/</link>
+    <title>Pdf on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/pdf/</link>
+    <description>Recent content in Pdf on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Thu, 15 Dec 2011 00:00:00 UTC</updated>
+    <lastBuildDate>Thu, 15 Dec 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Translating a PDF</title>
       <link>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</link>
-      <pubDate>Thu, 15 Dec 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Thu, 15 Dec 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/12/translating_a_pdf/</guid>
       <description>&lt;p&gt;Hey, if you pass the link of the online PDF document to the Google Translate service then Google will extract the text from the PDF and translate it in the language that you selected.  It doesn&amp;rsquo;t keep the &lt;strong&gt;exact same&lt;/strong&gt; page formatting but the PDF is now &lt;strong&gt;very&lt;/strong&gt; readable.  Much more readable than it was before&amp;hellip; :-)&lt;/p&gt;
 
@@ -24,8 +24,8 @@
     <item>
       <title>Convert an A4 sized .pdf file to A5 size</title>
       <link>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</link>
-      <pubDate>Wed, 05 Jan 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Wed, 05 Jan 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/01/convert_an_a4_page_to_a5/</guid>
       <description>&lt;p&gt;I was working on a LyX document based on the Tufte layout and unfortunately the page layout was available at A4 page sizes only (ok, US letter, too, but that doesn&amp;rsquo;t count :)&lt;/p&gt;
 

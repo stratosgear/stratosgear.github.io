@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Reviews on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/reviews/index.xml/</link>
+    <title>Reviews on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/reviews/</link>
+    <description>Recent content in Reviews on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Tue, 01 Nov 2011 00:00:00 UTC</updated>
+    <lastBuildDate>Tue, 01 Nov 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/reviews/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ringworld</title>
       <link>http://stratos.gerakakis.net/book/ringworld/</link>
-      <pubDate>Tue, 01 Nov 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/ringworld/</guid>
       <description>&lt;!--- 0575077026 --&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/7/71/Ringworld%281stEd%29.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/7/71/Ringworld%281stEd%29.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -28,6 +29,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;No wonder this has won both Hugo and Nebula awards in &lt;sup&gt;1970&lt;/sup&gt;&amp;frasl;&lt;sub&gt;71&lt;/sub&gt;.&lt;/p&gt;
 
@@ -40,14 +42,15 @@
     <item>
       <title>Time Enough for Love</title>
       <link>http://stratos.gerakakis.net/book/time_enough_for_love/</link>
-      <pubDate>Fri, 14 Oct 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Fri, 14 Oct 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/time_enough_for_love/</guid>
       <description>&lt;!--- 0441810764 --&gt;
 
+&lt;p&gt;
 &lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/6/68/Time_Enough_For_Love_73.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/6/68/Time_Enough_For_Love_73.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -56,6 +59,7 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Lazarus Long&lt;/strong&gt;&lt;/p&gt;

@@ -46,7 +46,7 @@
     </h2>
     
     <p>Tagged as: 
-      <a class="tag" href="/tags/ubuntu">ubuntu</a>&nbsp; 
+      <a class="tag" href="/tags/linux">linux</a>&nbsp; 
       <a class="tag" href="/tags/cli">cli</a>&nbsp; 
       <a class="tag" href="/tags/ssh">ssh</a>&nbsp; 
     </p>
@@ -74,10 +74,10 @@
 
 <pre><code>user@machine:~&gt; ssh-keygen -t rsa
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/user/.ssh/id_rsa): 
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
 Created directory '/home/user/.ssh'.
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 Your identification has been saved in /home/user/.ssh/id_rsa.
 Your public key has been saved in /home/user/.ssh/id_rsa.pub.
 The key fingerprint is:
@@ -86,8 +86,8 @@ XX:XX:XX:XX:...
 
 <p>Then create a directory on the remote machine::</p>
 
-<pre><code>user@machine:~&gt; ssh otherUser@remote mkdir -p .ssh
-otherUser@remote's password: 
+<pre><code>user@machine:~&gt; ssh otherUser@remote &quot;mkdir -p .ssh &amp;&amp; chmod 700 .ssh&quot;
+otherUser@remote's password:
 </code></pre>
 
 <p>Finally append new key to remote .ssh/authorized_keys file::</p>
@@ -157,7 +157,7 @@ otherUser@remote's password:
 
       
       <li>
-        <a href="http://stratos.gerakakis.net/about/">
+        <a href="/about/">
           About</a>
       </li>
       
@@ -199,8 +199,8 @@ otherUser@remote's password:
     <p class="footnote">powered by
       <a href="http://hugo.spf13.com">Hugo</a>
       <br/>
-      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">stratos.gerakakis.net</span>by
-      <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Stratos Gerakakis</span>is licensed under a
+      <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">stratos.gerakakis.net</span> by
+      <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Stratos Gerakakis</span> is licensed under a
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
         <br />

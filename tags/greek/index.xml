@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Greek on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/greek/index.xml/</link>
+    <title>Greek on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/greek/</link>
+    <description>Recent content in Greek on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Sat, 28 May 2011 00:00:00 UTC</updated>
+    <lastBuildDate>Sat, 28 May 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/greek/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Cosmote more 4 us</title>
       <link>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</link>
-      <pubDate>Sat, 28 May 2011 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sat, 28 May 2011 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;/images/cosmote_more4us.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://stratos.gerakakis.net/images/cosmote_more4us.jpg&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -26,11 +27,12 @@
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Ξαφνικά άρχισαν να μου έρχονται κάποια SMS στο καρτοκινητό μου ότι:&lt;/p&gt;
 
 &lt;blockquote&gt;
-&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ &lt;sup&gt;22&lt;/sup&gt;&amp;frasl;&lt;sub&gt;05&lt;/sub&gt;/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
+&lt;p&gt;ΜΟΛΙΣ ΣΥΝΔΕΘΗΚΕΣ ΣΤΟ INTERNET ΜΕ ΧΡΕΩΣΗ 1Ε ΓΙΑ 24 ΩΡΕΣ. ΜΠΟΡΕΙΣ ΝΑ ΣΕΡΦΑΡΕΙΣ ΑΠΕΡΙΟΡΙΣΤΑ ΑΠΟ ΤΟ ΚΙΝΗΤΟ ΣΟY ΜΕΧΡΙ ΤΙΣ 22/05/11 11:45 ΧΩΡΙΣ ΕΠΙΠΛΕΟΝ ΧΡΕΩΣΗ.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Στην αρχή νόμιζα ότι έκανα εγώ κάποιο λάθος, αλλά σήμερα διασταύρωσα με την αδερφή μου ότι γίνεται και σε εκείνην το ίδιο.  Σε αυτήν είχαν ήδη χρεώσει περίπου 20 ευρώ και όταν πήρε τηλέφωνο την εξυπηρέτηση πελατών της είπαν ότι είναι μια καινούρια υπηρεσία της Cosmote και αν δεν την θέλει μπορεί να την απενεργοποιήσει.&lt;/p&gt;
@@ -90,8 +92,8 @@
     <item>
       <title>Change codepage on Windows console</title>
       <link>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</link>
-      <pubDate>Tue, 02 Mar 2010 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Tue, 02 Mar 2010 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2010/03/change_codepage_on_windows_console/</guid>
       <description>&lt;p&gt;You will find this essential when administrating ORACLE databases from the command line and the locale of the database is set to Greek. I prefer to read the console output in Greek rather in gibberish::&lt;/p&gt;
 
@@ -103,8 +105,8 @@
     <item>
       <title>Αρίθμηση των δρόμων</title>
       <link>http://stratos.gerakakis.net/2004/12/street_numbering/</link>
-      <pubDate>Sun, 05 Dec 2004 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sun, 05 Dec 2004 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/2004/12/street_numbering/</guid>
       <description>&lt;p&gt;Οι παρακάτω οδηγίες ίσως να είναι σημαντικές για κάποιον που ψάχνει να βρει μία συγκεκριμένη διεύθυνση.&lt;/p&gt;
 

@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Hugo on Stratos Gerakakis </title>
-      <generator uri="https://hugo.spf13.com">Hugo</generator>
-    <link>http://stratos.gerakakis.net/tags/hugo/index.xml/</link>
+    <title>Hugo on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/hugo/</link>
+    <description>Recent content in Hugo on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <author>Stratos Gerakakis</author>
-    
-    <updated>Sun, 10 Aug 2014 00:00:00 UTC</updated>
+    <lastBuildDate>Sun, 10 Aug 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://stratos.gerakakis.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Left Hand Of Darkness</title>
       <link>http://stratos.gerakakis.net/book/left_hand_of_darkness/</link>
-      <pubDate>Sun, 10 Aug 2014 00:00:00 UTC</pubDate>
-      <author>Stratos Gerakakis</author>
+      <pubDate>Sun, 10 Aug 2014 00:00:00 +0000</pubDate>
+      
       <guid>http://stratos.gerakakis.net/book/left_hand_of_darkness/</guid>
-      <description>&lt;figure &gt;
+      <description>&lt;p&gt;
+&lt;figure &gt;
     
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34;  /&gt;
+        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34; /&gt;
     
     
 &lt;/figure&gt;
+&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Winter is an Earth-like planet with two major differences: conditions are semi artic even at the warmest time of the year, and the inhabitants are all of the same sex. Tucked away in a remote corner of the universe, they have no knowledge of space travel or of life beyond their own world. And when a strange envoy from space brings news of a vast coalition of planets which they are invited to join, he is met with fear, mistrust and disbelief.&lt;/p&gt;
