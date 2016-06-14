@@ -41,14 +41,14 @@
       <pubDate>Sun, 10 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>http://stratos.gerakakis.net/book/left_hand_of_darkness/</guid>
-      <description>&lt;p&gt;
+      <description>
 &lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/8/88/TheLeftHandOfDarkness1stEd.jpg&#34; /&gt;
     
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;blockquote&gt;
 &lt;p&gt;Winter is an Earth-like planet with two major differences: conditions are semi artic even at the warmest time of the year, and the inhabitants are all of the same sex. Tucked away in a remote corner of the universe, they have no knowledge of space travel or of life beyond their own world. And when a strange envoy from space brings news of a vast coalition of planets which they are invited to join, he is met with fear, mistrust and disbelief.&lt;/p&gt;
@@ -75,8 +75,263 @@
 &lt;p&gt;This must be the sixth or sevent attempt trying to find the right tool for my online ramblings (after trying, html pages, Geeklog, Drupal, Blogger, Dokuwiki, Nikola, Tinkerer, Pelican)&lt;/p&gt;
 
 &lt;p&gt;Usually I go with by the handle &lt;strong&gt;stratosgear&lt;/strong&gt; and you can find me with that username on &lt;a href=&#34;https://bitbucket.org/stratosgear&#34; title=&#34;Bitbucket&#34;&gt;Bitbucket&lt;/a&gt;, &lt;a href=&#34;https://github.com/stratosgear&#34; title=&#34;Github&#34;&gt;Github&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/stratosgear&#34; title=&#34;Twitter&#34;&gt;Twitter&lt;/a&gt;, &lt;a href=&#34;https://plus.google.com/+StratosGerakakis&#34; title=&#34;Google+&#34;&gt;Google+&lt;/a&gt; or other services.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Biography</title>
+      <link>http://stratos.gerakakis.net/bio/</link>
+      <pubDate>Wed, 06 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://stratos.gerakakis.net/bio/</guid>
+      <description>
 
-&lt;p&gt;For more serious (or not) info you can also read about me in &lt;a href=&#34;http://gr.linkedin.com/in/stratosgear&#34; title=&#34;LinkedIn&#34;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;
+&lt;style&gt;
+.post h3 {
+  border-bottom: 2px solid grey;
+  padding-top: 0.5em;
+}
+.post h4 {
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+.post h5 {
+  margin-bottom: 0;
+}
+.post ul {
+  margin-bottom: 0.5em;
+}
+&lt;/style&gt;
+
+&lt;p&gt;This is pulled from the latest version of my info on LinkedIn, right after they got acquired by Microsoft on Jul 2016. Just the &lt;em&gt;straw&lt;/em&gt; that broke the camel&amp;rsquo;s back, that was the required nudge to make me drop LinkedIn.&lt;/p&gt;
+
+&lt;p&gt;Nothing valuable there anyways, except constant headhunter requests to get linked, and an &lt;strong&gt;awfull&lt;/strong&gt; LinkedIn interface to &amp;ldquo;trick&amp;rdquo; you into linking with any stranger there and ever increasing pathetic attempts to make you a paying customer by an ever increasing removal of features.&lt;/p&gt;
+
+&lt;p&gt;Judging from the fate of Skype, Sunrise, SwiftKey(?) this won&amp;rsquo;t be getting any better now anyways, so&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;summary:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Summary&lt;/h3&gt;
+
+&lt;p&gt;Application Developer and Project Manager in a wide variety of web based projects and back end server solutions. Many years of experience producing well structured code and managing small teams of developers, providing elegant solutions to intimidating problems.&lt;/p&gt;
+
+&lt;h3 id=&#34;experience:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Experience&lt;/h3&gt;
+
+&lt;h4 id=&#34;planetek-hellas:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Planetek Hellas&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Service Manager, Technical Lead, Senior Software Engineer&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;November 2013 – Present (2 years 8 months)&lt;/em&gt;&lt;br /&gt;
+Madrid Area, Spain&lt;/p&gt;
+
+&lt;p&gt;Working onsite ESAC, ESA (European Space Astronomy Center, European Space Agency), Madrid, Spain​, as a Service Manager and Technical lead for Planetek Hellas ESA projects.​&lt;/p&gt;
+
+&lt;h5 id=&#34;saps:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;SAPS&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;cience &lt;strong&gt;A&lt;/strong&gt;rchives &lt;strong&gt;P&lt;/strong&gt;ublication &lt;strong&gt;S&lt;/strong&gt;ystem is a rich Internet Application that aims to provide an automated process of linking scientific publications with ESA&amp;rsquo;s astrophysics and planetary Missions and Observations, as well as business analytics based on the generated information.&lt;/p&gt;
+
+&lt;p&gt;Java based development based on Spring based backend running on Tomcat and Google GWT as the frontend, backed by Postgresql database, with searching capabilities provided by ElasticSearch and integration with multiple ESAC Archive AIO systems&lt;/p&gt;
+
+&lt;h5 id=&#34;plaavi:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;PLAAVI&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;PLA&lt;/strong&gt;nck &lt;strong&gt;A&lt;/strong&gt;dded &lt;strong&gt;V&lt;/strong&gt;alue &lt;strong&gt;I&lt;/strong&gt;nterfaces Project with the intention to allow users to apply various post-processing to PLANCK data before downloading them from the Planck Legacy Archive (PLA) hosted at ESAC.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The functionality of the PLAAVI will also allow users to reprocess the science data in a manner different from what is done by the Planck data processing centre and thereby generate their own products. A list of the available Added Vale Interfaces (AVIs) provided will be:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Noise Map Cut-out&lt;/li&gt;
+&lt;li&gt;Effective Beam Averaging on Map Cut-out&lt;/li&gt;
+&lt;li&gt;Unit Conversions&lt;/li&gt;
+&lt;li&gt;Color Corrections&lt;/li&gt;
+&lt;li&gt;Planck Sky Model (PSM)&lt;/li&gt;
+&lt;li&gt;Map Making&lt;/li&gt;
+&lt;li&gt;Component Separation&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;All infrastructure running on clustered installation of Docker containers and integrated with the existing PLA archive website​&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Python based development of a distributed service oriented system, backed a fully restful API server and MongoDB, Redis with dashboards provided by Grafana.&lt;/p&gt;
+
+&lt;h4 id=&#34;startup-company:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Startup Company&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Technical Lead, Senior Software Engineer&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;February 2013 – October 2013 (9 months)&lt;/em&gt;&lt;br /&gt;
+Athens, Greece&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Building an online e-commerce site for airline and hotel ticket reservations.&lt;/li&gt;
+&lt;li&gt;Integration to third party services through SOAP web services.&lt;/li&gt;
+&lt;li&gt;Multiple backend cache systems (memcache, ElasticSearch, Redis)&lt;/li&gt;
+&lt;li&gt;Hosted on Amazon EC2. Clustered implementation through multiple application and cache servers. Database in Amazon RDS.&lt;/li&gt;
+&lt;li&gt;Faceted search interface with Jquery, ElasticSearch, Twitter Bootstrap.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Project was developed in Symfony2 PHP framework.&lt;/p&gt;
+
+&lt;h4 id=&#34;airtickets-gr:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;airtickets.gr&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Senior Software Engineer&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;August 2012 – November 2012 (4 months)&lt;/em&gt;&lt;br /&gt;
+Athens, Greece&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Lead Engineer responsible for architecting and implementing a Java backend service to integrate web service communications with Amadeus CRS/GDS (Computer Reservation System, Global Distribution System).&lt;/li&gt;
+&lt;li&gt;Implemented optimized workflow in order to minimize amount of communication between travel agency and reservations system.&lt;/li&gt;
+&lt;li&gt;Successfully passed the implemented solution through the Amadeus certification process before the system can be taken online.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Work was done with Java, with Spring framework and Apache Axis Soap protocol.&lt;/p&gt;
+
+&lt;h4 id=&#34;peopleperhour-com:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;PeoplePerHour.com&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Software Engineer&lt;/strong&gt;
+&lt;em&gt;March 2012 – July 2012 (5 months)&lt;/em&gt;&lt;br /&gt;
+Athens, Greece&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Worked developing a caching and indexing service based on Solr (search and indexing service based on Apache Lucene).&lt;/li&gt;
+&lt;li&gt;Developed formulas for scoring and boosting results, calculating facets and implementing fuzzy searches on autocomplete text boxes.&lt;/li&gt;
+&lt;li&gt;Also optimized various parts of the website using memcache techniques.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Coding was done in PHP with the Yii PHP framework.&lt;/p&gt;
+
+&lt;h4 id=&#34;evorad:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Evorad&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Development Manager&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;September 2006 – May 2011 (4 years 9 months)&lt;/em&gt;&lt;br /&gt;
+Athens, Greece&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Excellent knowledge of both RIS and PACS workflows and requirements.&lt;/li&gt;
+&lt;li&gt;Developed algorithms for image orientation, multi-parameter series synchronization, MPR and MIP calculations, image annotations, image sorting, etc.&lt;/li&gt;
+&lt;li&gt;Designed automated appointment scheduler for medical appointments, server based CD/DVD burning solution, customized integration with customer’s HIS systems, DICOM study auto-forwarding, customized DICOM worklist integration, etc&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Project was Java based with Swing GUI&lt;/p&gt;
+
+&lt;h4 id=&#34;emphasis-systems:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Emphasis Systems&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Consultant / Software Engineer&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;April 2003 – August 2006 (3 years 5 months)&lt;/em&gt;&lt;br /&gt;
+Athens, Greece&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Participation as software engineer in the project Weight Info (Java servlets, JADE ontologies)&lt;/li&gt;
+&lt;li&gt;Participation as software engineer in the project eRemedy (Java user interface applet, hardware-software interaction, telemedicine environment)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Projects:&lt;/strong&gt; &lt;a href=&#34;http://goo.gl/PTfjm&#34; title=&#34;Care-paths&#34;&gt;CARE-PATHS&lt;/a&gt;, &lt;a href=&#34;http://goo.gl/zWnCn&#34; title=&#34;Carditis&#34;&gt;Carditis&lt;/a&gt;, &lt;a href=&#34;http://goo.gl/PTfjm&#34; title=&#34;Weight-Info&#34;&gt;Weight-Info&lt;/a&gt;, &lt;a href=&#34;http://goo.gl/DYb9O&#34; title=&#34;E-Remedy&#34;&gt;E-Remedy&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;intergraphics:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Intergraphics&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Web Design Instructor&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;February 2001 – March 2002 (1 year 2 months)&lt;/em&gt;&lt;br /&gt;
+Athens, Greece&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Instructor for Web Design classes, teaching HTML and Flash Actionscript.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;mediterranean-agronomic-institute-of-chania:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Mediterranean Agronomic Institute of Chania&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Software Engineer&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;February 2000 – February 2001 (1 year 1 month)&lt;/em&gt;
+Chania, Crete, Greece&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Developed and implemented the Institute&amp;rsquo;s website.&lt;/li&gt;
+&lt;li&gt;Designed the intranet so that the departmnets could share information.&lt;/li&gt;
+&lt;li&gt;Developed the Herbarium Management system (TCL/TK based).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;encommerce-inc-entrust:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;enCommerce Inc / Entrust&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Software Engineer&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;December 1996 – November 1999 (3 years)&lt;/em&gt;&lt;br /&gt;
+Sunnyvale, CA, USA&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Acted as the main engineer for all Graphical User Interface efforts.&lt;/li&gt;
+&lt;li&gt;Developed the Administration Application GUI for getAccess (enCommerce main product).&lt;/li&gt;
+&lt;li&gt;Researched and eventually developed concurrent GUI and CLI (Command Line Interface) for the same product.&lt;/li&gt;
+&lt;li&gt;Improved the graphical representation of the topology mapping of a network distributed installation of getAccess.&lt;/li&gt;
+&lt;li&gt;Lead Engineer in localization to Japanese.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;kapalua-consulting:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Kapalua Consulting&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Consultant / Software Engineer&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;July 1996 – December 1996 (6 months)&lt;/em&gt;&lt;br /&gt;
+Sunnyvale, CA, USA&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Developed and supported a travel agency web site using HTML and Perl.&lt;/li&gt;
+&lt;li&gt;Installed and supported various versions of web servers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;university-of-san-francisco:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;University of San Francisco&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Systems Programming TA&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;January 1992 – May 1992 (5 months)&lt;/em&gt;&lt;br /&gt;
+San Francisco, CA, USA&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Created role model answers of the given projects to be used as reference.&lt;/li&gt;
+&lt;li&gt;Maintained office hours to assist students with their homework.&lt;/li&gt;
+&lt;li&gt;Read and corrected lab assignments.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;courses:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Courses&lt;/h3&gt;
+
+&lt;h4 id=&#34;evorad-1:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Evorad&lt;/h4&gt;
+
+&lt;p&gt;Oracle Healthcare Transaction Base (HTB) Training&lt;br /&gt;
+(16-20 November, 2009)&lt;/p&gt;
+
+&lt;h3 id=&#34;skills:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Skills&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;(In strictly alphabetical order)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Agile, Agile Methodologies, AJAX, Amadeus GDS, Amazon Web Services, Apache, Bash, BIRT, CSS, Distributed Systems, Docker, Drupal, Eclipse, ElasticSearch, Git, Google App Engine, Hibernate, HTML 5, Integration, Jasper Reports, Java, JavaScript, jQuery, JSON, Kibana, Linux, Logstash, Mercurial, MySQL, OOP, Perl, PHP, PostgreSQL, Python, Rancher, REST, Smarty, SOAP, Solr, Spring, Subversion, Symfony, TeamCity, Web Applications, Web Development, Web Services, wxPython, Yii, ZeroMQ&lt;/p&gt;
+
+&lt;h3 id=&#34;certifications:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Certifications&lt;/h3&gt;
+
+&lt;p&gt;PADI Open Water Diver&lt;br /&gt;
+PADI, License 991170****&lt;br /&gt;
+May 1999&lt;/p&gt;
+
+&lt;h3 id=&#34;education:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Education&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;University of San Francisco&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;Bachelor&amp;rsquo;s, Computer Science, Mathematics Minor&lt;/em&gt;&lt;br /&gt;
+1989 – 1994&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Eniaio Polykladiko Lykeio at Chania&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;High School degree&lt;/em&gt;&lt;br /&gt;
+1986 – 1988&lt;/p&gt;
+
+&lt;h3 id=&#34;languages:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Languages&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Greek&lt;/strong&gt;: Native or bilingual proficiency&lt;br /&gt;
+&lt;strong&gt;English&lt;/strong&gt;: Native or bilingual proficiency&lt;br /&gt;
+&lt;strong&gt;Spanish&lt;/strong&gt;: Elementary proficiency&lt;/p&gt;
+
+&lt;h3 id=&#34;additional-info:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Additional Info&lt;/h3&gt;
+
+&lt;h4 id=&#34;interests:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Interests&lt;/h4&gt;
+
+&lt;p&gt;Board Games, Reading, Music, Bicycling, Traveling, Scuba diving, Digital Photography.&lt;/p&gt;
+
+&lt;h4 id=&#34;personal-details:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Personal Details&lt;/h4&gt;
+
+&lt;p&gt;Birthday: 1970&lt;br /&gt;
+Marital Status: Married&lt;/p&gt;
+
+&lt;h4 id=&#34;advice-for-contacting-stratos:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Advice for Contacting Stratos&lt;/h4&gt;
+
+&lt;p&gt;Please note: I only link with people that I personally know and have met. I&amp;rsquo;m not linking with random people, and the only exception is for people who are properly introduced to me by a common acquaintance.&lt;/p&gt;
+
+&lt;p&gt;Your linkedin invitation will be brutally rejected otherwise, so brace for it. Have a nice day :)&lt;/p&gt;
 </description>
     </item>
     
@@ -124,7 +379,7 @@ $ pip install -E myVirtualEnv mysql-python
       <guid>http://stratos.gerakakis.net/book/ringworld/</guid>
       <description>&lt;!--- 0575077026 --&gt;
 
-&lt;p&gt;
+
 &lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/7/71/Ringworld%281stEd%29.jpg&#34; /&gt;
@@ -136,13 +391,15 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;No wonder this has won both Hugo and Nebula awards in &lt;sup&gt;1970&lt;/sup&gt;&amp;frasl;&lt;sub&gt;71&lt;/sub&gt;.&lt;/p&gt;
 
 &lt;p&gt;I was not very fond of Niven&amp;rsquo;s writing style (this is the first &lt;a href=&#34;http://en.wikipedia.org/wiki/Larry_Niven&#34;&gt;Larry Niven&lt;/a&gt; book I read) and maybe he used it for this book only.  The plot though was ingenious.  The idea of the Ringworld was very interesting. It kept me entertained from the beginning until the end.&lt;/p&gt;
 
-&lt;p&gt;Highly recommended! :-)  Read more about the plot on &lt;a href=&#34;http://en.wikipedia.org/wiki/Ringworld&#34;&gt;wikipedia&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Highly recommended! :-)  Read more about the plot on [wikipedia][].&lt;/p&gt;
+
+&lt;p&gt;[wikipedia]: &lt;a href=&#34;http://en.wikipedia.org/wiki/Ringworld&#34;&gt;http://en.wikipedia.org/wiki/Ringworld&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -154,7 +411,7 @@ $ pip install -E myVirtualEnv mysql-python
       <guid>http://stratos.gerakakis.net/book/time_enough_for_love/</guid>
       <description>&lt;!--- 0441810764 --&gt;
 
-&lt;p&gt;
+
 &lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/6/68/Time_Enough_For_Love_73.jpg&#34; /&gt;
@@ -166,7 +423,7 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Lazarus Long&lt;/strong&gt;&lt;/p&gt;
@@ -190,7 +447,7 @@ $ pip install -E myVirtualEnv mysql-python
       <pubDate>Sat, 03 Sep 2011 00:00:00 +0000</pubDate>
       
       <guid>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</guid>
-      <description>&lt;p&gt;
+      <description>
 &lt;figure &gt;
     
         &lt;img src=&#34;http://stratos.gerakakis.net/images/iss.jpg&#34; /&gt;
@@ -202,17 +459,19 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Today I saw my first overhead pass of the ISS.&lt;/p&gt;
 
-&lt;p&gt;For some time I was registered to &lt;a href=&#34;http://www.twisst.nl&#34;&gt;Twisst&lt;/a&gt; and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
+&lt;p&gt;For some time I was registered to [Twisst][] and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
 
 &lt;p&gt;So, today at 20:52 (right as Twisst predicted) I saw the ISS. The brightness was supposed to be at a magnitude of -1.6 (I have no idea how bright that is) and I was wondering what was I was supposed to be looking at.  Suddenly, approximately where I was looking at, a very bright star appeared out of nowhere.  And I could see it with a naked eye.&lt;/p&gt;
 
 &lt;p&gt;It was brighter than the other current stars I could see at the moment and it moved at a pretty high speed accross the sky.  It looked like an airplane was flying overhead, but at a quite fast pace.  The whole pass took approximately 5 minutes and the station traversed an arc almost two thirds of the sky. Then, slowly, in 5-6 seconds, while it was still moving, faded out to nothing.&lt;/p&gt;
 
 &lt;p&gt;I must have look like an idiot, standing there in the middle of the park (it was Azul&amp;rsquo;s nightly walk) gazing at the sky for five minutes.  But, I think it was worth it&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;[Twisst]: &lt;a href=&#34;http://www.twisst.nl&#34;&gt;http://www.twisst.nl&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -402,7 +661,7 @@ $ pip install -E myVirtualEnv mysql-python
       <pubDate>Sat, 28 May 2011 00:00:00 +0000</pubDate>
       
       <guid>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</guid>
-      <description>&lt;p&gt;
+      <description>
 &lt;figure &gt;
     
         &lt;img src=&#34;http://stratos.gerakakis.net/images/cosmote_more4us.jpg&#34; /&gt;
@@ -414,7 +673,7 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Ξαφνικά άρχισαν να μου έρχονται κάποια SMS στο καρτοκινητό μου ότι:&lt;/p&gt;
 
@@ -535,7 +794,7 @@ $ pip install -E myVirtualEnv mysql-python
       <guid>http://stratos.gerakakis.net/book/dune/</guid>
       <description>&lt;!--- 0441013597 --&gt;
 
-&lt;p&gt;
+
 &lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/5/5a/FrankHerbert_Dune_1st.jpg&#34; /&gt;
@@ -547,7 +806,7 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;I was looking to print a nice PnP (Print and Play) game and I came across &lt;a href=&#34;http://boardgamegeek.com/boardgame/121/dune&#34;&gt;Dune&lt;/a&gt;.&lt;/p&gt;
 
@@ -555,7 +814,9 @@ $ pip install -E myVirtualEnv mysql-python
 
 &lt;p&gt;And in case you didn&amp;rsquo;t know, this book is often quoted as &lt;em&gt;&amp;ldquo;THE best science fiction novel&amp;rdquo;&lt;/em&gt; with more than 12 million copies sold worldwide.&lt;/p&gt;
 
-&lt;p&gt;The &lt;a href=&#34;http://en.wikipedia.org/wiki/Dune_(novel)&#34;&gt;wikipedia article&lt;/a&gt; is very informative, too.&lt;/p&gt;
+&lt;p&gt;The [wikipedia article][] is very informative, too.&lt;/p&gt;
+
+&lt;p&gt;[wikipedia article]: &lt;a href=&#34;http://en.wikipedia.org/wiki/Dune_(novel&#34;&gt;http://en.wikipedia.org/wiki/Dune_(novel&lt;/a&gt;)&lt;/p&gt;
 </description>
     </item>
     
@@ -620,7 +881,7 @@ ifelse
       <pubDate>Thu, 04 Nov 2010 00:00:00 +0000</pubDate>
       
       <guid>http://stratos.gerakakis.net/book/the_forever_war/</guid>
-      <description>&lt;p&gt;
+      <description>
 &lt;figure &gt;
     
         &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/c/cd/TheForeverWar%281stEd%29.jpg&#34; /&gt;
@@ -632,7 +893,7 @@ ifelse
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;blockquote&gt;
 &lt;p&gt;Private William Mandella is a reluctant hero in an interstellar war against an unknowable and unconquerable alien enemy. But his greatest test will be when he returns home. Relativity means that for every few months&amp;rsquo; tour of duty centuries have passed on Earth, isolating the combatants ever more from the world for whose future they are fighting.&lt;/p&gt;
@@ -643,35 +904,6 @@ ifelse
 &lt;p&gt;Wow, this was a very nice read. I never thought of that particular aspect of time dilation, when travelling at the speed of light. Talking about a meaningless war that drags it&amp;rsquo;s feet&amp;hellip;!&lt;/p&gt;
 
 &lt;p&gt;Two thumbs up for &amp;ldquo;The Forever War&amp;rdquo;, On to &amp;ldquo;Forever Peace&amp;rdquo; now&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Installing Virtualbox on Ubuntu Server 10.04</title>
-      <link>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</link>
-      <pubDate>Fri, 22 Oct 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2010/10/installing_virtualbox_on_ubuntu_server_10_04/</guid>
-      <description>
-
-&lt;p&gt;Wanna install Virtualbox on a headless Ubuntu server?&lt;/p&gt;
-
-&lt;p&gt;First do a:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo aptitude install libcurl3 libgl1-mesa-glx libqt4-network libqt4-opengl libxcursor1 libxinerama1 libxmu6 libsdl1.2debian
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then download the appropriate .deb for your architecture from &lt;a href=&#34;http://www.virtualbox.org/wiki/Linux_Downloads&#34;&gt;http://www.virtualbox.org/wiki/Linux_Downloads&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally, install with:&lt;/p&gt;
-
-&lt;p&gt;sudo dpkg -i virtualbox-3.2_3.2.10-66523~Ubuntu~lucid_amd64.deb&lt;/p&gt;
-
-&lt;p&gt;(Ok, I installed virtualbox 3.2 on a 64 bit server, yours might vary)&lt;/p&gt;
-
-&lt;h3 id=&#34;extra-credit:ee28dc631e021a2ef70672aede7f2e6b&#34;&gt;Extra credit&lt;/h3&gt;
-
-&lt;p&gt;If you want to make your life &lt;strong&gt;REAAALY&lt;/strong&gt; easy you should also install &lt;a href=&#34;http://code.google.com/p/phpvirtualbox&#34;&gt;phpvirtualbox&lt;/a&gt; on the host Ubuntu server and get a shiny web based GUI administration screen that looks almost exactly like the native GUI Virtualbox application.&lt;/p&gt;
 </description>
     </item>
     

@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>http://stratos.gerakakis.net/bio/</loc>
+    <lastmod>2014-08-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://stratos.gerakakis.net/2011/12/mysql_bindings_in_django/</loc>
     <lastmod>2011-12-25T00:00:00+00:00</lastmod>
   </url>

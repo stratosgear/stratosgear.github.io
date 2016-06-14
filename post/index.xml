@@ -77,7 +77,7 @@ $ pip install -E myVirtualEnv mysql-python
       <pubDate>Sat, 03 Sep 2011 00:00:00 +0000</pubDate>
       
       <guid>http://stratos.gerakakis.net/2011/09/first_overhead_iss_pass/</guid>
-      <description>&lt;p&gt;
+      <description>
 &lt;figure &gt;
     
         &lt;img src=&#34;http://stratos.gerakakis.net/images/iss.jpg&#34; /&gt;
@@ -89,17 +89,19 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Today I saw my first overhead pass of the ISS.&lt;/p&gt;
 
-&lt;p&gt;For some time I was registered to &lt;a href=&#34;http://www.twisst.nl&#34;&gt;Twisst&lt;/a&gt; and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
+&lt;p&gt;For some time I was registered to [Twisst][] and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
 
 &lt;p&gt;So, today at 20:52 (right as Twisst predicted) I saw the ISS. The brightness was supposed to be at a magnitude of -1.6 (I have no idea how bright that is) and I was wondering what was I was supposed to be looking at.  Suddenly, approximately where I was looking at, a very bright star appeared out of nowhere.  And I could see it with a naked eye.&lt;/p&gt;
 
 &lt;p&gt;It was brighter than the other current stars I could see at the moment and it moved at a pretty high speed accross the sky.  It looked like an airplane was flying overhead, but at a quite fast pace.  The whole pass took approximately 5 minutes and the station traversed an arc almost two thirds of the sky. Then, slowly, in 5-6 seconds, while it was still moving, faded out to nothing.&lt;/p&gt;
 
 &lt;p&gt;I must have look like an idiot, standing there in the middle of the park (it was Azul&amp;rsquo;s nightly walk) gazing at the sky for five minutes.  But, I think it was worth it&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;[Twisst]: &lt;a href=&#34;http://www.twisst.nl&#34;&gt;http://www.twisst.nl&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -289,7 +291,7 @@ $ pip install -E myVirtualEnv mysql-python
       <pubDate>Sat, 28 May 2011 00:00:00 +0000</pubDate>
       
       <guid>http://stratos.gerakakis.net/2011/05/cosmote_more_4_us/</guid>
-      <description>&lt;p&gt;
+      <description>
 &lt;figure &gt;
     
         &lt;img src=&#34;http://stratos.gerakakis.net/images/cosmote_more4us.jpg&#34; /&gt;
@@ -301,7 +303,7 @@ $ pip install -E myVirtualEnv mysql-python
     &lt;/figcaption&gt;
     
 &lt;/figure&gt;
-&lt;/p&gt;
+
 
 &lt;p&gt;Ξαφνικά άρχισαν να μου έρχονται κάποια SMS στο καρτοκινητό μου ότι:&lt;/p&gt;
 
