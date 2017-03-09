@@ -2,12 +2,194 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stratos Gerakakis</title>
-    <link>http://stratos.gerakakis.net/</link>
+    <link>http://stratos.gerakakis.net/index.xml</link>
     <description>Recent content on Stratos Gerakakis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Aug 2014 14:26:03 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 08 Mar 2017 21:45:58 +0100</lastBuildDate>
     <atom:link href="http://stratos.gerakakis.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Verifying my email signatures</title>
+      <link>http://stratos.gerakakis.net/2017/03/verifying_email_signatures/</link>
+      <pubDate>Wed, 08 Mar 2017 21:45:58 +0100</pubDate>
+      
+      <guid>http://stratos.gerakakis.net/2017/03/verifying_email_signatures/</guid>
+      <description>
+
+&lt;p&gt;After a funky incident many years ago, when a collaborator in a European project
+(at a point where we were having an argument) decided to circulate one of my
+emails, after editing it to his liking, all my bussiness emails are now
+electronically signed.&lt;/p&gt;
+
+&lt;p&gt;My emails end up being a little more &amp;ldquo;dirtier&amp;rdquo;, with all the PGP headers and
+footers, but this comes at a very small inconvenience (at least to me)
+considering that all my email correspondance is now tamperproof.&lt;/p&gt;
+
+&lt;p&gt;I do get the occasional question though (apart from the complains that my emails
+look funny) on how to actually check that a given email is valid and the
+contents have not be altered.&lt;/p&gt;
+
+&lt;p&gt;Here are two ways on how to verify, that an email was indeed sent by me and that
+the contents have not been altered.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:  What follows is going to mess with your head. PGP encryption and
+signing is not meant to be used by everyday people.  I&amp;rsquo;ll try my best to give
+a gentle overview, but still, it will be messy!&lt;/p&gt;
+
+&lt;h3 id=&#34;format-of-signed-emails&#34;&gt;Format of signed emails&lt;/h3&gt;
+
+&lt;p&gt;The format of the emails always have the following pattern:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Hi,
+
+This is my email.
+
+- --
+Stratos Gerakakis
+Senior Software Engineer
+
+Planetek Hellas
+44 Kifisias Avenue,  Athens Space Cluster
+Building C, 15125 Marousi, Athens, Greece
+Tel +34 918 131 442 - Mob +34 684 124 497
+gerakakis@planetek.gr  –  www.planetek.gr
+
+== https://keybase.io/stratosgerakakis ==
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEETENGmDUJ68gM1ayY/6ikKBcYr8cFAljAcJgACgkQ/6ikKBcY
+r8eQ+Af7B47OgqQJi171uMT/tndZHO8KzeGrQLUF6f8GwyrZ3Zcn2qIirOOsE5lD
+QtbTxIkwW4iAAFygwUoG4nOXLlDI2emJAVxksdxsTsSo+vTi99DcbDVN9Tm1SiW1
+//CEL8ciHrl9SJJSCWp2hLcQn21rUKsiCzAMVF1SHMHeWUc2roYSmmBzJyver0ph
+YBhr0SdBzfcc+HBv0EBRURUypCtEf6Kci/D3/Zublg0m9qbg4p684IUnOvC7bjmQ
+qpy6D1o7OkoKeKiGFMZSqsW3DvVvyXG37FzJZK7LBsmQBMR64IOLjv/n+dNTIZ20
+F/IOd5lKZlytdI2bxIHq2Zt4leXtmQ==
+=n7Pn
+-----END PGP SIGNATURE-----
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;They always start with a &lt;code&gt;-----BEGIN PGP SIGNED MESSAGE-----&lt;/code&gt; string and they
+end with a &lt;code&gt;-----END PGP SIGNATURE-----&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Save a file with these exact contents, including the PGP header and footer
+strings, into a file, let&amp;rsquo;s say &lt;code&gt;/tmp/message.gpg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The following instructions assume that you use a real operating system and that
+you have access to a capable command line shell.&lt;/p&gt;
+
+&lt;h3 id=&#34;verifying-with-gnupg&#34;&gt;Verifying with GnuPG&lt;/h3&gt;
+
+&lt;p&gt;You will need to have the &lt;code&gt;GnuPG&lt;/code&gt; package installed.&lt;/p&gt;
+
+&lt;p&gt;You will more likely need to have my public key to verify my signature and
+the easiest way to get it would be with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl https://keybase.io/stratosgerakakis/pgp_keys.asc | gpg --import
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The basic command to verify the email signature is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --verify /tmp/message.gpg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should be getting an output like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: Good signature from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;
+gpg:                 aka &amp;quot;[jpeg image of size 22170]&amp;quot;
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 4C43 4698 3509 EBC8 0CD5  AC98 FFA8 A428 1718 AFC7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The WARNING that gpg is displaying, is because of the inherent lack of trust
+of my public key that you just imported.  Is it really &lt;strong&gt;my&lt;/strong&gt; public key that
+you downloaded before?  Unless you personally verify with me that this is
+indeed my key, gpg will always warn you that this is not a trusted key.&lt;/p&gt;
+
+&lt;p&gt;You &lt;em&gt;could&lt;/em&gt; sign my key, implying that you trust it, and make the warning go
+away, but that will mean that you already have your own set of private and
+public keys, and at this point I&amp;rsquo;m not going to turn this into a full gpg
+tutorial.&lt;/p&gt;
+
+&lt;p&gt;The important thing, so far, is the line above that reads &lt;strong&gt;&lt;code&gt;Good signature
+from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If the message was tampered (try editing the &lt;code&gt;/tmp/message.gpg&lt;/code&gt; file) then
+the response you would get would be something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: BAD signature from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you had &lt;strong&gt;not&lt;/strong&gt; imported my public key, as we did in the first step, then
+you would be getting something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: Can&#39;t check signature: public key not found
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;verifying-with-keybase&#34;&gt;Verifying with keybase&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://keybase.io/&#34;&gt;Keybase&lt;/a&gt; is a nice utility/service that encapsulates
+a lot of this raw encryption/signing black magic into an easier workflow. It
+also allows you to verify your self and establish a level of trust that the
+keys that you claim are yours are indeed yours and that you are who you claim
+to be.  Yes, this thing with the web of trust is very paranoid&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;You will need to have the keybase binaries installed from their website in
+order to follow through.&lt;/p&gt;
+
+&lt;p&gt;Once you do, then:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ keybase pgp pull stratosgerakakis
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will pull my public key, and:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ keybase gpg verify -i /tmp/message.gpg
+Signature verified. Signed by stratosgerakakis 2 hours ago (2017-03-08 20:59:04 +0000 UTC).
+PGP Fingerprint: 4c4346983509ebc80cd5ac98ffa8a4281718afc7.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will verify that the email message is intact.&lt;/p&gt;
+
+&lt;p&gt;Keybase is also doing a lot of other interesting stuff and it&amp;rsquo;s worth checking
+it out, if you&amp;rsquo;re into that short of thing.&lt;/p&gt;
+
+&lt;h3 id=&#34;automatic-ways-to-validate-email-signatures&#34;&gt;Automatic ways to validate email signatures&lt;/h3&gt;
+
+&lt;p&gt;Obviously you are &lt;strong&gt;not&lt;/strong&gt; meant to go through the whole procedure for all the
+emails.  Your emailer program should be able to help verify the signatures of
+the emails, through the help of certain extensions/helper utilities.&lt;/p&gt;
+
+&lt;p&gt;Once again this is not a full tutorial on how to setup your email program
+(I don&amp;rsquo;t even know what program you&amp;rsquo;re using) but here is a list of programs
+that have capabilities to encrypt and verify emails:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.enigmail.net&#34;&gt;Enigmail&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mailvelope.com/en/&#34;&gt;Mailvelope&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.openkeychain.org/&#34;&gt;OpenKeychain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gpgtools.org/&#34;&gt;GPGTools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;plus others I have not personaly tried.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Yes, unfortunately nothing in this worklfow is straightforward and it&amp;rsquo;s a big
+mess, requiring a lot research and field specific knowledge to understand it
+all.  And by no means I do &lt;strong&gt;not&lt;/strong&gt; claim to be an expert on any of these!&lt;/p&gt;
+
+&lt;p&gt;Good luck!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Moving to Arch</title>
@@ -109,13 +291,13 @@
 
 &lt;p&gt;Judging from the fate of Skype, Sunrise, SwiftKey(?) this won&amp;rsquo;t be getting any better now anyways, so&amp;hellip;&lt;/p&gt;
 
-&lt;h3 id=&#34;summary:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Summary&lt;/h3&gt;
+&lt;h3 id=&#34;summary&#34;&gt;Summary&lt;/h3&gt;
 
 &lt;p&gt;Application Developer and Project Manager in a wide variety of web based projects and back end server solutions. Many years of experience producing well structured code and managing small teams of developers, providing elegant solutions to intimidating problems.&lt;/p&gt;
 
-&lt;h3 id=&#34;experience:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Experience&lt;/h3&gt;
+&lt;h3 id=&#34;experience&#34;&gt;Experience&lt;/h3&gt;
 
-&lt;h4 id=&#34;planetek-hellas:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Planetek Hellas&lt;/h4&gt;
+&lt;h4 id=&#34;planetek-hellas&#34;&gt;Planetek Hellas&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Service Manager, Technical Lead, Senior Software Engineer&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;November 2013 – Present (2 years 8 months)&lt;/em&gt;&lt;br /&gt;
@@ -123,13 +305,13 @@ Madrid Area, Spain&lt;/p&gt;
 
 &lt;p&gt;Working onsite ESAC, ESA (European Space Astronomy Center, European Space Agency), Madrid, Spain​, as a Service Manager and Technical lead for Planetek Hellas ESA projects.​&lt;/p&gt;
 
-&lt;h5 id=&#34;saps:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;SAPS&lt;/h5&gt;
+&lt;h5 id=&#34;saps&#34;&gt;SAPS&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;S&lt;/strong&gt;cience &lt;strong&gt;A&lt;/strong&gt;rchives &lt;strong&gt;P&lt;/strong&gt;ublication &lt;strong&gt;S&lt;/strong&gt;ystem is a rich Internet Application that aims to provide an automated process of linking scientific publications with ESA&amp;rsquo;s astrophysics and planetary Missions and Observations, as well as business analytics based on the generated information.&lt;/p&gt;
 
 &lt;p&gt;Java based development based on Spring based backend running on Tomcat and Google GWT as the frontend, backed by Postgresql database, with searching capabilities provided by ElasticSearch and integration with multiple ESAC Archive AIO systems&lt;/p&gt;
 
-&lt;h5 id=&#34;plaavi:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;PLAAVI&lt;/h5&gt;
+&lt;h5 id=&#34;plaavi&#34;&gt;PLAAVI&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;PLA&lt;/strong&gt;nck &lt;strong&gt;A&lt;/strong&gt;dded &lt;strong&gt;V&lt;/strong&gt;alue &lt;strong&gt;I&lt;/strong&gt;nterfaces Project with the intention to allow users to apply various post-processing to PLANCK data before downloading them from the Planck Legacy Archive (PLA) hosted at ESAC.&lt;/p&gt;
 
@@ -151,7 +333,7 @@ Madrid Area, Spain&lt;/p&gt;
 
 &lt;p&gt;Python based development of a distributed service oriented system, backed a fully restful API server and MongoDB, Redis with dashboards provided by Grafana.&lt;/p&gt;
 
-&lt;h4 id=&#34;startup-company:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Startup Company&lt;/h4&gt;
+&lt;h4 id=&#34;startup-company&#34;&gt;Startup Company&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Technical Lead, Senior Software Engineer&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;February 2013 – October 2013 (9 months)&lt;/em&gt;&lt;br /&gt;
@@ -167,7 +349,7 @@ Athens, Greece&lt;/p&gt;
 
 &lt;p&gt;Project was developed in Symfony2 PHP framework.&lt;/p&gt;
 
-&lt;h4 id=&#34;airtickets-gr:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;airtickets.gr&lt;/h4&gt;
+&lt;h4 id=&#34;airtickets-gr&#34;&gt;airtickets.gr&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Senior Software Engineer&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;August 2012 – November 2012 (4 months)&lt;/em&gt;&lt;br /&gt;
@@ -181,7 +363,7 @@ Athens, Greece&lt;/p&gt;
 
 &lt;p&gt;Work was done with Java, with Spring framework and Apache Axis Soap protocol.&lt;/p&gt;
 
-&lt;h4 id=&#34;peopleperhour-com:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;PeoplePerHour.com&lt;/h4&gt;
+&lt;h4 id=&#34;peopleperhour-com&#34;&gt;PeoplePerHour.com&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Software Engineer&lt;/strong&gt;
 &lt;em&gt;March 2012 – July 2012 (5 months)&lt;/em&gt;&lt;br /&gt;
@@ -195,7 +377,7 @@ Athens, Greece&lt;/p&gt;
 
 &lt;p&gt;Coding was done in PHP with the Yii PHP framework.&lt;/p&gt;
 
-&lt;h4 id=&#34;evorad:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Evorad&lt;/h4&gt;
+&lt;h4 id=&#34;evorad&#34;&gt;Evorad&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Development Manager&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;September 2006 – May 2011 (4 years 9 months)&lt;/em&gt;&lt;br /&gt;
@@ -209,7 +391,7 @@ Athens, Greece&lt;/p&gt;
 
 &lt;p&gt;Project was Java based with Swing GUI&lt;/p&gt;
 
-&lt;h4 id=&#34;emphasis-systems:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Emphasis Systems&lt;/h4&gt;
+&lt;h4 id=&#34;emphasis-systems&#34;&gt;Emphasis Systems&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Consultant / Software Engineer&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;April 2003 – August 2006 (3 years 5 months)&lt;/em&gt;&lt;br /&gt;
@@ -222,7 +404,7 @@ Athens, Greece&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Projects:&lt;/strong&gt; &lt;a href=&#34;http://goo.gl/PTfjm&#34; title=&#34;Care-paths&#34;&gt;CARE-PATHS&lt;/a&gt;, &lt;a href=&#34;http://goo.gl/zWnCn&#34; title=&#34;Carditis&#34;&gt;Carditis&lt;/a&gt;, &lt;a href=&#34;http://goo.gl/PTfjm&#34; title=&#34;Weight-Info&#34;&gt;Weight-Info&lt;/a&gt;, &lt;a href=&#34;http://goo.gl/DYb9O&#34; title=&#34;E-Remedy&#34;&gt;E-Remedy&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;intergraphics:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Intergraphics&lt;/h4&gt;
+&lt;h4 id=&#34;intergraphics&#34;&gt;Intergraphics&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Web Design Instructor&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;February 2001 – March 2002 (1 year 2 months)&lt;/em&gt;&lt;br /&gt;
@@ -232,7 +414,7 @@ Athens, Greece&lt;/p&gt;
 &lt;li&gt;Instructor for Web Design classes, teaching HTML and Flash Actionscript.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;mediterranean-agronomic-institute-of-chania:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Mediterranean Agronomic Institute of Chania&lt;/h4&gt;
+&lt;h4 id=&#34;mediterranean-agronomic-institute-of-chania&#34;&gt;Mediterranean Agronomic Institute of Chania&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Software Engineer&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;February 2000 – February 2001 (1 year 1 month)&lt;/em&gt;
@@ -244,7 +426,7 @@ Chania, Crete, Greece&lt;/p&gt;
 &lt;li&gt;Developed the Herbarium Management system (TCL/TK based).&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;encommerce-inc-entrust:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;enCommerce Inc / Entrust&lt;/h4&gt;
+&lt;h4 id=&#34;encommerce-inc-entrust&#34;&gt;enCommerce Inc / Entrust&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Software Engineer&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;December 1996 – November 1999 (3 years)&lt;/em&gt;&lt;br /&gt;
@@ -258,7 +440,7 @@ Sunnyvale, CA, USA&lt;/p&gt;
 &lt;li&gt;Lead Engineer in localization to Japanese.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;kapalua-consulting:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Kapalua Consulting&lt;/h4&gt;
+&lt;h4 id=&#34;kapalua-consulting&#34;&gt;Kapalua Consulting&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Consultant / Software Engineer&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;July 1996 – December 1996 (6 months)&lt;/em&gt;&lt;br /&gt;
@@ -269,7 +451,7 @@ Sunnyvale, CA, USA&lt;/p&gt;
 &lt;li&gt;Installed and supported various versions of web servers.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;university-of-san-francisco:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;University of San Francisco&lt;/h4&gt;
+&lt;h4 id=&#34;university-of-san-francisco&#34;&gt;University of San Francisco&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Systems Programming TA&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;January 1992 – May 1992 (5 months)&lt;/em&gt;&lt;br /&gt;
@@ -281,26 +463,26 @@ San Francisco, CA, USA&lt;/p&gt;
 &lt;li&gt;Read and corrected lab assignments.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;courses:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Courses&lt;/h3&gt;
+&lt;h3 id=&#34;courses&#34;&gt;Courses&lt;/h3&gt;
 
-&lt;h4 id=&#34;evorad-1:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Evorad&lt;/h4&gt;
+&lt;h4 id=&#34;evorad-1&#34;&gt;Evorad&lt;/h4&gt;
 
 &lt;p&gt;Oracle Healthcare Transaction Base (HTB) Training&lt;br /&gt;
 (16-20 November, 2009)&lt;/p&gt;
 
-&lt;h3 id=&#34;skills:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Skills&lt;/h3&gt;
+&lt;h3 id=&#34;skills&#34;&gt;Skills&lt;/h3&gt;
 
 &lt;p&gt;&lt;em&gt;(In strictly alphabetical order)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Agile, Agile Methodologies, AJAX, Amadeus GDS, Amazon Web Services, Apache, Bash, BIRT, CSS, Distributed Systems, Docker, Drupal, Eclipse, ElasticSearch, Git, Google App Engine, Hibernate, HTML 5, Integration, Jasper Reports, Java, JavaScript, jQuery, JSON, Kibana, Linux, Logstash, Mercurial, MySQL, OOP, Perl, PHP, PostgreSQL, Python, Rancher, REST, Smarty, SOAP, Solr, Spring, Subversion, Symfony, TeamCity, Web Applications, Web Development, Web Services, wxPython, Yii, ZeroMQ&lt;/p&gt;
 
-&lt;h3 id=&#34;certifications:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Certifications&lt;/h3&gt;
+&lt;h3 id=&#34;certifications&#34;&gt;Certifications&lt;/h3&gt;
 
 &lt;p&gt;PADI Open Water Diver&lt;br /&gt;
 PADI, License 991170****&lt;br /&gt;
 May 1999&lt;/p&gt;
 
-&lt;h3 id=&#34;education:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Education&lt;/h3&gt;
+&lt;h3 id=&#34;education&#34;&gt;Education&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;University of San Francisco&lt;/strong&gt;&lt;br /&gt;
 &lt;em&gt;Bachelor&amp;rsquo;s, Computer Science, Mathematics Minor&lt;/em&gt;&lt;br /&gt;
@@ -310,24 +492,24 @@ May 1999&lt;/p&gt;
 &lt;em&gt;High School degree&lt;/em&gt;&lt;br /&gt;
 1986 – 1988&lt;/p&gt;
 
-&lt;h3 id=&#34;languages:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Languages&lt;/h3&gt;
+&lt;h3 id=&#34;languages&#34;&gt;Languages&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Greek&lt;/strong&gt;: Native or bilingual proficiency&lt;br /&gt;
 &lt;strong&gt;English&lt;/strong&gt;: Native or bilingual proficiency&lt;br /&gt;
 &lt;strong&gt;Spanish&lt;/strong&gt;: Elementary proficiency&lt;/p&gt;
 
-&lt;h3 id=&#34;additional-info:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Additional Info&lt;/h3&gt;
+&lt;h3 id=&#34;additional-info&#34;&gt;Additional Info&lt;/h3&gt;
 
-&lt;h4 id=&#34;interests:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Interests&lt;/h4&gt;
+&lt;h4 id=&#34;interests&#34;&gt;Interests&lt;/h4&gt;
 
 &lt;p&gt;Board Games, Reading, Music, Bicycling, Traveling, Scuba diving, Digital Photography.&lt;/p&gt;
 
-&lt;h4 id=&#34;personal-details:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Personal Details&lt;/h4&gt;
+&lt;h4 id=&#34;personal-details&#34;&gt;Personal Details&lt;/h4&gt;
 
 &lt;p&gt;Birthday: 1970&lt;br /&gt;
 Marital Status: Married&lt;/p&gt;
 
-&lt;h4 id=&#34;advice-for-contacting-stratos:541edf880cc61d1f4ca4d7d05824fa74&#34;&gt;Advice for Contacting Stratos&lt;/h4&gt;
+&lt;h4 id=&#34;advice-for-contacting-stratos&#34;&gt;Advice for Contacting Stratos&lt;/h4&gt;
 
 &lt;p&gt;Please note: I only link with people that I personally know and have met. I&amp;rsquo;m not linking with random people, and the only exception is for people who are properly introduced to me by a common acquaintance.&lt;/p&gt;
 
@@ -397,9 +579,7 @@ $ pip install -E myVirtualEnv mysql-python
 
 &lt;p&gt;I was not very fond of Niven&amp;rsquo;s writing style (this is the first &lt;a href=&#34;http://en.wikipedia.org/wiki/Larry_Niven&#34;&gt;Larry Niven&lt;/a&gt; book I read) and maybe he used it for this book only.  The plot though was ingenious.  The idea of the Ringworld was very interesting. It kept me entertained from the beginning until the end.&lt;/p&gt;
 
-&lt;p&gt;Highly recommended! :-)  Read more about the plot on [wikipedia][].&lt;/p&gt;
-
-&lt;p&gt;[wikipedia]: &lt;a href=&#34;http://en.wikipedia.org/wiki/Ringworld&#34;&gt;http://en.wikipedia.org/wiki/Ringworld&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Highly recommended! :-)  Read more about the plot on &lt;a href=&#34;http://en.wikipedia.org/wiki/Ringworld&#34;&gt;wikipedia&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -463,15 +643,13 @@ $ pip install -E myVirtualEnv mysql-python
 
 &lt;p&gt;Today I saw my first overhead pass of the ISS.&lt;/p&gt;
 
-&lt;p&gt;For some time I was registered to [Twisst][] and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
+&lt;p&gt;For some time I was registered to &lt;a href=&#34;http://www.twisst.nl&#34;&gt;Twisst&lt;/a&gt; and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
 
 &lt;p&gt;So, today at 20:52 (right as Twisst predicted) I saw the ISS. The brightness was supposed to be at a magnitude of -1.6 (I have no idea how bright that is) and I was wondering what was I was supposed to be looking at.  Suddenly, approximately where I was looking at, a very bright star appeared out of nowhere.  And I could see it with a naked eye.&lt;/p&gt;
 
 &lt;p&gt;It was brighter than the other current stars I could see at the moment and it moved at a pretty high speed accross the sky.  It looked like an airplane was flying overhead, but at a quite fast pace.  The whole pass took approximately 5 minutes and the station traversed an arc almost two thirds of the sky. Then, slowly, in 5-6 seconds, while it was still moving, faded out to nothing.&lt;/p&gt;
 
 &lt;p&gt;I must have look like an idiot, standing there in the middle of the park (it was Azul&amp;rsquo;s nightly walk) gazing at the sky for five minutes.  But, I think it was worth it&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;[Twisst]: &lt;a href=&#34;http://www.twisst.nl&#34;&gt;http://www.twisst.nl&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -745,7 +923,7 @@ $ pip install -E myVirtualEnv mysql-python
 
 &lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
 
-&lt;h2 id=&#34;recording:614caedb33634d43f044cbd61067e96e&#34;&gt;Recording&lt;/h2&gt;
+&lt;h2 id=&#34;recording&#34;&gt;Recording&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://streamripper.sourceforge.net&#34;&gt;streamripper&lt;/a&gt;: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::&lt;/p&gt;
 
@@ -763,7 +941,7 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;p&gt;$ crontab -e
   0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.&lt;/p&gt;
 
-&lt;h2 id=&#34;splitting:614caedb33634d43f044cbd61067e96e&#34;&gt;Splitting&lt;/h2&gt;
+&lt;h2 id=&#34;splitting&#34;&gt;Splitting&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://audacious-media-player.org&#34;&gt;audacious&lt;/a&gt;: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.&lt;/p&gt;
 
@@ -778,7 +956,7 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;li&gt;-o finalRecording: The final splitted file.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;tagging:614caedb33634d43f044cbd61067e96e&#34;&gt;Tagging&lt;/h2&gt;
+&lt;h2 id=&#34;tagging&#34;&gt;Tagging&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://easytag.sourceforge.net&#34;&gt;easyTag&lt;/a&gt;: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!&lt;/p&gt;
 
@@ -814,9 +992,7 @@ $ pip install -E myVirtualEnv mysql-python
 
 &lt;p&gt;And in case you didn&amp;rsquo;t know, this book is often quoted as &lt;em&gt;&amp;ldquo;THE best science fiction novel&amp;rdquo;&lt;/em&gt; with more than 12 million copies sold worldwide.&lt;/p&gt;
 
-&lt;p&gt;The [wikipedia article][] is very informative, too.&lt;/p&gt;
-
-&lt;p&gt;[wikipedia article]: &lt;a href=&#34;http://en.wikipedia.org/wiki/Dune_(novel&#34;&gt;http://en.wikipedia.org/wiki/Dune_(novel&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;http://en.wikipedia.org/wiki/Dune_(novel)&#34;&gt;wikipedia article&lt;/a&gt; is very informative, too.&lt;/p&gt;
 </description>
     </item>
     
@@ -872,38 +1048,6 @@ ifelse
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Open myBook.pdf and marvel at your handiwork&amp;hellip; :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The Forever War</title>
-      <link>http://stratos.gerakakis.net/book/the_forever_war/</link>
-      <pubDate>Thu, 04 Nov 2010 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/book/the_forever_war/</guid>
-      <description>
-&lt;figure &gt;
-    
-        &lt;img src=&#34;http://upload.wikimedia.org/wikipedia/en/c/cd/TheForeverWar%281stEd%29.jpg&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;The Forever War&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-
-
-&lt;blockquote&gt;
-&lt;p&gt;Private William Mandella is a reluctant hero in an interstellar war against an unknowable and unconquerable alien enemy. But his greatest test will be when he returns home. Relativity means that for every few months&amp;rsquo; tour of duty centuries have passed on Earth, isolating the combatants ever more from the world for whose future they are fighting.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;em&gt;(From the book&amp;rsquo;s back cover)&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Wow, this was a very nice read. I never thought of that particular aspect of time dilation, when travelling at the speed of light. Talking about a meaningless war that drags it&amp;rsquo;s feet&amp;hellip;!&lt;/p&gt;
-
-&lt;p&gt;Two thumbs up for &amp;ldquo;The Forever War&amp;rdquo;, On to &amp;ldquo;Forever Peace&amp;rdquo; now&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     

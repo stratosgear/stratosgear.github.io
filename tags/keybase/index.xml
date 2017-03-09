@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Keybase on Stratos Gerakakis</title>
+    <link>http://stratos.gerakakis.net/tags/keybase/index.xml</link>
+    <description>Recent content in Keybase on Stratos Gerakakis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://stratos.gerakakis.net/tags/keybase/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Verifying my email signatures</title>
+      <link>http://stratos.gerakakis.net/2017/03/verifying_email_signatures/</link>
+      <pubDate>Wed, 08 Mar 2017 21:45:58 +0100</pubDate>
+      
+      <guid>http://stratos.gerakakis.net/2017/03/verifying_email_signatures/</guid>
+      <description>
+
+&lt;p&gt;After a funky incident many years ago, when a collaborator in a European project
+(at a point where we were having an argument) decided to circulate one of my
+emails, after editing it to his liking, all my bussiness emails are now
+electronically signed.&lt;/p&gt;
+
+&lt;p&gt;My emails end up being a little more &amp;ldquo;dirtier&amp;rdquo;, with all the PGP headers and
+footers, but this comes at a very small inconvenience (at least to me)
+considering that all my email correspondance is now tamperproof.&lt;/p&gt;
+
+&lt;p&gt;I do get the occasional question though (apart from the complains that my emails
+look funny) on how to actually check that a given email is valid and the
+contents have not be altered.&lt;/p&gt;
+
+&lt;p&gt;Here are two ways on how to verify, that an email was indeed sent by me and that
+the contents have not been altered.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:  What follows is going to mess with your head. PGP encryption and
+signing is not meant to be used by everyday people.  I&amp;rsquo;ll try my best to give
+a gentle overview, but still, it will be messy!&lt;/p&gt;
+
+&lt;h3 id=&#34;format-of-signed-emails&#34;&gt;Format of signed emails&lt;/h3&gt;
+
+&lt;p&gt;The format of the emails always have the following pattern:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Hi,
+
+This is my email.
+
+- --
+Stratos Gerakakis
+Senior Software Engineer
+
+Planetek Hellas
+44 Kifisias Avenue,  Athens Space Cluster
+Building C, 15125 Marousi, Athens, Greece
+Tel +34 918 131 442 - Mob +34 684 124 497
+gerakakis@planetek.gr  –  www.planetek.gr
+
+== https://keybase.io/stratosgerakakis ==
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEETENGmDUJ68gM1ayY/6ikKBcYr8cFAljAcJgACgkQ/6ikKBcY
+r8eQ+Af7B47OgqQJi171uMT/tndZHO8KzeGrQLUF6f8GwyrZ3Zcn2qIirOOsE5lD
+QtbTxIkwW4iAAFygwUoG4nOXLlDI2emJAVxksdxsTsSo+vTi99DcbDVN9Tm1SiW1
+//CEL8ciHrl9SJJSCWp2hLcQn21rUKsiCzAMVF1SHMHeWUc2roYSmmBzJyver0ph
+YBhr0SdBzfcc+HBv0EBRURUypCtEf6Kci/D3/Zublg0m9qbg4p684IUnOvC7bjmQ
+qpy6D1o7OkoKeKiGFMZSqsW3DvVvyXG37FzJZK7LBsmQBMR64IOLjv/n+dNTIZ20
+F/IOd5lKZlytdI2bxIHq2Zt4leXtmQ==
+=n7Pn
+-----END PGP SIGNATURE-----
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;They always start with a &lt;code&gt;-----BEGIN PGP SIGNED MESSAGE-----&lt;/code&gt; string and they
+end with a &lt;code&gt;-----END PGP SIGNATURE-----&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Save a file with these exact contents, including the PGP header and footer
+strings, into a file, let&amp;rsquo;s say &lt;code&gt;/tmp/message.gpg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The following instructions assume that you use a real operating system and that
+you have access to a capable command line shell.&lt;/p&gt;
+
+&lt;h3 id=&#34;verifying-with-gnupg&#34;&gt;Verifying with GnuPG&lt;/h3&gt;
+
+&lt;p&gt;You will need to have the &lt;code&gt;GnuPG&lt;/code&gt; package installed.&lt;/p&gt;
+
+&lt;p&gt;You will more likely need to have my public key to verify my signature and
+the easiest way to get it would be with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl https://keybase.io/stratosgerakakis/pgp_keys.asc | gpg --import
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The basic command to verify the email signature is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --verify /tmp/message.gpg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should be getting an output like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: Good signature from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;
+gpg:                 aka &amp;quot;[jpeg image of size 22170]&amp;quot;
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 4C43 4698 3509 EBC8 0CD5  AC98 FFA8 A428 1718 AFC7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The WARNING that gpg is displaying, is because of the inherent lack of trust
+of my public key that you just imported.  Is it really &lt;strong&gt;my&lt;/strong&gt; public key that
+you downloaded before?  Unless you personally verify with me that this is
+indeed my key, gpg will always warn you that this is not a trusted key.&lt;/p&gt;
+
+&lt;p&gt;You &lt;em&gt;could&lt;/em&gt; sign my key, implying that you trust it, and make the warning go
+away, but that will mean that you already have your own set of private and
+public keys, and at this point I&amp;rsquo;m not going to turn this into a full gpg
+tutorial.&lt;/p&gt;
+
+&lt;p&gt;The important thing, so far, is the line above that reads &lt;strong&gt;&lt;code&gt;Good signature
+from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If the message was tampered (try editing the &lt;code&gt;/tmp/message.gpg&lt;/code&gt; file) then
+the response you would get would be something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: BAD signature from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you had &lt;strong&gt;not&lt;/strong&gt; imported my public key, as we did in the first step, then
+you would be getting something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: Can&#39;t check signature: public key not found
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;verifying-with-keybase&#34;&gt;Verifying with keybase&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://keybase.io/&#34;&gt;Keybase&lt;/a&gt; is a nice utility/service that encapsulates
+a lot of this raw encryption/signing black magic into an easier workflow. It
+also allows you to verify your self and establish a level of trust that the
+keys that you claim are yours are indeed yours and that you are who you claim
+to be.  Yes, this thing with the web of trust is very paranoid&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;You will need to have the keybase binaries installed from their website in
+order to follow through.&lt;/p&gt;
+
+&lt;p&gt;Once you do, then:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ keybase pgp pull stratosgerakakis
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will pull my public key, and:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ keybase gpg verify -i /tmp/message.gpg
+Signature verified. Signed by stratosgerakakis 2 hours ago (2017-03-08 20:59:04 +0000 UTC).
+PGP Fingerprint: 4c4346983509ebc80cd5ac98ffa8a4281718afc7.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will verify that the email message is intact.&lt;/p&gt;
+
+&lt;p&gt;Keybase is also doing a lot of other interesting stuff and it&amp;rsquo;s worth checking
+it out, if you&amp;rsquo;re into that short of thing.&lt;/p&gt;
+
+&lt;h3 id=&#34;automatic-ways-to-validate-email-signatures&#34;&gt;Automatic ways to validate email signatures&lt;/h3&gt;
+
+&lt;p&gt;Obviously you are &lt;strong&gt;not&lt;/strong&gt; meant to go through the whole procedure for all the
+emails.  Your emailer program should be able to help verify the signatures of
+the emails, through the help of certain extensions/helper utilities.&lt;/p&gt;
+
+&lt;p&gt;Once again this is not a full tutorial on how to setup your email program
+(I don&amp;rsquo;t even know what program you&amp;rsquo;re using) but here is a list of programs
+that have capabilities to encrypt and verify emails:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.enigmail.net&#34;&gt;Enigmail&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mailvelope.com/en/&#34;&gt;Mailvelope&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.openkeychain.org/&#34;&gt;OpenKeychain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gpgtools.org/&#34;&gt;GPGTools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;plus others I have not personaly tried.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Yes, unfortunately nothing in this worklfow is straightforward and it&amp;rsquo;s a big
+mess, requiring a lot research and field specific knowledge to understand it
+all.  And by no means I do &lt;strong&gt;not&lt;/strong&gt; claim to be an expert on any of these!&lt;/p&gt;
+
+&lt;p&gt;Good luck!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

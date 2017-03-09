@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reviews on Stratos Gerakakis</title>
-    <link>http://stratos.gerakakis.net/tags/reviews/</link>
+    <link>http://stratos.gerakakis.net/tags/reviews/index.xml</link>
     <description>Recent content in Reviews on Stratos Gerakakis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Nov 2011 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://stratos.gerakakis.net/tags/reviews/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -35,9 +34,7 @@
 
 &lt;p&gt;I was not very fond of Niven&amp;rsquo;s writing style (this is the first &lt;a href=&#34;http://en.wikipedia.org/wiki/Larry_Niven&#34;&gt;Larry Niven&lt;/a&gt; book I read) and maybe he used it for this book only.  The plot though was ingenious.  The idea of the Ringworld was very interesting. It kept me entertained from the beginning until the end.&lt;/p&gt;
 
-&lt;p&gt;Highly recommended! :-)  Read more about the plot on [wikipedia][].&lt;/p&gt;
-
-&lt;p&gt;[wikipedia]: &lt;a href=&#34;http://en.wikipedia.org/wiki/Ringworld&#34;&gt;http://en.wikipedia.org/wiki/Ringworld&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Highly recommended! :-)  Read more about the plot on &lt;a href=&#34;http://en.wikipedia.org/wiki/Ringworld&#34;&gt;wikipedia&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

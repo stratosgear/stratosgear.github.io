@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on Stratos Gerakakis</title>
-    <link>http://stratos.gerakakis.net/tags/hugo/</link>
+    <link>http://stratos.gerakakis.net/tags/hugo/index.xml</link>
     <description>Recent content in Hugo on Stratos Gerakakis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Aug 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://stratos.gerakakis.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     <item>

@@ -2,12 +2,194 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Stratos Gerakakis</title>
-    <link>http://stratos.gerakakis.net/post/</link>
+    <link>http://stratos.gerakakis.net/post/index.xml</link>
     <description>Recent content in Posts on Stratos Gerakakis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Aug 2014 14:26:03 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 08 Mar 2017 21:45:58 +0100</lastBuildDate>
     <atom:link href="http://stratos.gerakakis.net/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Verifying my email signatures</title>
+      <link>http://stratos.gerakakis.net/2017/03/verifying_email_signatures/</link>
+      <pubDate>Wed, 08 Mar 2017 21:45:58 +0100</pubDate>
+      
+      <guid>http://stratos.gerakakis.net/2017/03/verifying_email_signatures/</guid>
+      <description>
+
+&lt;p&gt;After a funky incident many years ago, when a collaborator in a European project
+(at a point where we were having an argument) decided to circulate one of my
+emails, after editing it to his liking, all my bussiness emails are now
+electronically signed.&lt;/p&gt;
+
+&lt;p&gt;My emails end up being a little more &amp;ldquo;dirtier&amp;rdquo;, with all the PGP headers and
+footers, but this comes at a very small inconvenience (at least to me)
+considering that all my email correspondance is now tamperproof.&lt;/p&gt;
+
+&lt;p&gt;I do get the occasional question though (apart from the complains that my emails
+look funny) on how to actually check that a given email is valid and the
+contents have not be altered.&lt;/p&gt;
+
+&lt;p&gt;Here are two ways on how to verify, that an email was indeed sent by me and that
+the contents have not been altered.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:  What follows is going to mess with your head. PGP encryption and
+signing is not meant to be used by everyday people.  I&amp;rsquo;ll try my best to give
+a gentle overview, but still, it will be messy!&lt;/p&gt;
+
+&lt;h3 id=&#34;format-of-signed-emails&#34;&gt;Format of signed emails&lt;/h3&gt;
+
+&lt;p&gt;The format of the emails always have the following pattern:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Hi,
+
+This is my email.
+
+- --
+Stratos Gerakakis
+Senior Software Engineer
+
+Planetek Hellas
+44 Kifisias Avenue,  Athens Space Cluster
+Building C, 15125 Marousi, Athens, Greece
+Tel +34 918 131 442 - Mob +34 684 124 497
+gerakakis@planetek.gr  –  www.planetek.gr
+
+== https://keybase.io/stratosgerakakis ==
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCAAdFiEETENGmDUJ68gM1ayY/6ikKBcYr8cFAljAcJgACgkQ/6ikKBcY
+r8eQ+Af7B47OgqQJi171uMT/tndZHO8KzeGrQLUF6f8GwyrZ3Zcn2qIirOOsE5lD
+QtbTxIkwW4iAAFygwUoG4nOXLlDI2emJAVxksdxsTsSo+vTi99DcbDVN9Tm1SiW1
+//CEL8ciHrl9SJJSCWp2hLcQn21rUKsiCzAMVF1SHMHeWUc2roYSmmBzJyver0ph
+YBhr0SdBzfcc+HBv0EBRURUypCtEf6Kci/D3/Zublg0m9qbg4p684IUnOvC7bjmQ
+qpy6D1o7OkoKeKiGFMZSqsW3DvVvyXG37FzJZK7LBsmQBMR64IOLjv/n+dNTIZ20
+F/IOd5lKZlytdI2bxIHq2Zt4leXtmQ==
+=n7Pn
+-----END PGP SIGNATURE-----
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;They always start with a &lt;code&gt;-----BEGIN PGP SIGNED MESSAGE-----&lt;/code&gt; string and they
+end with a &lt;code&gt;-----END PGP SIGNATURE-----&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Save a file with these exact contents, including the PGP header and footer
+strings, into a file, let&amp;rsquo;s say &lt;code&gt;/tmp/message.gpg&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The following instructions assume that you use a real operating system and that
+you have access to a capable command line shell.&lt;/p&gt;
+
+&lt;h3 id=&#34;verifying-with-gnupg&#34;&gt;Verifying with GnuPG&lt;/h3&gt;
+
+&lt;p&gt;You will need to have the &lt;code&gt;GnuPG&lt;/code&gt; package installed.&lt;/p&gt;
+
+&lt;p&gt;You will more likely need to have my public key to verify my signature and
+the easiest way to get it would be with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl https://keybase.io/stratosgerakakis/pgp_keys.asc | gpg --import
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The basic command to verify the email signature is:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --verify /tmp/message.gpg
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should be getting an output like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: Good signature from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;
+gpg:                 aka &amp;quot;[jpeg image of size 22170]&amp;quot;
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 4C43 4698 3509 EBC8 0CD5  AC98 FFA8 A428 1718 AFC7
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The WARNING that gpg is displaying, is because of the inherent lack of trust
+of my public key that you just imported.  Is it really &lt;strong&gt;my&lt;/strong&gt; public key that
+you downloaded before?  Unless you personally verify with me that this is
+indeed my key, gpg will always warn you that this is not a trusted key.&lt;/p&gt;
+
+&lt;p&gt;You &lt;em&gt;could&lt;/em&gt; sign my key, implying that you trust it, and make the warning go
+away, but that will mean that you already have your own set of private and
+public keys, and at this point I&amp;rsquo;m not going to turn this into a full gpg
+tutorial.&lt;/p&gt;
+
+&lt;p&gt;The important thing, so far, is the line above that reads &lt;strong&gt;&lt;code&gt;Good signature
+from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;If the message was tampered (try editing the &lt;code&gt;/tmp/message.gpg&lt;/code&gt; file) then
+the response you would get would be something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: BAD signature from &amp;quot;Stratos Gerakakis &amp;lt;gerakakis@planetek.gr&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you had &lt;strong&gt;not&lt;/strong&gt; imported my public key, as we did in the first step, then
+you would be getting something like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --verify /tmp/message.gpg
+gpg: Signature made Wed Mar  8 20:59:04 2017 UTC using RSA key ID 1718AFC7
+gpg: Can&#39;t check signature: public key not found
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;verifying-with-keybase&#34;&gt;Verifying with keybase&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://keybase.io/&#34;&gt;Keybase&lt;/a&gt; is a nice utility/service that encapsulates
+a lot of this raw encryption/signing black magic into an easier workflow. It
+also allows you to verify your self and establish a level of trust that the
+keys that you claim are yours are indeed yours and that you are who you claim
+to be.  Yes, this thing with the web of trust is very paranoid&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;You will need to have the keybase binaries installed from their website in
+order to follow through.&lt;/p&gt;
+
+&lt;p&gt;Once you do, then:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ keybase pgp pull stratosgerakakis
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will pull my public key, and:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ keybase gpg verify -i /tmp/message.gpg
+Signature verified. Signed by stratosgerakakis 2 hours ago (2017-03-08 20:59:04 +0000 UTC).
+PGP Fingerprint: 4c4346983509ebc80cd5ac98ffa8a4281718afc7.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;will verify that the email message is intact.&lt;/p&gt;
+
+&lt;p&gt;Keybase is also doing a lot of other interesting stuff and it&amp;rsquo;s worth checking
+it out, if you&amp;rsquo;re into that short of thing.&lt;/p&gt;
+
+&lt;h3 id=&#34;automatic-ways-to-validate-email-signatures&#34;&gt;Automatic ways to validate email signatures&lt;/h3&gt;
+
+&lt;p&gt;Obviously you are &lt;strong&gt;not&lt;/strong&gt; meant to go through the whole procedure for all the
+emails.  Your emailer program should be able to help verify the signatures of
+the emails, through the help of certain extensions/helper utilities.&lt;/p&gt;
+
+&lt;p&gt;Once again this is not a full tutorial on how to setup your email program
+(I don&amp;rsquo;t even know what program you&amp;rsquo;re using) but here is a list of programs
+that have capabilities to encrypt and verify emails:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.enigmail.net&#34;&gt;Enigmail&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mailvelope.com/en/&#34;&gt;Mailvelope&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.openkeychain.org/&#34;&gt;OpenKeychain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://gpgtools.org/&#34;&gt;GPGTools&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;plus others I have not personaly tried.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Yes, unfortunately nothing in this worklfow is straightforward and it&amp;rsquo;s a big
+mess, requiring a lot research and field specific knowledge to understand it
+all.  And by no means I do &lt;strong&gt;not&lt;/strong&gt; claim to be an expert on any of these!&lt;/p&gt;
+
+&lt;p&gt;Good luck!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Moving to Arch</title>
@@ -93,15 +275,13 @@ $ pip install -E myVirtualEnv mysql-python
 
 &lt;p&gt;Today I saw my first overhead pass of the ISS.&lt;/p&gt;
 
-&lt;p&gt;For some time I was registered to [Twisst][] and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
+&lt;p&gt;For some time I was registered to &lt;a href=&#34;http://www.twisst.nl&#34;&gt;Twisst&lt;/a&gt; and I was receiving their notifications on Twitter but I never actually bothered to really look up and see the station fly overhead.  Well, in my defense, living in Athens, with all this light pollution you can barely see the sky and the stars, so I was waiting for the right opportunity before I actually tried.&lt;/p&gt;
 
 &lt;p&gt;So, today at 20:52 (right as Twisst predicted) I saw the ISS. The brightness was supposed to be at a magnitude of -1.6 (I have no idea how bright that is) and I was wondering what was I was supposed to be looking at.  Suddenly, approximately where I was looking at, a very bright star appeared out of nowhere.  And I could see it with a naked eye.&lt;/p&gt;
 
 &lt;p&gt;It was brighter than the other current stars I could see at the moment and it moved at a pretty high speed accross the sky.  It looked like an airplane was flying overhead, but at a quite fast pace.  The whole pass took approximately 5 minutes and the station traversed an arc almost two thirds of the sky. Then, slowly, in 5-6 seconds, while it was still moving, faded out to nothing.&lt;/p&gt;
 
 &lt;p&gt;I must have look like an idiot, standing there in the middle of the park (it was Azul&amp;rsquo;s nightly walk) gazing at the sky for five minutes.  But, I think it was worth it&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;[Twisst]: &lt;a href=&#34;http://www.twisst.nl&#34;&gt;http://www.twisst.nl&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -375,7 +555,7 @@ $ pip install -E myVirtualEnv mysql-python
 
 &lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
 
-&lt;h2 id=&#34;recording:614caedb33634d43f044cbd61067e96e&#34;&gt;Recording&lt;/h2&gt;
+&lt;h2 id=&#34;recording&#34;&gt;Recording&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://streamripper.sourceforge.net&#34;&gt;streamripper&lt;/a&gt;: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::&lt;/p&gt;
 
@@ -393,7 +573,7 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;p&gt;$ crontab -e
   0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.&lt;/p&gt;
 
-&lt;h2 id=&#34;splitting:614caedb33634d43f044cbd61067e96e&#34;&gt;Splitting&lt;/h2&gt;
+&lt;h2 id=&#34;splitting&#34;&gt;Splitting&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://audacious-media-player.org&#34;&gt;audacious&lt;/a&gt;: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.&lt;/p&gt;
 
@@ -408,7 +588,7 @@ $ pip install -E myVirtualEnv mysql-python
 &lt;li&gt;-o finalRecording: The final splitted file.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;tagging:614caedb33634d43f044cbd61067e96e&#34;&gt;Tagging&lt;/h2&gt;
+&lt;h2 id=&#34;tagging&#34;&gt;Tagging&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://easytag.sourceforge.net&#34;&gt;easyTag&lt;/a&gt;: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!&lt;/p&gt;
 
@@ -494,7 +674,7 @@ ifelse
 
 &lt;p&gt;(Ok, I installed virtualbox 3.2 on a 64 bit server, yours might vary)&lt;/p&gt;
 
-&lt;h3 id=&#34;extra-credit:ee28dc631e021a2ef70672aede7f2e6b&#34;&gt;Extra credit&lt;/h3&gt;
+&lt;h3 id=&#34;extra-credit&#34;&gt;Extra credit&lt;/h3&gt;
 
 &lt;p&gt;If you want to make your life &lt;strong&gt;REAAALY&lt;/strong&gt; easy you should also install &lt;a href=&#34;http://code.google.com/p/phpvirtualbox&#34;&gt;phpvirtualbox&lt;/a&gt; on the host Ubuntu server and get a shiny web based GUI administration screen that looks almost exactly like the native GUI Virtualbox application.&lt;/p&gt;
 </description>
@@ -512,9 +692,9 @@ ifelse
 
 &lt;p&gt;Recently, I was not happy with the way I had partitioned the array and I wanted to re-arrange it, so I thought it would be a nice idea to document the process I went through. At the same I took the opportunity to also document the initial array creation (in case I&amp;rsquo;ll have to redo it again)&lt;/p&gt;
 
-&lt;h2 id=&#34;raid-setup:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;RAID Setup&lt;/h2&gt;
+&lt;h2 id=&#34;raid-setup&#34;&gt;RAID Setup&lt;/h2&gt;
 
-&lt;h3 id=&#34;creating-the-raid-sandbox:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Creating the RAID sandbox&lt;/h3&gt;
+&lt;h3 id=&#34;creating-the-raid-sandbox&#34;&gt;Creating the RAID sandbox&lt;/h3&gt;
 
 &lt;p class=&#34;admonition warning&#34; markdown=&#34;1&#34;&gt;
 &lt;b&gt;Caution:&lt;/b&gt; Do not play recklessly with your disk partitions. You can very easily mistype something, or run a command with the wrong parameters and lose your data. Instead of blindingly follow what I propose here, create a safe sandbox environment to familiarize yourself with the RAID setup.  Then when you are comfortable setting everything up, do the same thing with your real disks.
@@ -553,7 +733,7 @@ stratos@yoda:~/sandbox$ sudo losetup /dev/loop2 raid2
 stratos@yoda:~/sandbox$ sudo losetup /dev/loop3 raid3
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;setup-of-raid-arrays:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Setup of RAID arrays&lt;/h3&gt;
+&lt;h3 id=&#34;setup-of-raid-arrays&#34;&gt;Setup of RAID arrays&lt;/h3&gt;
 
 &lt;p&gt;Now we have created three partitions /dev/loop1, /dev/loop2 and /dev/loop3 that will imitate some actual /dev/sdXX, /dev/sdXX and /dev/sdXX partitions.&lt;/p&gt;
 
@@ -566,11 +746,11 @@ mdadm: size set to 102336K
 mdadm: array /dev/md3 started.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;lvm2-setup:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;LVM2 Setup&lt;/h2&gt;
+&lt;h2 id=&#34;lvm2-setup&#34;&gt;LVM2 Setup&lt;/h2&gt;
 
 &lt;p&gt;At this point we could format the /dev/md3 partition with some filesystem and start using it. But that&amp;rsquo;s the old way of doing it. What we want to do is run LVM2 on top of the RAID5 partition so we can better utilize the space provided by the /dev/md3 partition, allowing us to dynamically create, resize and remove volumes in the space provided.&lt;/p&gt;
 
-&lt;h3 id=&#34;create-the-lvm2-partitions:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Create the LVM2 partitions&lt;/h3&gt;
+&lt;h3 id=&#34;create-the-lvm2-partitions&#34;&gt;Create the LVM2 partitions&lt;/h3&gt;
 
 &lt;p&gt;In order to use LVM2 we first have to create a LVM2 Physical Volume:&lt;/p&gt;
 
@@ -672,7 +852,7 @@ stratos@yoda:~/sandbox$ sudo lvdisplay
 
 &lt;p&gt;OK. The allocated PE are 20 and we have another 29 unallocated.&lt;/p&gt;
 
-&lt;h3 id=&#34;create-the-mountable-volume:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Create the mountable volume&lt;/h3&gt;
+&lt;h3 id=&#34;create-the-mountable-volume&#34;&gt;Create the mountable volume&lt;/h3&gt;
 
 &lt;p&gt;The newly created LVM2 volume is unformatted:&lt;/p&gt;
 
@@ -736,11 +916,11 @@ Hello LVM2 logical volume
 
 &lt;p&gt;As long as the &lt;strong&gt;test.txt&lt;/strong&gt; file is there through all our following tests, then our data is safe.&lt;/p&gt;
 
-&lt;h2 id=&#34;lvm2-manipulation:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;LVM2 Manipulation&lt;/h2&gt;
+&lt;h2 id=&#34;lvm2-manipulation&#34;&gt;LVM2 Manipulation&lt;/h2&gt;
 
 &lt;p&gt;Let&amp;rsquo;s play with the 49 available PE given to us from the lvm-group Volume Group.&lt;/p&gt;
 
-&lt;h3 id=&#34;add-more-volumes:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Add more volumes&lt;/h3&gt;
+&lt;h3 id=&#34;add-more-volumes&#34;&gt;Add more volumes&lt;/h3&gt;
 
 &lt;p&gt;Create another LVM2 Logical volume:&lt;/p&gt;
 
@@ -787,7 +967,7 @@ drwxr-xr-x  3 root    root         1024 2010-10-02 11:39 myVolume2
 
 &lt;p&gt;Now we have another volume with 10 PE (40MB).&lt;/p&gt;
 
-&lt;h3 id=&#34;resize-volumes:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Resize volumes&lt;/h3&gt;
+&lt;h3 id=&#34;resize-volumes&#34;&gt;Resize volumes&lt;/h3&gt;
 
 &lt;p&gt;We have myVolume with 20 PE and myVolume2 with 10 PE. We should have 19 PE still unallocated:&lt;/p&gt;
 
@@ -856,7 +1036,7 @@ Hello LVM2 logical volume
 
 &lt;p&gt;So far so good.&lt;/p&gt;
 
-&lt;h3 id=&#34;remove-volumes:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Remove volumes&lt;/h3&gt;
+&lt;h3 id=&#34;remove-volumes&#34;&gt;Remove volumes&lt;/h3&gt;
 
 &lt;p&gt;We have another volume, myVolume2 that we created for fun for 10 PE (40 MB). Let&amp;rsquo;s remove it and reclaim the space:&lt;/p&gt;
 
@@ -893,11 +1073,11 @@ stratos@yoda:~/sandbox$ sudo vgdisplay
 
 &lt;p&gt;So, now we have 19 free PE. The allocated 30 are from myVolume (20 initial + 10 after the resize)&lt;/p&gt;
 
-&lt;h2 id=&#34;raid-manipulation:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;RAID Manipulation&lt;/h2&gt;
+&lt;h2 id=&#34;raid-manipulation&#34;&gt;RAID Manipulation&lt;/h2&gt;
 
 &lt;p&gt;Playing with LVM2 is nice because you can manipulate and assign the available space you have any way you want. The actual unseen hero is the RAID5 volume that we have created because it provides a guarantee that even if one disk fails we will not lose our data. Let&amp;rsquo;s play with the RAID disks now.&lt;/p&gt;
 
-&lt;h3 id=&#34;fail-a-raid-disk-and-recover:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Fail a RAID disk and recover&lt;/h3&gt;
+&lt;h3 id=&#34;fail-a-raid-disk-and-recover&#34;&gt;Fail a RAID disk and recover&lt;/h3&gt;
 
 &lt;p&gt;Hopefully you will never have to face a failed disk, but it is quite important to know what to do if a disk fails. For now, in our comfortable sandbox we will imitate a failed disk and we will check if we&amp;rsquo;ll lose any data:&lt;/p&gt;
 
@@ -1081,7 +1261,7 @@ Working Devices : 3
 
 &lt;p&gt;Nice and clean. Let&amp;rsquo;s hope you never have to go through a procedure like this, EVER.&lt;/p&gt;
 
-&lt;h3 id=&#34;increase-the-raid-array-size:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Increase the RAID array size&lt;/h3&gt;
+&lt;h3 id=&#34;increase-the-raid-array-size&#34;&gt;Increase the RAID array size&lt;/h3&gt;
 
 &lt;p&gt;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;ldquo;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
 
@@ -1094,7 +1274,7 @@ Working Devices : 3
 &lt;li&gt;Increase the size of the disks already in the array.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;add-new-disks-to-the-raid-array:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Add new disks to the RAID array&lt;/h3&gt;
+&lt;h3 id=&#34;add-new-disks-to-the-raid-array&#34;&gt;Add new disks to the RAID array&lt;/h3&gt;
 
 &lt;p&gt;Adding a new disk in the array is easy (assuming you still have free SATA ports in your motherboard).&lt;/p&gt;
 
@@ -1258,7 +1438,7 @@ Hello LVM2 logical volume
 
 &lt;p&gt;Yep, still here.&lt;/p&gt;
 
-&lt;h3 id=&#34;increase-the-size-of-the-raid-disks:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Increase the size of the RAID disks&lt;/h3&gt;
+&lt;h3 id=&#34;increase-the-size-of-the-raid-disks&#34;&gt;Increase the size of the RAID disks&lt;/h3&gt;
 
 &lt;p&gt;In reality (as in my personal case) you will end up increasing the initial RAID size because you want to substitute the original disks with larger ones. The prices keep dropping and the amount of SATA ports in a motherboard are finite. So, sooner or later you will need to replace the disks, with larger ones.&lt;/p&gt;
 
@@ -1414,7 +1594,7 @@ stratos@yoda:~/sandbox$ sudo vgdisplay lvm-group
 
 &lt;p&gt;As you see we went from 74 PE to 112 PE. Now we can go back to normal LVM2 volume manipulation to take advantage of the gained space.&lt;/p&gt;
 
-&lt;h3 id=&#34;recover-raid-array:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Recover RAID array&lt;/h3&gt;
+&lt;h3 id=&#34;recover-raid-array&#34;&gt;Recover RAID array&lt;/h3&gt;
 
 &lt;p&gt;OK, but what happens when something happens and you lose your RAID array?&lt;/p&gt;
 
@@ -1472,11 +1652,11 @@ stratos@yoda:~/sandbox$ sudo cp mdadm.conf /etc/mdadm/mdadm.conf
 
 &lt;p&gt;Now, if you reboot you should have you array back. Well, done!&lt;/p&gt;
 
-&lt;h2 id=&#34;raid-lvm2-summary:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;RAID/LVM2 Summary&lt;/h2&gt;
+&lt;h2 id=&#34;raid-lvm2-summary&#34;&gt;RAID/LVM2 Summary&lt;/h2&gt;
 
 &lt;p&gt;So to sum up all the Raid and LVM2 operations that we did:&lt;/p&gt;
 
-&lt;h3 id=&#34;create-sandbox:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Create sandbox&lt;/h3&gt;
+&lt;h3 id=&#34;create-sandbox&#34;&gt;Create sandbox&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;cd ~
 cd sandbox/
@@ -1488,26 +1668,26 @@ sudo losetup /dev/loop2 raid2
 sudo losetup /dev/loop3 raid3
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;create-raid5-array:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Create RAID5 array&lt;/h3&gt;
+&lt;h3 id=&#34;create-raid5-array&#34;&gt;Create RAID5 array&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo mdadm --create --verbose /dev/md3 -l5 -n3 /dev/loop1 /dev/loop2 /dev/loop3
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;create-lvm2-volumes:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Create LVM2 volumes&lt;/h3&gt;
+&lt;h3 id=&#34;create-lvm2-volumes&#34;&gt;Create LVM2 volumes&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo pvcreate /dev/md3
 sudo vgcreate lvm-group /dev/md3
 sudo lvcreate -l 20 lvm-group -n myVolume     # you can use any PE you want
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;format-mount-the-volume:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Format / Mount the volume&lt;/h3&gt;
+&lt;h3 id=&#34;format-mount-the-volume&#34;&gt;Format / Mount the volume&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo mkfs.ext4 /dev/lvm-group/myVolume
 mkdir myVolume
 sudo mount /dev/lvm-group/myVolume myVolume
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;extend-an-lvm2-logical-volume:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Extend an LVM2 Logical Volume&lt;/h3&gt;
+&lt;h3 id=&#34;extend-an-lvm2-logical-volume&#34;&gt;Extend an LVM2 Logical Volume&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo lvextend -l+10 /dev/lvm-group/myVolume   # add any PE you want
 sudo umount myVolume
@@ -1515,12 +1695,12 @@ sudo e2fsck -f /dev/lvm-group/myVolume
 sudo resize2fs /dev/lvm-group/myVolume
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;remove-an-lvm2-logical-volume:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Remove an LVM2 Logical Volume&lt;/h3&gt;
+&lt;h3 id=&#34;remove-an-lvm2-logical-volume&#34;&gt;Remove an LVM2 Logical Volume&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo lvremove /dev/lvm-group/myVolume2
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;replace-a-failed-raid-disk:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Replace a failed RAID disk&lt;/h3&gt;
+&lt;h3 id=&#34;replace-a-failed-raid-disk&#34;&gt;Replace a failed RAID disk&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo mdadm --fail /dev/md3 /dev/loop3          # This is part of our simulation
 sudo mdadm --remove /dev/md3 /dev/loop3
@@ -1531,7 +1711,7 @@ sudo losetup /dev/loop3 raid3
 sudo mdadm /dev/md3 --add /dev/loop3           # Do this under normal circumstances
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;add-new-disks-to-raid5-array:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Add new disks to RAID5 array&lt;/h3&gt;
+&lt;h3 id=&#34;add-new-disks-to-raid5-array&#34;&gt;Add new disks to RAID5 array&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;dd if=/dev/zero of=raid4 bs=10240 count=10240  # This is part of our simulation
 sudo losetup /dev/loop4 raid4
@@ -1539,7 +1719,7 @@ sudo mdadm --grow /dev/md3 --raid-devices=4    # Do this under normal circumstan
 sudo pvresize /dev/md3
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;increase-size-of-raid-disks:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Increase size of RAID disks&lt;/h3&gt;
+&lt;h3 id=&#34;increase-size-of-raid-disks&#34;&gt;Increase size of RAID disks&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo mdadm --fail /dev/md3 /dev/loop1          # First remove old disk
 sudo mdadm --remove /dev/md3 /dev/loop1
@@ -1553,7 +1733,7 @@ sudo mdadm /dev/md3 --grow --size=max
 sudo pvresize /dev/md3
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;recover-lost-raid-array:eac168a4d4aa4a6f9e28c20ed3911aad&#34;&gt;Recover lost RAID array&lt;/h3&gt;
+&lt;h3 id=&#34;recover-lost-raid-array&#34;&gt;Recover lost RAID array&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo mdadm --examine --scan                   # append output to /etc/mdadm/mdadm.conf
 &lt;/code&gt;&lt;/pre&gt;
@@ -1572,12 +1752,12 @@ sudo pvresize /dev/md3
 
 &lt;p&gt;These are little Ubuntu snippets, that I always forget!&lt;/p&gt;
 
-&lt;h3 id=&#34;changing-the-timezone:572ba4bfb46d7d6ac05ea4483bb7f9fa&#34;&gt;Changing the timezone&lt;/h3&gt;
+&lt;h3 id=&#34;changing-the-timezone&#34;&gt;Changing the timezone&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo dpkg-reconfigure tzdata
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;create-and-mount-xfs-filesystem:572ba4bfb46d7d6ac05ea4483bb7f9fa&#34;&gt;Create and mount xfs filesystem&lt;/h3&gt;
+&lt;h3 id=&#34;create-and-mount-xfs-filesystem&#34;&gt;Create and mount xfs filesystem&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt-get install xfsprogs
 $ sudo mkfs.xfs /dev/sdf
@@ -1590,7 +1770,7 @@ $ sudo mkfs.xfs /dev/sdf
 
 &lt;p&gt;(Tested on Amazon EC2 EBS volume.)&lt;/p&gt;
 
-&lt;h3 id=&#34;timestamp-too-far-in-the-future:572ba4bfb46d7d6ac05ea4483bb7f9fa&#34;&gt;Timestamp too far in the future&lt;/h3&gt;
+&lt;h3 id=&#34;timestamp-too-far-in-the-future&#34;&gt;Timestamp too far in the future&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    su rm -rf /var/run/sudo/Username
 &lt;/code&gt;&lt;/pre&gt;
@@ -1689,24 +1869,6 @@ $MySql_Library-&amp;gt;Execute(&amp;quot;SET character_set_results=greek&amp;quo
 &lt;p&gt;The above example was run in some AdoDB Phakt scripts, but the gist of it is before any selects run the above sql commands.&lt;/p&gt;
 
 &lt;p&gt;Good luck&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Αρίθμηση των δρόμων</title>
-      <link>http://stratos.gerakakis.net/2004/12/street_numbering/</link>
-      <pubDate>Sun, 05 Dec 2004 00:00:00 +0000</pubDate>
-      
-      <guid>http://stratos.gerakakis.net/2004/12/street_numbering/</guid>
-      <description>&lt;p&gt;Οι παρακάτω οδηγίες ίσως να είναι σημαντικές για κάποιον που ψάχνει να βρει μία συγκεκριμένη διεύθυνση.&lt;/p&gt;
-
-&lt;p&gt;Οι δρόμοι στην Αθήνα δεν έχουν τον ίδιο αριθμό μόνο μία φορά . Για παράδειγμα, δεν υπάρχει μόνο μία Πειραιώς 40 αλλά τουλάχιστον τρεις ή τέσσερις.&lt;/p&gt;
-
-&lt;p&gt;Όταν έψαχνα να βρω την Πειραιώς 40 (Υπουργείο Εργασίας και Κοινωνικής Ασφάλισης), κοιτάζοντας στον χάρτη και υποθέτωντας ότι το 40 θα βρίσκεται κάπου στην αρχή ή στο τέλος της Πειραιώς και, ίσως, επειδή ονομάζεται Πειραιώς θα ξεκινάει και από τον Πειραιά, έκανα το λάθος να βρώ έναν τυχαίο αριθμό 38 στον χάρτη κοντά στην αρχή της Πειραιώς και να υποθέσω οτι από &amp;lsquo;κει ξεκινάει η αρίθμηση.&lt;/p&gt;
-
-&lt;p&gt;Αμ, δε&amp;hellip;. Γιατί να είναι τόσο εύκολο? Όπως φαίνεται οι δήμοι έχουν κάποιοι σοβαρό λόγο να θέλουν να αριθμούν τα κομμάτια των δρόμων που ανήκουν στην δικαιοδοσία  τους με τους δικούς τους αριθμούς.  Πιό πρακτικό λόγο εξυπηρετούν, δυστυχώς δεν μπορώ να σκεφτώ?&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;Εάν όντως υπάρχει θα ήθελα να τον ξέρω. (Όπως επίσης θα ήθελα να ξέρω και από πιά μεριά του δρόμου αρχίζει η αρίθμηση.)&lt;/p&gt;
 </description>
     </item>
     

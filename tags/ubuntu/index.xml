@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on Stratos Gerakakis</title>
-    <link>http://stratos.gerakakis.net/tags/ubuntu/</link>
+    <link>http://stratos.gerakakis.net/tags/ubuntu/index.xml</link>
     <description>Recent content in Ubuntu on Stratos Gerakakis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Aug 2014 14:26:03 +0200</lastBuildDate>
     <atom:link href="http://stratos.gerakakis.net/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -45,12 +44,12 @@
 
 &lt;p&gt;These are little Ubuntu snippets, that I always forget!&lt;/p&gt;
 
-&lt;h3 id=&#34;changing-the-timezone:572ba4bfb46d7d6ac05ea4483bb7f9fa&#34;&gt;Changing the timezone&lt;/h3&gt;
+&lt;h3 id=&#34;changing-the-timezone&#34;&gt;Changing the timezone&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;sudo dpkg-reconfigure tzdata
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;create-and-mount-xfs-filesystem:572ba4bfb46d7d6ac05ea4483bb7f9fa&#34;&gt;Create and mount xfs filesystem&lt;/h3&gt;
+&lt;h3 id=&#34;create-and-mount-xfs-filesystem&#34;&gt;Create and mount xfs filesystem&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo apt-get install xfsprogs
 $ sudo mkfs.xfs /dev/sdf
@@ -63,7 +62,7 @@ $ sudo mkfs.xfs /dev/sdf
 
 &lt;p&gt;(Tested on Amazon EC2 EBS volume.)&lt;/p&gt;
 
-&lt;h3 id=&#34;timestamp-too-far-in-the-future:572ba4bfb46d7d6ac05ea4483bb7f9fa&#34;&gt;Timestamp too far in the future&lt;/h3&gt;
+&lt;h3 id=&#34;timestamp-too-far-in-the-future&#34;&gt;Timestamp too far in the future&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;    su rm -rf /var/run/sudo/Username
 &lt;/code&gt;&lt;/pre&gt;

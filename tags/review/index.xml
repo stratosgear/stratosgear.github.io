@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Review on Stratos Gerakakis</title>
-    <link>http://stratos.gerakakis.net/tags/review/</link>
+    <link>http://stratos.gerakakis.net/tags/review/index.xml</link>
     <description>Recent content in Review on Stratos Gerakakis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Aug 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://stratos.gerakakis.net/tags/review/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -66,9 +65,7 @@
 
 &lt;p&gt;And in case you didn&amp;rsquo;t know, this book is often quoted as &lt;em&gt;&amp;ldquo;THE best science fiction novel&amp;rdquo;&lt;/em&gt; with more than 12 million copies sold worldwide.&lt;/p&gt;
 
-&lt;p&gt;The [wikipedia article][] is very informative, too.&lt;/p&gt;
-
-&lt;p&gt;[wikipedia article]: &lt;a href=&#34;http://en.wikipedia.org/wiki/Dune_(novel&#34;&gt;http://en.wikipedia.org/wiki/Dune_(novel&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&#34;http://en.wikipedia.org/wiki/Dune_(novel)&#34;&gt;wikipedia article&lt;/a&gt; is very informative, too.&lt;/p&gt;
 </description>
     </item>
     
@@ -122,7 +119,7 @@
 
 &lt;p&gt;This is Volume One that includes the first three books of the series: The Star King, The Killing Machine and The Palace of Love.&lt;/p&gt;
 
-&lt;h2 id=&#34;the-star-king:58862752ffb66aaec0a3876c9abb56f6&#34;&gt;The Star King&lt;/h2&gt;
+&lt;h2 id=&#34;the-star-king&#34;&gt;The Star King&lt;/h2&gt;
 
 
 &lt;figure &gt;
@@ -146,7 +143,7 @@
 
 &lt;p&gt;&lt;em&gt;Read more at the&lt;/em&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/Star_King&#34;&gt;Wikipedia article.&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;the-killing-machine:58862752ffb66aaec0a3876c9abb56f6&#34;&gt;The Killing Machine&lt;/h2&gt;
+&lt;h2 id=&#34;the-killing-machine&#34;&gt;The Killing Machine&lt;/h2&gt;
 
 
 &lt;figure &gt;
@@ -168,7 +165,7 @@
 
 &lt;p&gt;&lt;em&gt;Read more at the&lt;/em&gt; &lt;a href=&#34;http://en.wikipedia.org/wiki/The_Killing_Machine&#34;&gt;Wikipedia article.&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;the-palace-of-love:58862752ffb66aaec0a3876c9abb56f6&#34;&gt;The Palace of Love&lt;/h2&gt;
+&lt;h2 id=&#34;the-palace-of-love&#34;&gt;The Palace of Love&lt;/h2&gt;
 
 
 &lt;figure &gt;

@@ -2,11 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cli on Stratos Gerakakis</title>
-    <link>http://stratos.gerakakis.net/tags/cli/</link>
+    <link>http://stratos.gerakakis.net/tags/cli/index.xml</link>
     <description>Recent content in Cli on Stratos Gerakakis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Apr 2011 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://stratos.gerakakis.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -19,7 +18,7 @@
 
 &lt;p&gt;My choice of Ubuntu tools for recording, splitting and tagging streaming audio.&lt;/p&gt;
 
-&lt;h2 id=&#34;recording:614caedb33634d43f044cbd61067e96e&#34;&gt;Recording&lt;/h2&gt;
+&lt;h2 id=&#34;recording&#34;&gt;Recording&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://streamripper.sourceforge.net&#34;&gt;streamripper&lt;/a&gt;: Command line tool. Excellent choice since it makes it so easy to schedule recordings with it::&lt;/p&gt;
 
@@ -37,7 +36,7 @@
 &lt;p&gt;$ crontab -e
   0 6 * * 1 streamripper URL -options for recording every Monday morning at 6.&lt;/p&gt;
 
-&lt;h2 id=&#34;splitting:614caedb33634d43f044cbd61067e96e&#34;&gt;Splitting&lt;/h2&gt;
+&lt;h2 id=&#34;splitting&#34;&gt;Splitting&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://audacious-media-player.org&#34;&gt;audacious&lt;/a&gt;: Audio player that has a nice Left-Right cursor key playback to easily find the places in the stream recording that you want to split/cut. Mark the Start and End Time from the recording that you made.&lt;/p&gt;
 
@@ -52,7 +51,7 @@
 &lt;li&gt;-o finalRecording: The final splitted file.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&#34;tagging:614caedb33634d43f044cbd61067e96e&#34;&gt;Tagging&lt;/h2&gt;
+&lt;h2 id=&#34;tagging&#34;&gt;Tagging&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://easytag.sourceforge.net&#34;&gt;easyTag&lt;/a&gt;: Use it to put mp3 tags in the final recording. Actually, any tagger would do. This is a, well, easy one!&lt;/p&gt;
 

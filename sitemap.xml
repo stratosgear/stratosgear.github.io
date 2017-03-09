@@ -2,9 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://stratos.gerakakis.net/</loc>
-    <lastmod>2014-08-22T14:26:03+02:00</lastmod>
-    <priority>0</priority>
+    <loc>http://stratos.gerakakis.net/2017/03/verifying_email_signatures/</loc>
+    <lastmod>2017-03-08T21:45:58+01:00</lastmod>
   </url>
   
   <url>
@@ -130,6 +129,233 @@
   <url>
     <loc>http://stratos.gerakakis.net/2003/08/prefa/</loc>
     <lastmod>2003-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/arch/</loc>
+    <lastmod>2014-08-22T14:26:03+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/audio/</loc>
+    <lastmod>2011-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/book/</loc>
+    <lastmod>2014-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/card-games/</loc>
+    <lastmod>2003-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/cli/</loc>
+    <lastmod>2011-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/django/</loc>
+    <lastmod>2011-12-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/domains/</loc>
+    <lastmod>2011-06-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/google/</loc>
+    <lastmod>2011-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/gpg/</loc>
+    <lastmod>2017-03-08T21:45:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/greek/</loc>
+    <lastmod>2011-05-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/hugo/</loc>
+    <lastmod>2014-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/iss/</loc>
+    <lastmod>2011-09-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/keno/</loc>
+    <lastmod>2004-11-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/keybase/</loc>
+    <lastmod>2017-03-08T21:45:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/linux/</loc>
+    <lastmod>2017-03-08T21:45:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/lotto/</loc>
+    <lastmod>2004-11-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/lvm/</loc>
+    <lastmod>2010-10-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/migration/</loc>
+    <lastmod>2014-08-22T14:26:03+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/mysql/</loc>
+    <lastmod>2011-12-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/nebula/</loc>
+    <lastmod>2014-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/oracle/</loc>
+    <lastmod>2010-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/pdf/</loc>
+    <lastmod>2011-12-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/post/</loc>
+    <lastmod>2017-03-08T21:45:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/prefa/</loc>
+    <lastmod>2003-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/python/</loc>
+    <lastmod>2011-12-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/raid/</loc>
+    <lastmod>2010-10-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/review/</loc>
+    <lastmod>2014-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/reviews/</loc>
+    <lastmod>2011-11-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/rules/</loc>
+    <lastmod>2003-08-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/scifi/</loc>
+    <lastmod>2014-08-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/server/</loc>
+    <lastmod>2010-10-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/ssh/</loc>
+    <lastmod>2008-03-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/statistics/</loc>
+    <lastmod>2004-11-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/</loc>
+    <lastmod>2017-03-08T21:45:58+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/ubuntu/</loc>
+    <lastmod>2014-08-22T14:26:03+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/vmware/</loc>
+    <lastmod>2010-10-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://stratos.gerakakis.net/tags/windows/</loc>
+    <lastmod>2010-03-02T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>
